@@ -1,9 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using MVC_CRUD_KePa.Models;
+using System.Configuration;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+builder.Services.AddDbContext<KepaContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("conexion")));
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
