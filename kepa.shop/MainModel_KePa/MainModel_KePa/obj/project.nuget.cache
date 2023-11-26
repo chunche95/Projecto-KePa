@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "2KKNIzuezWfHzhdGGlS2eYsRbplJ6SL8CqfjTmfiabSFvXAwj3LB1GKygP26/fMd12bsMINSELNhIBm7jJ8drg==",
+  "success": true,
+  "projectFilePath": "D:\\Documentos\\UCLM\\3ro\\IPO\\Projecto-KePa\\kepa.shop\\MainModel_KePa\\MainModel_KePa\\MainModel_KePa.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pauli\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512",
+    "C:\\Users\\pauli\\.nuget\\packages\\fontawesome.sharp\\6.3.0\\fontawesome.sharp.6.3.0.nupkg.sha512",
+    "C:\\Users\\pauli\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\pauli\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\pauli\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\pauli\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.25\\microsoft.netcore.app.host.win-x64.6.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}
