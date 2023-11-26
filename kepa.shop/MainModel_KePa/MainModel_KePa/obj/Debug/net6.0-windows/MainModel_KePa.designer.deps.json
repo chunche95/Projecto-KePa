@@ -14,6 +14,14 @@
             "fileVersion": "6.3.0.0"
           }
         }
+      },
+      "Material.Icons/2.0.12": {
+        "runtime": {
+          "lib/netstandard2.0/Material.Icons.dll": {
+            "assemblyVersion": "2.0.12.0",
+            "fileVersion": "2.0.12.0"
+          }
+        }
       }
     }
   },
@@ -31,6 +39,13 @@
       "sha512": "sha512-3/Fb0N04yYK8An07oox5ISlUyNgsnWildHfoP69uqTEOsemQemRyciphMkXZOcdBupjUD+lVsRE3FqG41/dzPA==",
       "path": "fontawesome.sharp/6.3.0",
       "hashPath": "fontawesome.sharp.6.3.0.nupkg.sha512"
+    },
+    "Material.Icons/2.0.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WFGgzasAxxyp02AI5OFqIGiTELKFstSkhy1TI5/KTlDzhvRRdXLAnZubIcz/3oPTj+N/Bnx6nkVAPyRL57Yphg==",
+      "path": "material.icons/2.0.12",
+      "hashPath": "material.icons.2.0.12.nupkg.sha512"
     }
   }
 }

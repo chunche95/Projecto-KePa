@@ -15,17 +15,26 @@
                 <DockPanel.Background>
                     <ImageBrush ImageSource="Img/portada_giraffes.png"/>
                 </DockPanel.Background>
-                <Button Content="Button" Height="50" RenderTransformOrigin="0.5,0.5" DockPanel.Dock="Bottom">
+
+                <Label Content="NOTHING HAS CHANGED – " Width="450" Height="80" BorderThickness="15,28,18,0" Margin="0,290,0,0" FontSize="22" FontFamily="Arial"/>
+                <Label Content="THE VERY BEST OF DAVID BOWIE" Width="460" Height="80" BorderThickness="15,28,18,0" Margin="-451,370,0,0" FontSize="22" FontFamily="Arial"/>
+                <Button x:Name="Go" Content=">" Width="72" Height="65" Margin="79,562,0,0" Background="#FF0A0A0A" FontWeight="Bold" FontSize="48" BorderThickness="2,1,1,1" Foreground="#FFF9F2F2" FontFamily="SimSun" BorderBrush="#FFEDE7E7"/>
+                <Button x:Name="Ordenr_now" Content="ORDER NOW" Height="77" RenderTransformOrigin="0.5,0.5" DockPanel.Dock="Bottom" Panel.ZIndex="45" Margin="-587,0,-77,62" Width="267" FontSize="36" FontFamily="Bahnschrift" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Button_Click" Foreground="#FFEAF701" BorderBrush="#FFE5F108">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.8" SpreadMethod="Reflect" MappingMode="Absolute">
+                            <GradientStop Color="Black" Offset="0.05"/>
+                            <GradientStop Color="#FF5B5843" Offset="0.623"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
                     <Button.RenderTransform>
                         <TransformGroup>
-                            <ScaleTransform ScaleX="-1"/>
+                            <ScaleTransform ScaleX="1"/>
                             <SkewTransform/>
-                            <RotateTransform Angle="-1.158"/>
+                            <RotateTransform Angle="-0.48"/>
                             <TranslateTransform/>
                         </TransformGroup>
                     </Button.RenderTransform>
                 </Button>
-
             </DockPanel>
 
         </DockPanel>

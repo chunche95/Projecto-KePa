@@ -16,6 +16,15 @@
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App"
         ]
+      },
+      "Material.Icons/2.0.12": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Material.Icons.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Material.Icons.dll": {}
+        }
       }
     }
   },
@@ -55,12 +64,26 @@
         "lib/net6.0-windows7.0/FontAwesome.Sharp.dll",
         "lib/netcoreapp3.1/FontAwesome.Sharp.dll"
       ]
+    },
+    "Material.Icons/2.0.12": {
+      "sha512": "WFGgzasAxxyp02AI5OFqIGiTELKFstSkhy1TI5/KTlDzhvRRdXLAnZubIcz/3oPTj+N/Bnx6nkVAPyRL57Yphg==",
+      "type": "package",
+      "path": "material.icons/2.0.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/netstandard2.0/Material.Icons.dll",
+        "material.icons.2.0.12.nupkg.sha512",
+        "material.icons.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "FontAwesome >= 4.7.0",
-      "FontAwesome.Sharp >= 6.3.0"
+      "FontAwesome.Sharp >= 6.3.0",
+      "Material.Icons >= 2.0.12"
     ]
   },
   "packageFolders": {
@@ -112,6 +135,10 @@
           "FontAwesome.Sharp": {
             "target": "Package",
             "version": "[6.3.0, )"
+          },
+          "Material.Icons": {
+            "target": "Package",
+            "version": "[2.0.12, )"
           }
         },
         "imports": [
