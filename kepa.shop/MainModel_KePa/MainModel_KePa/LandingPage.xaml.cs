@@ -24,5 +24,10 @@ namespace MainModel_KePa
         {
             InitializeComponent();
         }
+
+        private void Frame_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
     }
 }

@@ -12,6 +12,9 @@
                 <ImageBrush ImageSource="Img/fondo-final.jpg"/>
             </DockPanel.Background>
             <DockPanel Width="610" Height="643" Margin="80,0,0,0" LastChildFill="False" Panel.ZIndex="1" Tag="jiraffe" RenderTransformOrigin="0.5,0.5">
+                <DockPanel.Effect>
+                    <DropShadowEffect/>
+                </DockPanel.Effect>
                 <DockPanel.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -49,15 +52,12 @@
                     <ImageBrush/>
                 </Grid.Background>
             </Grid>
+            
             <Rectangle Stroke="Black" Width="595" RadiusX="49.02" RadiusY="49.02" Margin="0,0,0,880" Fill="#7FC7B9B9"/>
-            <Grid Width="100" Margin="-800,37,0,0">
+            <Grid Width="440" Margin="-550,37,0,0">
                 <Image Source="/Img/espana.png" Stretch="Fill" Width="87" Height="85" Margin="0,1,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                <Grid Height="NaN" Margin="151,1,-275,941" Width="NaN">
-                    <Image Source="/Img/acceso.png" Stretch="Fill" Margin="0,0,137,0" Width="87" Height="85"/>
-                    <Image x:Name="information" Source="/Img/informacion.png" Stretch="Fill" Margin="138,0,0,0" Width="86" Height="85" HorizontalAlignment="Left" VerticalAlignment="Center" StretchDirection="DownOnly"/>
-
-                </Grid>
-
+                <Image Source="/Img/acceso.png" Stretch="Fill" Margin="153,1,200,941" Width="87" Height="85" RenderTransformOrigin="1.552,-3.576"/>
+                <Image x:Name="information" Source="/Img/informacion.png" Stretch="Fill" Margin="297,1,0,0" Width="86" Height="85" HorizontalAlignment="Left" VerticalAlignment="Top" StretchDirection="DownOnly"/>
             </Grid>
             <Image Source="/Img/KEPA MUSIC 2.png" Stretch="Fill" Width="150" Margin="-1900,-860,0,0" Height="150"/>
 

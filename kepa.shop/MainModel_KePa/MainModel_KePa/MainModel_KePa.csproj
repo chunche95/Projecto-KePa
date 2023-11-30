@@ -13,6 +13,7 @@
     <None Remove="Img\portada_giraffes.png" />
     <None Remove="newportada_giraffes.png" />
     <None Remove="portada_giraffes.png" />
+    <None Remove="raspberry.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +27,7 @@
     <Resource Include="Img\giraffes.jpg" />
     <Resource Include="Img\newportada_giraffes.png" />
     <Resource Include="Img\portada_giraffes.png" />
+    <Resource Include="raspberry.jpg" />
   </ItemGroup>
 
 </Project>

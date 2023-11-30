@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MainModel_KePa")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5cfa500a0c1070f8180a50fcce16075434f09f83")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("MainModel_KePa")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MainModel_KePa")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
