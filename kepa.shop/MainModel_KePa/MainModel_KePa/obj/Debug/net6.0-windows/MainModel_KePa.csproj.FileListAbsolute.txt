@@ -22,3 +22,6 @@ D:\Documentos\UCLM\3ro\IPO\Projecto-KePa\kepa.shop\MainModel_KePa\MainModel_KePa
 D:\Documentos\UCLM\3ro\IPO\Projecto-KePa\kepa.shop\MainModel_KePa\MainModel_KePa\obj\Debug\net6.0-windows\MainModel_KePa.pdb
 D:\Documentos\UCLM\3ro\IPO\Projecto-KePa\kepa.shop\MainModel_KePa\MainModel_KePa\obj\Debug\net6.0-windows\MainModel_KePa.genruntimeconfig.cache
 D:\Documentos\UCLM\3ro\IPO\Projecto-KePa\kepa.shop\MainModel_KePa\MainModel_KePa\obj\Debug\net6.0-windows\ref\MainModel_KePa.dll
+D:\Documentos\UCLM\3ro\IPO\Projecto-KePa\kepa.shop\MainModel_KePa\MainModel_KePa\bin\Debug\net6.0-windows\Material.Icons.dll
+D:\Documentos\UCLM\3ro\IPO\Projecto-KePa\kepa.shop\MainModel_KePa\MainModel_KePa\obj\Debug\net6.0-windows\LandingPage.g.cs
+D:\Documentos\UCLM\3ro\IPO\Projecto-KePa\kepa.shop\MainModel_KePa\MainModel_KePa\obj\Debug\net6.0-windows\LandingPage.baml
