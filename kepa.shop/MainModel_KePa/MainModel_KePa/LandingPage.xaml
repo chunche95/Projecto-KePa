@@ -61,7 +61,7 @@
         <!-- Browse Records -->
         <Grid Margin="0,40,0,210" Grid.Row="1">
             <!-- Listado de Browse Records -->
-            <StackPanel Grid.Row="6" Orientation="Horizontal" Margin="0,66,20,265">
+            <StackPanel Orientation="Horizontal" Margin="-14,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="800">
                 <Button Height="100" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="53,5,0,0">
                     <Image x:Name="Vinilo1" Height="100" Width="79" Source="/raspberry.jpg" Stretch="Fill"/>
                 </Button>
