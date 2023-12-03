@@ -63,18 +63,74 @@
             <!-- Listado de Browse Records -->
             <StackPanel Orientation="Horizontal" Margin="-14,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="800">
                 <Button Height="100" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="53,5,0,0">
-                    <Image x:Name="Vinilo1" Height="100" Width="79" Source="/raspberry.jpg" Stretch="Fill"/>
+                    <Image x:Name="Vinilo1" Height="100" Width="79" Source="/Img/tape_vynil/raspberry.jpg" Stretch="Fill"/>
                 </Button>
 
-                <Button Height="100" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="53,5,0,0">Button 1</Button>
-                <Button Height="100" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="53,5,0,0">Button 1</Button>
-                <Button Height="100" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="53,5,0,0">Button 1</Button>
-                <Button Height="100" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="53,5,0,0">Button 1</Button>
-                <Button Height="100" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="53,5,0,0">Button 1</Button>
+                <Button Height="100" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="53,5,0,0">
+                    <Image x:Name="Vinilo2" Height="100" Width="79" Source="/Img/vinyl-record.jpg" Stretch="Fill"/>
+                </Button>
+                <Button Height="100" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="53,5,0,0">
+                    <Image x:Name="Vinilo3" Height="100" Width="79" Source="/Img/tape_vynil/michael-jackson-thriller.jpg" Stretch="Fill"/>
+                </Button>
+                <Button Height="100" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="53,5,0,0">
+                    <Image x:Name="Vinilo4" Height="100" Width="79" Source="/Img/tape_vynil/aretha-f.jpg" Stretch="Fill"/>
+                </Button>
+                <Button Height="100" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="53,5,0,0">
+                    <Image x:Name="Vinilo5" Height="100" Width="79" Source="/Img/tape_vynil/newgiraffes.png" Stretch="Fill"/>
+                </Button>
+                <Button Height="100" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="53,5,0,0">
+                    <Image x:Name="Vinilo6" Height="100" Width="79" Source="/Img/tape_vynil/slender.jpg" Stretch="Fill"/>
+                </Button>
             </StackPanel>
         </Grid>
         <!-- Popular Vynils -->
-        <Grid Margin="0,205,0,45" Grid.Row="1"/>
+        <Grid Margin="0,205,0,45" Grid.Row="1">
+            <!-- Listado de Popular Records -->
+            <StackPanel Orientation="Horizontal" Margin="-7,-16,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="800">
+                <Button Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="53,5,0,0">
+                    <Image x:Name="Vinilo7" Height="100" Width="79" Source="/Img/tape_vynil/abstract.jpg" Stretch="Fill" MinWidth="80" MinHeight="68">
+                        <Image.Effect>
+                            <DropShadowEffect/>
+                        </Image.Effect>
+                    </Image>
+                </Button>
+
+                <Button Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="53,5,0,0" BorderThickness="0,0,0,0" Opacity="0.8" MinWidth="80" MinHeight="80">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                    <Image x:Name="Vinilo8" Height="100" Width="79" Source="/Img/tape_vynil/ineverlovedamanthewayiloveyou.jpg" Stretch="Fill"/>
+                </Button>
+                <Button Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="53,5,0,0">
+                    <Image x:Name="Vinilo9" Height="100" Width="79" Source="/Img/tape_vynil/michael-jackson-thriller.jpg" Stretch="Fill" MinWidth="80" MinHeight="80">
+                        <Image.Effect>
+                            <DropShadowEffect/>
+                        </Image.Effect>
+                    </Image>
+                </Button>
+                <Button Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="53,5,0,0">
+                    <Image x:Name="Vinilo10" Height="100" Width="79" Source="/Img/tape_vynil/aretha-f.jpg" Stretch="Fill">
+                        <Image.Effect>
+                            <DropShadowEffect/>
+                        </Image.Effect>
+                    </Image>
+                </Button>
+                <Button Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="53,5,0,0">
+                    <Image x:Name="Vinilo11" Height="100" Width="79" Source="/Img/tape_vynil/fox.jpg" Stretch="Fill">
+                        <Image.Effect>
+                            <DropShadowEffect/>
+                        </Image.Effect>
+                    </Image>
+                </Button>
+                <Button Height="80" Width="80" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="53,5,0,0">
+                    <Image x:Name="Vinilo12" Height="100" Width="79" Source="/Img/tape_vynil/bohemian-rhapsody.jpg" Stretch="Fill">
+                        <Image.Effect>
+                            <DropShadowEffect/>
+                        </Image.Effect>
+                    </Image>
+                </Button>
+            </StackPanel>
+        </Grid>
         <TextBlock HorizontalAlignment="Left" Margin="20,45,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="B"/><Run Text="rowse Records"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="20,177,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="P"/><Run Text="opular Vynil Records"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="20,280,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="S"/><Run Text="earch of"/></TextBlock>
