@@ -214,7 +214,7 @@ namespace MainModel_KePa {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MainModel_KePa;component/landingpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MainModel_KePa;V1.0.0.0;component/landingpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\LandingPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
