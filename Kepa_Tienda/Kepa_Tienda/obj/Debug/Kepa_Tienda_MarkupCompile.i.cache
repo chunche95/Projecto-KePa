@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\34602\source\repos\Kepa_Tienda\Kepa_Tienda\App.xaml
-4-1649731434
+12-472591876
 
-9-1226084115
+2229126663
 13-1505183044
-MainWindow.xaml;View\LoginView.xaml;View\Principal.xaml;View\Registrarse.xaml;
+MainWindow.xaml;View\Carrito.xaml;View\CompraRealizada.xaml;View\ConfirmacionDePago.xaml;View\DatosDePago.xaml;View\DetallesQueens.xaml;View\ListaDeDeseos.xaml;View\ListaPedidos.xaml;View\LoginView.xaml;View\Principal.xaml;View\Registrarse.xaml;View\DetallesKrisschasy.xaml;
 
-False
+True
 

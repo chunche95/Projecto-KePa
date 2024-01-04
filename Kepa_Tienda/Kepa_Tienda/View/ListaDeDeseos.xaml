@@ -1,0 +1,176 @@
+﻿<Window x:Class="Kepa_Tienda.View.ListaDeDeseos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kepa_Tienda.View"
+        mc:Ignorable="d"
+        WindowStyle="None" 
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Title="Carrito" Height="550" Width="800">
+    <Grid Margin="74,0,-0.333,69.333">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="405*"/>
+            <RowDefinition Height="14*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Margin="60,10,-0.333,68.333">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="591*"/>
+                <ColumnDefinition Width="19*"/>
+                <ColumnDefinition Width="56*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32*"/>
+                <RowDefinition Height="14*"/>
+                <RowDefinition Height="86.667"/>
+                <RowDefinition Height="361*"/>
+            </Grid.RowDefinitions>
+
+
+            <!-- Buscador -->
+
+            <!-- Opciones de idioma, carrito, etc. -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,387.333,57.333,-121.333" Width="155" Grid.Row="3">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,524">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0*"/>
+                            <ColumnDefinition Width="260*"/>
+                            <ColumnDefinition Width="89*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Content="Carrito" Grid.ColumnSpan="3"/>
+                    </Grid>
+                    <Button Content="Salir"/>
+                </StackPanel>
+            </StackPanel>
+            <Border CornerRadius="12" Width="801" Height="612" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.75" Margin="-135,-15,0,-210.333" Grid.RowSpan="4" Grid.ColumnSpan="3">
+                <Border.Background>
+                    <ImageBrush ImageSource="Contenedor de contenido -Panel de administracion.png" Stretch="UniformToFill"/>
+                </Border.Background>
+
+                <Grid Margin="20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="481*"/>
+                        <ColumnDefinition Width="391*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Lista de discos -->
+                    <ListBox x:Name="ListaDeDiscos" Margin="138,134,131.333,77" BorderBrush="Transparent" Background="#FF878787" Opacity="0.98" Grid.Row="0" Grid.ColumnSpan="2">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Titulo}" FontWeight="Bold" FontSize="18"/>
+                                    <TextBlock Text="{Binding Precio}" Foreground="White" FontSize="16"/>
+                                    <TextBlock Text="{Binding Cantidad}" Foreground="White" FontSize="16"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <!-- Total -->
+
+                    <Rectangle Fill="#FF979797" HorizontalAlignment="Left" Height="111" Stroke="Black" VerticalAlignment="Top" Width="800" Margin="-20,-20,-18.667,0" Opacity="0.95" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="SearchTextBox" Text="Buscar..." Background="Transparent" BorderThickness="0" Margin="145,23,9,510" VerticalContentAlignment="Center"/>
+                    <Border x:Name="SearchBorder" CornerRadius="20" BorderBrush="Black" BorderThickness="1" Width="492" HorizontalAlignment="Center" Margin="138,23,131.333,510" Grid.ColumnSpan="2">
+                        <Grid Margin="-6.333,76.667,18.667,-76.667">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="69*"/>
+                                <ColumnDefinition Width="105*"/>
+                                <ColumnDefinition Width="221*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Width="25" Height="25" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,-71,-5.333,82" Grid.Column="2">
+                                <Image Source="lupa.png" Width="15" Height="15"/>
+                            </Button>
+                        </Grid>
+                    </Border>
+                    <Image HorizontalAlignment="Left" Margin="275,23,0,0" VerticalAlignment="Top" Width="30" Height="39" Source="images.png" MouseLeftButtonDown="Carrito_Click" RenderTransformOrigin="0.067,-0.026" Grid.Column="1"/>
+                    <Button Click="Volver" Margin="10,3,340,497">
+                        <Image Source="Rectangle 4.png" Width="65" Height="72" />
+                    </Button>
+
+                </Grid>
+            </Border>
+            <Button x:Name="btnMinimize"
+        BorderThickness="0"
+        Content="-"
+        Foreground="White"
+        FontSize="16"
+        FontFamily="Montserrat"
+        Cursor="Hand"
+        Click="btnMinimize_Click"
+        HorizontalAlignment="Right"
+        VerticalAlignment="Top"
+        Margin="0,-19,26,0"
+        Height="30"
+        Width="30" Grid.Column="2">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#28AEED"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#278BEF"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Width="18" Height="18"
+                                        CornerRadius="9"
+                                        Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+
+                </Button.Template>
+            </Button>
+
+            <Button x:Name="btnClose"
+        BorderThickness="0"
+        Content="X"
+        Foreground="White"
+        FontSize="12"
+        FontFamily="Montserrat"
+        Cursor="Hand"
+        Click="btnClose_Click"
+        HorizontalAlignment="Right"
+        VerticalAlignment="Top"
+        Margin="0,-19,0,0"
+        Height="30"
+        Width="30" Grid.Column="2" Background="#FFFF2F00">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#DA34AE"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#C62DAE"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="18" Height="18"
+                                        CornerRadius="9"
+                                        Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+        </Grid>
+    </Grid>
+</Window>
+

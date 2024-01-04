@@ -23,15 +23,83 @@ namespace Kepa_Tienda.View
         {
             InitializeComponent();
         }
+        private void btnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
 
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
+        private void IrAListaDeDeseos_Click(object sender, RoutedEventArgs e)
+        {
+            ListaDeDeseos DeseosWindow = new ListaDeDeseos(); // 
 
+            DeseosWindow.MostrarDiscosEnLista();
+
+                
+                DeseosWindow.Show();
+            this.Close(); // Cierra la ventana actual
+        }
         private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged_2(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void cb_elementoSeleccionado(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void IrADetalles(object sender, RoutedEventArgs e)
+        {
+            // Código para abrir la ventana de DetallesKrisschasy
+            DetallesKrisschasy detallesWindow = new DetallesKrisschasy();
+            detallesWindow.Show();
+            
+            Close(); // O
+        }
+
+        private void IrADetallesQueens(object sender, RoutedEventArgs e)
+        {
+            // Código para abrir la ventana de DetallesQueens
+            DetallesQueens detallesQWindow = new DetallesQueens();
+            detallesQWindow.Show();
+           
+            Close(); 
+        }
+        private void IrAListaDePedidos(object sender, RoutedEventArgs e)
+        {
+            ListaPedidos PedidosWindow = new ListaPedidos(PedidoGlobal.PedidosRealizados);
+            PedidosWindow.Show();
+            this.Close();
+        }
+        private void Carrito_Click(object sender, MouseButtonEventArgs e)
+        {
+            Carrito carritoWindow = new Carrito();
+
+            // Pasar la lista de discos seleccionados al carrito
+            carritoWindow.MostrarDiscosEnCarrito();
+
+            carritoWindow.Show();
+        }
+
+
+
     }
 }

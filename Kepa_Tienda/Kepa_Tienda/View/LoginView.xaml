@@ -14,11 +14,11 @@
         AllowsTransparency="True"
         MouseDown="Window_MouseDown">
 
-    <Border CornerRadius="12">
+    <Border CornerRadius="12" Width="796" Height="559" HorizontalAlignment="Left" Margin="4,0,0,-9" VerticalAlignment="Bottom">
 
         <Border.Background>
-            <ImageBrush ImageSource="Rectangle 3.png"
-                        Stretch="None"/>
+            <ImageBrush ImageSource="Rectangle 3.png" Stretch="UniformToFill" Opacity="2"/>
+
         </Border.Background>
 
         <Border CornerRadius="10"                    
@@ -52,8 +52,8 @@
                         <ColumnDefinition Width="5"/>
                     </Grid.ColumnDefinitions>
 
-                    <Rectangle Fill="#FF194721" HorizontalAlignment="Left" Height="458" Margin="-42,-10,0,-418" Stroke="Black" VerticalAlignment="Top" Width="408" Opacity="0.6" Grid.ColumnSpan="4"/>
-                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="240" Margin="-10,83,0,-293" Stroke="Black" VerticalAlignment="Top" Width="345" Opacity="0.5" Grid.ColumnSpan="2"/>
+                    <Rectangle Fill="#FF023C0B" HorizontalAlignment="Left" Height="458" Margin="-33,-22,0,-405.667" Stroke="Black" VerticalAlignment="Top" Width="408" Opacity="0.6" Grid.ColumnSpan="5"/>
+                    <Rectangle Fill="Black" HorizontalAlignment="Left" Height="240" Margin="-11,93,0,-302.667" Stroke="Black" VerticalAlignment="Top" Width="345" Opacity="0.5" Grid.ColumnSpan="2"/>
                     <TextBlock
     Foreground="Black"
     FontSize="18"
@@ -165,18 +165,9 @@
                                FontWeight="Medium"
                                FontFamily="Montserrat"
                                HorizontalAlignment="Center"/>
-
-                    <TextBlock
-                               Foreground="LightGray"
-                               FontSize="12"
-                               FontWeight="Medium"
-                               FontFamily="Montserrat"
-                        TextWrapping="Wrap"
-                               TextAlignment="Center"
-                               Margin="0,5,0,0"/>
                     <Image Source="Rectangle 4.png" Height="105" Margin="30,0,70,0" RenderTransformOrigin="0.57,1.385"/>
                     <TextBlock
-                               Foreground="#FF0C0B0B"
+                               Foreground="White"
                                FontSize="16"
                                FontWeight="Medium"
                                FontFamily="Montserrat"                             
@@ -185,14 +176,14 @@
                              FontSize="13"
                              FontWeight="Medium"
                              FontFamily="Montserrat"                            
-                             Foreground="#FF151515"
-                             CaretBrush="black"
-                             BorderBrush="black"
+                             Foreground="White"
+                             CaretBrush="White"
+                             BorderBrush="White"
                              BorderThickness="0,0,0,2"
                              Height="28"
                              VerticalContentAlignment="Center"
                              Margin="0,5,30,0"
-                             Padding="20,0,0,0" HorizontalAlignment="Right" Width="330" SelectionBrush="#FFEBF1F5">
+                             Padding="20,0,0,0" SelectionBrush="#FFEBF1F5">
 
                         <TextBox.Background>
                             <ImageBrush ImageSource="C:\Users\34602\source\repos\Kepa_Tienda\Kepa_Tienda\Imagenes\user-icon.png"
@@ -202,7 +193,7 @@
                     </TextBox>
 
                     <TextBlock Text="Password"
-                               Foreground="black"
+                               Foreground="White"
                                FontSize="16"
                                FontWeight="Medium"
                                FontFamily="Montserrat"                             
@@ -212,10 +203,10 @@
                              FontSize="13"
                              FontWeight="Medium"
                              FontFamily="Montserrat"                            
-                             Foreground="black
+                             Foreground="White
 "
-                             CaretBrush="black"
-                             BorderBrush="black"
+                             CaretBrush="White"
+                             BorderBrush="White"
                              BorderThickness="0,0,0,2"
                              Height="28"
                              VerticalContentAlignment="Center"
@@ -231,13 +222,12 @@
                     <Button x:Name="btnLogin"                          
                             BorderThickness="0"
                             Content="LOGIN"
-                            Foreground="Black
-                            "
+                            Foreground="Black                             "
                             FontSize="12"
                             FontFamily="Montserrat"
                             Cursor="Hand"                           
-                            Margin="0,5,20,0"
-                            Click="btnLogin_Click" RenderTransformOrigin="0.514,-1.111" Height="130" HorizontalAlignment="Right" Width="340" Background="White" FontWeight="Bold">
+                            Margin="-8,5,20,0"
+                            Click="btnLogin_Click" RenderTransformOrigin="0.514,-1.111" Height="167" HorizontalAlignment="Right" Width="340" Background="White" FontWeight="Bold">
 
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
@@ -266,7 +256,6 @@
                     <StackPanel Orientation="Horizontal"
                                 HorizontalAlignment="Center"
                                 Margin="0,15,0,0"/>
-                    <Rectangle Fill="#FFF4F4F5" Height="100" Stroke="Black"/>
 
                 </StackPanel>
 
@@ -279,7 +268,7 @@
                     Width="95"
                     Height="30"
                     BorderThickness="0"
-                    Background="#FF194721"
+                    Background="Black"
                     Foreground="White"
                     Padding="5"
                     Click="Registrarse_Click"
@@ -311,7 +300,7 @@
                     Width="110"
                     Height="30"
                     BorderThickness="0"
-                    Background="#FF194721"
+                    Background="Black"
                     Foreground="White"
                     Padding="5"
                     Click="Registrarse_Click"
@@ -324,6 +313,9 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
+                </Button>
+                <Button HorizontalAlignment="Left" Margin="-163,18,0,0" VerticalAlignment="Top" Width="45" Height="42" Grid.RowSpan="2" Background="#FF69D3BA">
+                    <Image Height="32" Width="45" Source="home.png" RenderTransformOrigin="0.6,0.5"/>
                 </Button>
             </Grid>
         </Border>
