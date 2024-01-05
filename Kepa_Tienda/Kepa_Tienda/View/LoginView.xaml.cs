@@ -51,7 +51,7 @@ namespace WPF_LoginForm.View
             {
                 // Usuario normal, redirigir a la ventana Principal
                 Principal principalWindow = new Principal();
-                principalWindow.MostrarDatosUsuario(usuario, "pack://application:,,,/imagenes/avatarusuairo.png", "Usuario");
+                principalWindow.MostrarDatosUsuario(usuario, "pack://application:,,,/imagenes/avatar.png", "Usuario");
                 principalWindow.Show();
                 this.Close(); // Cierra la ventana de inicio de sesión
             }
@@ -59,7 +59,7 @@ namespace WPF_LoginForm.View
             {
                 // Usuario administrador, redirigir a la ventana de Panel de Administrador
                 PanelDeAdministrador adminPanelWindow = new PanelDeAdministrador();
-                adminPanelWindow.MostrarDatosUsuario(usuario, "ruta_imagen", "Usuario Administrador");
+                adminPanelWindow.MostrarDatosUsuario(usuario, ""pack://application:,,,/imagenes/adminpng.png", "Usuario Administrador");
                 adminPanelWindow.Show();
                 this.Close(); // Cierra la ventana de inicio de sesión
             }

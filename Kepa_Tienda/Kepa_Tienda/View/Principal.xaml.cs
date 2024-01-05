@@ -102,8 +102,8 @@ namespace Kepa_Tienda.View
         {
             txtUserName.Text = nombreUsuario; // Asignar el nombre de usuario al TextBlock correspondiente
             imgProfile.Source = new BitmapImage(new Uri(rutaFotoPerfil)); // Asignar la imagen de perfil
-            txtUserType.Text = $"Tipo de usuario: {tipoUsuario}"; // Asignar el tipo de usuario
-            txtLastAccess.Text = $"Último acceso: {DateTime.Now}"; // Asignar la fecha de último acceso (fecha actual)
+            txtUserType.Text = $"{tipoUsuario}"; // Asignar el tipo de usuario
+            txtLastAccess.Text = $"{DateTime.Now}"; // Asignar la fecha de último acceso (fecha actual)
         }
 
 

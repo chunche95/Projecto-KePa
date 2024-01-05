@@ -290,7 +290,10 @@
     <Resource Include="View\happy.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Imagenes\avatarusuario.png" />
+    <Resource Include="Imagenes\avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Adminpng.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
