@@ -98,6 +98,13 @@ namespace Kepa_Tienda.View
 
             carritoWindow.Show();
         }
+        public void MostrarDatosUsuario(string nombreUsuario, string rutaFotoPerfil, string tipoUsuario)
+        {
+            txtUserName.Text = nombreUsuario; // Asignar el nombre de usuario al TextBlock correspondiente
+            imgProfile.Source = new BitmapImage(new Uri(rutaFotoPerfil)); // Asignar la imagen de perfil
+            txtUserType.Text = $"Tipo de usuario: {tipoUsuario}"; // Asignar el tipo de usuario
+            txtLastAccess.Text = $"Último acceso: {DateTime.Now}"; // Asignar la fecha de último acceso (fecha actual)
+        }
 
 
 

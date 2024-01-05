@@ -76,8 +76,15 @@
 
 
             <Button Content="Configuración" HorizontalAlignment="Right" Width="151" Margin="-1,391,280,110"/>
-            <Button Content="Soporte Técnico" Margin="0,421,262,76" Click="Button_Click"/>
-            <Button Content="Usuario Registrado" Margin="0,360,280,149" RenderTransformOrigin="0.625,-0.667"/>
+            <Button Content="Soporte Técnico" Margin="0,421,280,76" Click="Button_Click"/>
+            <!-- Para mostrar el nombre de usuario -->
+            <TextBlock x:Name="txtUserName" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <!-- Para mostrar la foto de perfil -->
+            <Image x:Name="imgProfile" HorizontalAlignment="Left" Height="100" Margin="10,40,0,0" VerticalAlignment="Top" Width="100"/>
+            <!-- Para mostrar el tipo de usuario -->
+            <TextBlock x:Name="txtUserType" HorizontalAlignment="Left" Margin="10,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <!-- Para mostrar la fecha de último acceso -->
+            <TextBlock x:Name="txtLastAccess" HorizontalAlignment="Left" Margin="10,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
             <Image HorizontalAlignment="Left" Height="75" Margin="50,-5,0,0" VerticalAlignment="Top" Width="110" Source="Rectangle 4.png"/>
             <Rectangle Fill="#FFE8E8E8" HorizontalAlignment="Left" Height="76" Margin="0,464,-1,0" Stroke="White" VerticalAlignment="Top" Width="801" Grid.ColumnSpan="3"/>
             <TextBox HorizontalAlignment="Left" Height="30" Margin="24,467,0,0" TextWrapping="Wrap" Text="KEPA MUSIC" VerticalAlignment="Top" Width="135" TextChanged="TextBox_TextChanged_1" Background="#FFE8E8E8" FontSize="22" Foreground="Black" FlowDirection="RightToLeft"/>
