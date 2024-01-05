@@ -59,7 +59,7 @@ namespace WPF_LoginForm.View
             {
                 // Usuario administrador, redirigir a la ventana de Panel de Administrador
                 PanelDeAdministrador adminPanelWindow = new PanelDeAdministrador();
-                adminPanelWindow.MostrarDatosUsuario(usuario, ""pack://application:,,,/imagenes/adminpng.png", "Usuario Administrador");
+                adminPanelWindow.MostrarDatosUsuario(usuario, "pack://application:,,,/imagenes/adminpng.png", "Administrador");
                 adminPanelWindow.Show();
                 this.Close(); // Cierra la ventana de inicio de sesión
             }

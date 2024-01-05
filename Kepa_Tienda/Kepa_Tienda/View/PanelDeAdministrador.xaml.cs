@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WPF_LoginForm.View;
 
 namespace Kepa_Tienda.View
 {
@@ -27,8 +28,8 @@ namespace Kepa_Tienda.View
         {
             txtUserName.Text = nombreUsuario; // Asignar el nombre de usuario al TextBlock correspondiente
             imgProfile.Source = new BitmapImage(new Uri(rutaFotoPerfil)); // Asignar la imagen de perfil
-            txtUserType.Text = $"Tipo de usuario: {tipoUsuario}"; // Asignar el tipo de usuario
-            txtLastAccess.Text = $"Último acceso: {DateTime.Now}"; // Asignar la fecha de último acceso (fecha actual)
+            txtUserType.Text = $"{tipoUsuario}"; // Asignar el tipo de usuario
+            txtLastAccess.Text = $"{DateTime.Now}"; // Asignar la fecha de último acceso (fecha actual)
         }
 
 
@@ -111,6 +112,13 @@ namespace Kepa_Tienda.View
 
             carritoWindow.Show();
         }
+       
+            private void Salir_Click(object sender, MouseButtonEventArgs e)
+            {
+                LoginView loginWindow = new LoginView(); // Crear una instancia de LoginView
+                loginWindow.Show(); // Mostrar la ventana LoginView
+                Close(); // Cerrar la ventana actual si es necesario
+            }
 
 
     }

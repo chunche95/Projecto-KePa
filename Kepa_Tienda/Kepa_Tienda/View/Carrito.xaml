@@ -96,7 +96,7 @@
                             </Button>
                         </Grid>
                     </Border>
-                    <Image HorizontalAlignment="Left" Margin="275,23,0,0" VerticalAlignment="Top" Width="30" Height="39" Source="images.png" MouseLeftButtonDown="Carrito_Click" RenderTransformOrigin="0.067,-0.026" Grid.Column="1"/>
+                    <Image HorizontalAlignment="Left" Margin="275,23,0,0" VerticalAlignment="Top" Width="30" Height="39" Source="images.png" MouseLeftButtonDown="Salir_Click" RenderTransformOrigin="0.067,-0.026" Grid.Column="1"/>
                     <Image HorizontalAlignment="Left" Height="90" Margin="10,-10,0,0" VerticalAlignment="Top" Width="85" Source="Rectangle 4.png"/>
                 </Grid>
             </Border>

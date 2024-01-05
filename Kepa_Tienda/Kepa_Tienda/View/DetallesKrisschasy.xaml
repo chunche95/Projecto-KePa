@@ -169,7 +169,7 @@ TextBlock.FontSize="22" >
                 </StackPanel>
             </StackPanel>
             <Image HorizontalAlignment="Left" Margin="0,14.889,0,0" VerticalAlignment="Top" Width="30" Height="29" Source="shopping-cart-outline-icon-vector.jpg" MouseLeftButtonDown="Carrito_Click" RenderTransformOrigin="0.667,0.483" Grid.RowSpan="2" Grid.Column="6" Grid.Row="1"/>
-            <Image HorizontalAlignment="Left" Margin="10,14.889,0,0" VerticalAlignment="Top" Width="30" Height="29" Source="images.png" MouseLeftButtonDown="Carrito_Click" Grid.RowSpan="2" Grid.Column="7" RenderTransformOrigin="0.633,1.333" Grid.Row="1"/>
+            <Image HorizontalAlignment="Left" Margin="10,14.889,0,0" VerticalAlignment="Top" Width="30" Height="29" Source="images.png" MouseLeftButtonDown="Salir_Click" Grid.RowSpan="2" Grid.Column="7" RenderTransformOrigin="0.633,1.333" Grid.Row="1"/>
             <Rectangle Fill="Black" Stroke="Black" Margin="419,64.556,60,240.444" Opacity="0.75" OpacityMask="Black" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="8"/>
 
         </Grid>

@@ -89,7 +89,7 @@
                     </StackPanel>
                 </StackPanel>
                 <Image HorizontalAlignment="Left" Margin="769,34,0,0" VerticalAlignment="Top" Width="30" Height="39" Source="shopping-cart-outline-icon-vector.jpg" MouseLeftButtonDown="Carrito_Click" RenderTransformOrigin="0.667,0.483" Grid.RowSpan="3"/>
-                <Image HorizontalAlignment="Left" Margin="9.667,34,0,0" VerticalAlignment="Top" Width="30" Height="39" Source="images.png" MouseLeftButtonDown="Carrito_Click" Grid.RowSpan="3" RenderTransformOrigin="0.067,-0.026" Grid.Column="1"/>
+                <Image HorizontalAlignment="Left" Margin="9.667,34,0,0" VerticalAlignment="Top" Width="30" Height="39" Source="images.png" MouseLeftButtonDown="Salir_Click" Grid.RowSpan="3" RenderTransformOrigin="0.067,-0.026" Grid.Column="1"/>
                 <Button x:Name="confirmar"                          
                         BorderThickness="0"
                         Content="confirmar"

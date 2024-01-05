@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Controls;
 using System.Collections.Generic;
+using WPF_LoginForm.View;
 
 namespace Kepa_Tienda.View
 {
@@ -144,6 +145,12 @@ namespace Kepa_Tienda.View
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+        private void Salir_Click(object sender, MouseButtonEventArgs e)
+        {
+            LoginView loginWindow = new LoginView(); // Crear una instancia de LoginView
+            loginWindow.Show(); // Mostrar la ventana LoginView
+            Close(); // Cerrar la ventana actual si es necesario
         }
     }
 }

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WPF_LoginForm.View;
 
 namespace Kepa_Tienda.View
 {
@@ -106,7 +107,12 @@ namespace Kepa_Tienda.View
             txtLastAccess.Text = $"{DateTime.Now}"; // Asignar la fecha de último acceso (fecha actual)
         }
 
-
+        private void Salir_Click(object sender, MouseButtonEventArgs e)
+        {
+            LoginView loginWindow = new LoginView(); // Crear una instancia de LoginView
+            loginWindow.Show(); // Mostrar la ventana LoginView
+            Close(); // Cerrar la ventana actual si es necesario
+        }
 
     }
 }

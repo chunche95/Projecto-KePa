@@ -72,3 +72,4 @@ D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\I
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tienda.csproj.CoreCompileInputs.cache
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tienda.exe
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tienda.pdb
+D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tienda.csproj.AssemblyReference.cache

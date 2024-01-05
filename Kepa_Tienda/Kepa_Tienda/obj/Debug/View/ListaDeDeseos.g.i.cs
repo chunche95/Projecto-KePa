@@ -122,7 +122,7 @@ namespace Kepa_Tienda.View {
             case 4:
             
             #line 92 "..\..\..\View\ListaDeDeseos.xaml"
-            ((System.Windows.Controls.Image)(target)).MouseLeftButtonDown += new System.Windows.Input.MouseButtonEventHandler(this.Carrito_Click);
+            ((System.Windows.Controls.Image)(target)).MouseLeftButtonDown += new System.Windows.Input.MouseButtonEventHandler(this.Salir_Click);
             
             #line default
             #line hidden

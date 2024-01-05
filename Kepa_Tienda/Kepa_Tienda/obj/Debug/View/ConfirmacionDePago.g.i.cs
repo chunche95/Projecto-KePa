@@ -143,7 +143,7 @@ namespace Kepa_Tienda.View {
             case 5:
             
             #line 111 "..\..\..\View\ConfirmacionDePago.xaml"
-            ((System.Windows.Controls.Image)(target)).MouseLeftButtonDown += new System.Windows.Input.MouseButtonEventHandler(this.Carrito_Click);
+            ((System.Windows.Controls.Image)(target)).MouseLeftButtonDown += new System.Windows.Input.MouseButtonEventHandler(this.Salir_Click);
             
             #line default
             #line hidden
