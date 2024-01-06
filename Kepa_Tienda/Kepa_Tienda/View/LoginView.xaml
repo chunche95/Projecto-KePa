@@ -186,7 +186,7 @@
                              Padding="20,0,0,0" SelectionBrush="#FFEBF1F5">
 
                         <TextBox.Background>
-                            <ImageBrush ImageSource="C:\Users\34602\source\repos\Kepa_Tienda\Kepa_Tienda\Imagenes\user-icon.png"
+                            <ImageBrush ImageSource="user-icon.png"
                                         Stretch="None"
                                         AlignmentX="Left"/>
                         </TextBox.Background>
@@ -214,7 +214,7 @@
                              Padding="20,0,0,0" SelectionBrush="#FFF3F3F3">
 
                         <PasswordBox.Background>
-                            <ImageBrush ImageSource="C:\Users\34602\source\repos\Kepa_Tienda\Kepa_Tienda\Imagenes\key-icon.png"
+                            <ImageBrush ImageSource="key-icon.png"
                                         Stretch="None"
                                         AlignmentX="Left"/>
                         </PasswordBox.Background>

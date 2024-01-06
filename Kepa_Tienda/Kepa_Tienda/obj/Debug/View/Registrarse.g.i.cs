@@ -75,14 +75,6 @@ namespace Kepa_Tienda.View {
         
         #line 153 "..\..\..\View\Registrarse.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox txtUser_Copy3;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 172 "..\..\..\View\Registrarse.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtUser_Copy4;
         
         #line default
@@ -139,9 +131,6 @@ namespace Kepa_Tienda.View {
             this.txtUser_Copy2 = ((System.Windows.Controls.TextBox)(target));
             return;
             case 6:
-            this.txtUser_Copy3 = ((System.Windows.Controls.TextBox)(target));
-            return;
-            case 7:
             this.txtUser_Copy4 = ((System.Windows.Controls.TextBox)(target));
             return;
             }

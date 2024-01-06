@@ -28,10 +28,10 @@
         <StackPanel Background="#FFABB6B9" Margin="0,85,528,84" Grid.ColumnSpan="2">
             <!-- Elementos del menú lateral -->
             <Button Content="Inicio" Height="30" Background="#FF98E4DD"/>
-            <Button Content="Explorar" Height="30"/>
-            <Button Content="Mi Colección" Height="30"/>
-            <Button Content="Lista de Deseos" Height="30" Click="IrAListaDeDeseos_Click"/>
-            <Button Content="Pedidos" Height="30" Click="IrAListaDePedidos"/>
+            <Button Content="Administracion Ventas" Height="30"/>
+            <Button Content="Gestionar Ofertas" Height="30" Click="Button_Click_1"/>
+            <Button Content="Gestión Vinilos" Height="30" Click="IrAListaDeDeseos_Click"/>
+            <Button Content="Gestion de Pedidos" Height="30" Click="IrAListaDePedidos"/>
         </StackPanel>
 
         <!-- Sección superior -->
