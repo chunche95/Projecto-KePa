@@ -120,7 +120,10 @@ namespace Kepa_Tienda.View
                 Close(); // Cerrar la ventana actual si es necesario
             }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
 
+        }
     }
 }
 
