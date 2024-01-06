@@ -43,24 +43,33 @@ namespace WPF_LoginForm.View
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-          
-                // Oculta la ventana de inicio de sesión
-                this.Hide();
+            string usuario = txtUser.Text; // Obtener el nombre de usuario ingresado
+            string contraseña = txtPass.Password; // Obtener la contraseña ingresada
 
-                try
-                {
-                    // Crea una instancia de la ventana principal
-                    Principal principalWindow = new Principal();
-
-                    // Muestra la ventana principal
-                    principalWindow.ShowDialog();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error al abrir la ventana principal: {ex.Message}");
-                }
-
+            // Verificar las credenciales para redirigir a la ventana correspondiente
+            if (usuario == "usuario1" && contraseña == "1234")
+            {
+                // Usuario normal, redirigir a la ventana Principal
+                Principal principalWindow = new Principal();
+                principalWindow.MostrarDatosUsuario(usuario, "pack://application:,,,/imagenes/avatar.png", "Usuario");
+                principalWindow.Show();
+                this.Close(); // Cierra la ventana de inicio de sesión
+            }
+            else if (usuario == "administrador1" && contraseña == "1234")
+            {
+                // Usuario administrador, redirigir a la ventana de Panel de Administrador
+                PanelDeAdministrador adminPanelWindow = new PanelDeAdministrador();
+                adminPanelWindow.MostrarDatosUsuario(usuario, "pack://application:,,,/imagenes/adminpng.png", "Administrador");
+                adminPanelWindow.Show();
+                this.Close(); // Cierra la ventana de inicio de sesión
+            }
+            else
+            {
+                // Credenciales incorrectas, mostrar un mensaje
+                MessageBox.Show("Usuario o contraseña incorrectos");
+            }
         }
+
 
         private void Registrarse_Click(object sender, RoutedEventArgs e)
         {

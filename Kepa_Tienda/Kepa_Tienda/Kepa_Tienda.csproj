@@ -55,14 +55,46 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="View\Carrito.xaml.cs">
+      <DependentUpon>Carrito.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CompraRealizada.xaml.cs">
+      <DependentUpon>CompraRealizada.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConfirmacionDePago.xaml.cs">
+      <DependentUpon>ConfirmacionDePago.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DatosDePago.xaml.cs">
+      <DependentUpon>DatosDePago.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DetallesQueens.xaml.cs">
+      <DependentUpon>DetallesQueens.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Disco.cs" />
+    <Compile Include="View\Detalles.cs" />
+    <Compile Include="View\ListaDeDeseos.xaml.cs">
+      <DependentUpon>ListaDeDeseos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ListaPedidos.xaml.cs">
+      <DependentUpon>ListaPedidos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Pago.cs" />
+    <Compile Include="View\PanelDeAdministrador.xaml.cs">
+      <DependentUpon>PanelDeAdministrador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pedido.cs" />
+    <Compile Include="View\Pedidos.cs" />
     <Compile Include="View\Principal.xaml.cs">
       <DependentUpon>Principal.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Registrarse.xaml.cs">
       <DependentUpon>Registrarse.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DetallesKrisschasy.xaml.cs">
+      <DependentUpon>DetallesKrisschasy.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -76,7 +108,39 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\Carrito.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CompraRealizada.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConfirmacionDePago.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DatosDePago.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DetallesQueens.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ListaDeDeseos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ListaPedidos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PanelDeAdministrador.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -85,6 +149,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Registrarse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DetallesKrisschasy.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -181,6 +249,51 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\Kisschasy__United-Paper-People-by-Debaser_2005.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="768x999-37d78ocio-mejores-portadas-discos-historia-viva-tequila-1980-11626838-1-esl-es-viva-tequila-1980-jpg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="6SJOXUHPPZMTJEGB2ZSOWS7YXY.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Contenedor de contenido -Panel de administracion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\shopping-cart-outline-icon-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\ed_sheeran_x-portada.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\81K6EI2aW0L._UF894,1000_QL80_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\this-is-it-michael-jackson-portada-original.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\ed_sheeran_x-portada.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\back-image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\happy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Adminpng.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

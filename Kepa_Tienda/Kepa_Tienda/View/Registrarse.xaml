@@ -15,8 +15,7 @@
     <Border CornerRadius="12">
 
         <Border.Background>
-            <ImageBrush ImageSource="Rectangle 3.png"
-                        Stretch="None"/>
+            <ImageBrush ImageSource="Rectangle 3.png" Stretch="UniformToFill"/>
         </Border.Background>
 
         <Border CornerRadius="10"
@@ -43,7 +42,7 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Rectangle Fill="#FF194721" HorizontalAlignment="Left" Height="471" Margin="-22,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="435" Opacity="0.6" Grid.RowSpan="11"/>
+                <Rectangle Fill="#FF0E6A1E" HorizontalAlignment="Left" Height="471" Margin="-22,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="435" Opacity="0.6" Grid.RowSpan="11"/>
                 <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="289" Margin="10,15,0,0" Stroke="Black" VerticalAlignment="Top" Width="368" Opacity="0.5" Grid.Row="2" Grid.RowSpan="9"/>
 
                 <!-- TextBlock "Registrarse" -->
@@ -71,7 +70,21 @@
                 </TextBox>
 
                 <!-- Botón "Registrarse" -->
-                <Button Grid.Row="10" Content="Registrarse" Width="100" HorizontalAlignment="Left" Margin="143,326,0,60" Click="Button_Click" FontWeight="Bold" FontSize="14"/>
+                <Button Grid.Row="10" Content="Registrarse" Width="100" HorizontalAlignment="Left" Margin="143,326,0,60" Click="Button_Click" FontWeight="Bold" FontSize="14"  Background="#FFFFFF" Foreground="Black" Padding="10" BorderThickness="0" Cursor="Hand">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" CornerRadius="20">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
 
                 <!-- TextBlock "¿Ya tienes una cuenta?..." -->
                 <Image HorizontalAlignment="Left" Height="100" Margin="143,27,0,0" Grid.RowSpan="11" VerticalAlignment="Top" Width="100" Source="Rectangle 4.png"/>
@@ -175,6 +188,9 @@
                             AlignmentX="Left"/>
                     </TextBox.Background>
                 </TextBox>
+                <Button HorizontalAlignment="Left" Margin="-167,27,0,0" VerticalAlignment="Top" Width="55" Height="51" Grid.RowSpan="11" Background="#FF4AEAD4">
+                    <Image Height="41" Width="45" Source="home.png"/>
+                </Button>
 
                 <!-- Integración de elementos de diseño del segundo código -->
                 <!-- ... -->
