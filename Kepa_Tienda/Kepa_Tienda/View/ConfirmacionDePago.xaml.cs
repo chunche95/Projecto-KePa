@@ -55,6 +55,7 @@ namespace Kepa_Tienda.View
             // Mostrar la ventana de compra realizada
             CompraRealizada compraWindow = new CompraRealizada();
             compraWindow.Show();
+            Close();
         }
         private void Carrito_Click(object sender, MouseButtonEventArgs e)
         {
