@@ -7,6 +7,12 @@ using WPF_LoginForm.View;
 
 namespace Kepa_Tienda.View
 {
+    public enum RolUsuario
+    {
+        Usuario,
+        Administrador
+    }
+
     public partial class DetallesKrisschasy : Window
     {
         public List<Disco> carrito = new List<Disco>();

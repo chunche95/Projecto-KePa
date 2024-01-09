@@ -49,19 +49,33 @@ namespace WPF_LoginForm.View
             // Verificar las credenciales para redirigir a la ventana correspondiente
             if (usuario == "usuario1" && contraseña == "1234")
             {
-                // Usuario normal, redirigir a la ventana Principal
+                // Usuario normal
+                Usuario usuarioNormal = new Usuario
+                {
+                    Nombre = usuario,
+                    Rol = RolUsuario.Usuario // Establecer el rol como Usuario
+                };
+
+                // Redirigir a la ventana Principal y configurar el usuario actual
                 Principal principalWindow = new Principal();
-                principalWindow.MostrarDatosUsuario(usuario, "pack://application:,,,/imagenes/avatar.png", "Usuario");
+                principalWindow.ConfigurarUsuarioActual(usuarioNormal);
                 principalWindow.Show();
                 this.Close(); // Cierra la ventana de inicio de sesión
             }
             else if (usuario == "administrador1" && contraseña == "1234")
             {
-                // Usuario administrador, redirigir a la ventana de Panel de Administrador
-                PanelDeAdministrador adminPanelWindow = new PanelDeAdministrador();
-                adminPanelWindow.MostrarDatosUsuario(usuario, "pack://application:,,,/imagenes/adminpng.png", "Administrador");
-                adminPanelWindow.Show();
-                this.Close(); // Cierra la ventana de inicio de sesión
+                // Usuario administrador
+                Usuario usuarioAdmin = new Usuario
+                {
+                    Nombre = usuario,
+                    Rol = RolUsuario.Administrador // Establecer el rol como Administrador
+                };
+
+                // Redirigir a la ventana de Panel de Administrador y configurar el usuario actual
+                Principal principalWindow = new Principal();
+                principalWindow.ConfigurarUsuarioActual(usuarioAdmin);
+                principalWindow.Show();
+                this.Close(); // Cierra la ventana de inicio de sesión// Cierra la ventana de inicio de sesión
             }
             else
             {
@@ -69,6 +83,7 @@ namespace WPF_LoginForm.View
                 MessageBox.Show("Usuario o contraseña incorrectos");
             }
         }
+
 
 
         private void Registrarse_Click(object sender, RoutedEventArgs e)

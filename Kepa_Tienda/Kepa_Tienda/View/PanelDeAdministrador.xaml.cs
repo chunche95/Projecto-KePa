@@ -97,6 +97,15 @@ namespace Kepa_Tienda.View
 
             Close();
         }
+
+        private void EditarKrissChasy(object sender, RoutedEventArgs e)
+        {
+            // Código para abrir la ventana de DetallesKrisschasy
+            DetallesKrisschasy detallesWindow = new DetallesKrisschasy();
+            detallesWindow.Show();
+
+            Close(); // O
+        }
         private void IrAListaDePedidos(object sender, RoutedEventArgs e)
         {
             ListaPedidos PedidosWindow = new ListaPedidos(PedidoGlobal.PedidosRealizados);
@@ -121,6 +130,11 @@ namespace Kepa_Tienda.View
             }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void borrar(object sender, RoutedEventArgs e)
         {
 
         }

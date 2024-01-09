@@ -20,10 +20,107 @@ namespace Kepa_Tienda.View
     /// </summary>
     public partial class Principal : Window
     {
+        private Usuario usuarioActual;
+
         public Principal()
         {
             InitializeComponent();
+            CargarDiscos(); // Cargar los discos al iniciar la ventana
         }
+        private void AgregarDisco_Click(object sender, RoutedEventArgs e)
+        {
+            // Abre un formulario o ventana para agregar discos
+            FormularioAgregarDisco formulario = new FormularioAgregarDisco(this);
+            formulario.Show();
+        }
+
+        public void ConfigurarUsuarioActual(Usuario usuario)
+        {
+            usuarioActual = usuario;
+            ConfigurarInterfazSegunRol();
+        }
+        private Disco ObtenerDiscoSeleccionado()
+        {
+            // Lógica para obtener el disco seleccionado
+            // Por ejemplo, si tienes una lista de discos en un ListBox y quieres obtener el disco seleccionado:
+            if (listBoxDiscos.SelectedItem is Disco discoSeleccionado)
+            {
+                return discoSeleccionado;
+            }
+
+            return null; // En caso de no haber seleccionado ningún disco
+        }
+        private void ConfigurarInterfazSegunRol()
+        {
+            if (usuarioActual.Rol == RolUsuario.Administrador)
+            {
+                // Si es un administrador, habilitar ciertas funcionalidades
+                adminButtons.Visibility = Visibility.Visible; // Mostrar los botones para el administrador
+            }
+            else
+            {
+                // Si es un usuario normal, deshabilitar ciertas funcionalidades
+                adminButtons.Visibility = Visibility.Collapsed; // Ocultar los botones para el administrador
+            }
+        }
+        private void borrar(object sender, RoutedEventArgs e)
+        {
+            // Mostrar un MessageBox para confirmar la acción
+            MessageBoxResult result = MessageBox.Show("¿Estás seguro que deseas eliminar este disco?", "Confirmar Eliminación", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                // Lógica para eliminar el disco aquí
+                // Supongamos que tienes una lista de discos y quieres eliminar el disco seleccionado
+
+                // Pseudocódigo:
+                // Obtener el disco seleccionado
+                Disco discoSeleccionado = ObtenerDiscoSeleccionado();
+
+                // Eliminar el disco de la lista
+                if (discoSeleccionado != null)
+                {
+                    // Eliminar discoSeleccionado de la lista de discos
+                    EliminarDisco(discoSeleccionado);
+
+                    // Actualizar la interfaz para reflejar los cambios
+                    ActualizarInterfaz();
+                }
+            }
+        }
+
+        private List<Disco> listaDeDiscos = new List<Disco>(); // Declaración de la lista de discos
+
+        // Método para cargar la lista de discos (puede variar dependiendo de tu aplicación)
+        private void CargarDiscos()
+        {
+            // Ejemplo de cómo podrías cargar discos a la lista
+            listaDeDiscos.Add(new Disco { Titulo = "Título del Disco 1", Precio = 10.99, ... });
+            listaDeDiscos.Add(new Disco { Titulo = "Título del Disco 2", Precio = 15.99, ... });
+
+            // Mostrar los discos en el ListBox
+            foreach (var disco in listaDeDiscos)
+            {
+                ListBoxDiscos.Items.Add(disco); // Añadir el disco al ListBox
+            }
+        }
+
+
+        private void EliminarDisco(Disco discoSeleccionado)
+        {
+            if (discoSeleccionado != null && listaDeDiscos.Contains(discoSeleccionado))
+            {
+                listaDeDiscos.Remove(discoSeleccionado); // Elimina el disco de la lista
+
+                // Aquí debes actualizar la interfaz para reflejar los cambios.
+                // Por ejemplo, si 'listBoxDiscos' es tu ListBox que muestra los discos,
+                // podrías hacer algo como:
+                listBoxDiscos.Items.Remove(discoSeleccionado); // Elimina el disco del ListBox
+            }
+        }
+
+
+       
         private void btnMinimize_Click(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
@@ -76,6 +173,7 @@ namespace Kepa_Tienda.View
             Close(); // O
         }
 
+       
         private void IrADetallesQueens(object sender, RoutedEventArgs e)
         {
             // Código para abrir la ventana de DetallesQueens

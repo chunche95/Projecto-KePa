@@ -193,334 +193,76 @@
         </Grid>
 
         <!-- Sección central (tienda de vinilos) -->
-        <ScrollViewer Margin="55.667,95,11,284" Grid.Column="1" Grid.ColumnSpan="5">
-            <WrapPanel>
-                <!-- ... -->
+        <ScrollViewer Margin="55.667,110,55,210" Grid.Column="1" Grid.ColumnSpan="5">
+            <ListBox Name="ListBoxDiscos" BorderThickness="0" Background="Transparent">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Height="589"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
 
-                <StackPanel Margin="10">
-                    <Button Click="IrADetalles" Margin="10">
-                        <Image Source="Kisschasy__United-Paper-People-by-Debaser_2005.jpg" Width="105" Height="110" RenderTransformOrigin="0.5,0.523"/>
-                    </Button>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
+                <!-- Agregar ListBoxItems -->
+                <ListBoxItem>
+                    <StackPanel>
+                        <!-- Imagen del artículo -->
+                        <Button Click="IrADetallesQueens" Margin="10">
+                            <Image Source="queens.jpg" Width="105" Height="110" RenderTransformOrigin="0.5,0.523"/>
+                        </Button>
+
+                        <!-- Valoración de estrellas -->
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
+                            <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
+                            <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
+                            <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
+                            <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
+                        </StackPanel>
+
+                        <!-- Botones de editar y borrar -->
+                        <StackPanel Orientation="Horizontal">
+                            <Button Click="Editar_Click" Content="Editar" Margin="5"/>
+                            <Button Click="Borrar_Click" Content="Borrar" Margin="5"/>
+                        </StackPanel>
                     </StackPanel>
-                </StackPanel>
-                <StackPanel Margin="10">
-                    <Button Click="IrADetallesQueens" Margin="10">
-                        <Image Source="queens.jpg" Width="105" Height="110" RenderTransformOrigin="0.5,0.523"/>
-                    </Button>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
+
+
+
+                </ListBoxItem>
+
+                <ListBoxItem>
+                    <StackPanel>
+                        <!-- Imagen del artículo -->
+                        <Button Click="IrADetalles" Margin="10">
+                            <Image Source="Kisschasy__United-Paper-People-by-Debaser_2005.jpg" Width="105" Height="110" RenderTransformOrigin="0.5,0.523"/>
+                        </Button>
+
+                        <!-- Valoración de estrellas -->
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
+                            <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
+                            <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
+                            <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
+                            <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
+                        </StackPanel>
+
+                        <!-- Botones de editar y borrar -->
+                        <StackPanel Orientation="Horizontal">
+                            <Button Click="Editar_Click" Content="Editar" Margin="5"/>
+                            <Button Click="Borrar_Click" Content="Borrar" Margin="5"/>
+                        </StackPanel>
                     </StackPanel>
-                </StackPanel>
-                <StackPanel Margin="10">
-                    <Button Click="IrADetalles" Margin="10">
-                        <Image Source="6SJOXUHPPZMTJEGB2ZSOWS7YXY.jpg" Width="105" Height="110" RenderTransformOrigin="0.5,0.523"/>
-                    </Button>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                    </StackPanel>
-                </StackPanel>
-                <StackPanel Margin="10">
-                    <Button Click="IrADetalles" Margin="10">
-                        <Image Source="Rock_Covers-ilustracion-oldskull-15.jpg" Width="105" Height="110" RenderTransformOrigin="0.5,0.523"/>
-                    </Button>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                    </StackPanel>
-                </StackPanel>
-                <StackPanel Margin="10">
-                    <Button Click="IrADetalles" Margin="10">
-                        <Image Source="The-Beatles-SgtPeppers.jpg" Width="105" Height="110" RenderTransformOrigin="0.5,0.523"/>
-                    </Button>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                    </StackPanel>
-                </StackPanel>
-                <StackPanel Margin="10">
-                    <Button Click="IrADetalles" Margin="10">
-                        <Image Source="the-dark-side-of-the-moon-pink-floyd-1973.jpg" Width="105" Height="110" RenderTransformOrigin="0.5,0.523"/>
-                    </Button>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                    </StackPanel>
-                </StackPanel>
-                <StackPanel Margin="10">
-                    <Button Click="IrADetalles" Margin="10">
-                        <Image Source="ed_sheeran_x-portada.jpg" Width="105" Height="110" RenderTransformOrigin="0.5,0.523"/>
-                    </Button>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                    </StackPanel>
-                </StackPanel>
-                <StackPanel Margin="10">
-                    <Button Click="IrADetalles" Margin="10">
-                        <Image Source="81K6EI2aW0L._UF894,1000_QL80_.jpg" Width="105" Height="110" RenderTransformOrigin="0.5,0.523"/>
-                    </Button>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                    </StackPanel>
-                </StackPanel>
-                <StackPanel Margin="10">
-                    <Button Click="IrADetalles" Margin="10">
-                        <Image Source="this-is-it-michael-jackson-portada-original.jpg" Width="105" Height="110" RenderTransformOrigin="0.5,0.523"/>
-                    </Button>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                    </StackPanel>
-                </StackPanel>
-            </WrapPanel>
+
+
+
+                </ListBoxItem>
+
+                <!-- Agregar otros ListBoxItems similares -->
+                <!-- ... Más elementos aquí ... -->
+
+            </ListBox>
+
         </ScrollViewer>
+        <Button Content="Agregar Disco" Click="AgregarDisco_Click" HorizontalAlignment="Left" Margin="20,110,0,210" Grid.Column="5" Width="50"/>
 
-
-        <ScrollViewer Margin="59.667,290,12,89" Grid.Column="1" Grid.ColumnSpan="5">
-            <WrapPanel>
-                <!-- ... -->
-
-                <StackPanel Margin="10">
-                    <Grid>
-                        <!-- Imagen -->
-                        <Button Click="IrADetalles" Margin="10">
-                            <Image Source="Kisschasy__United-Paper-People-by-Debaser_2005.jpg" Width="105" Height="110" RenderTransformOrigin="0.5,0.523"/>
-                        </Button>
-
-                        <!-- Border para el fondo del TextBlock -->
-                        <Border VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0" Background="#CCFF0000">
-                            <TextBlock FontWeight="Bold" Foreground="White" Padding="5">
-                <Run FontSize="10" Text="20% "/>
-                <Run FontSize="10" Text="OFF"/>
-                            </TextBlock>
-                        </Border>
-                    </Grid>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                    </StackPanel>
-                </StackPanel>
-                <StackPanel Margin="10">
-                    <Grid>
-                        <!-- Imagen -->
-                        <Button Click="IrADetalles" Margin="10">
-                            <Image Source="Kisschasy__United-Paper-People-by-Debaser_2005.jpg" Width="105" Height="110" RenderTransformOrigin="0.5,0.523"/>
-                        </Button>
-
-                        <!-- Border para el fondo del TextBlock -->
-                        <Border VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0" Background="#CCFF0000">
-                            <TextBlock FontWeight="Bold" Foreground="White" Padding="5">
-                <Run FontSize="10" Text="20% "/>
-                <Run FontSize="10" Text="OFF"/>
-                            </TextBlock>
-                        </Border>
-                    </Grid>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                    </StackPanel>
-                </StackPanel>
-                <StackPanel Margin="10">
-                    <Grid>
-                        <!-- Imagen -->
-                        <Button Click="IrADetalles" Margin="10">
-                            <Image Source="Kisschasy__United-Paper-People-by-Debaser_2005.jpg" Width="105" Height="110" RenderTransformOrigin="0.5,0.523"/>
-                        </Button>
-
-                        <!-- Border para el fondo del TextBlock -->
-                        <Border VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0" Background="#CCFF0000">
-                            <TextBlock FontWeight="Bold" Foreground="White" Padding="5">
-                <Run FontSize="10" Text="20% "/>
-                <Run FontSize="10" Text="OFF"/>
-                            </TextBlock>
-                        </Border>
-                    </Grid>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                    </StackPanel>
-                </StackPanel>
-                <StackPanel Margin="10">
-                    <Grid>
-                        <!-- Imagen -->
-                        <Button Click="IrADetalles" Margin="10">
-                            <Image Source="Kisschasy__United-Paper-People-by-Debaser_2005.jpg" Width="105" Height="110" RenderTransformOrigin="0.5,0.523"/>
-                        </Button>
-
-                        <!-- Border para el fondo del TextBlock -->
-                        <Border VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0" Background="#CCFF0000">
-                            <TextBlock FontWeight="Bold" Foreground="White" Padding="5">
-                <Run FontSize="10" Text="20% "/>
-                <Run FontSize="10" Text="OFF"/>
-                            </TextBlock>
-                        </Border>
-                    </Grid>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                    </StackPanel>
-                </StackPanel>
-                <StackPanel Margin="10">
-                    <Grid>
-                        <!-- Imagen -->
-                        <Button Click="IrADetalles" Margin="10">
-                            <Image Source="Kisschasy__United-Paper-People-by-Debaser_2005.jpg" Width="105" Height="110" RenderTransformOrigin="0.5,0.523"/>
-                        </Button>
-
-                        <!-- Border para el fondo del TextBlock -->
-                        <Border VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0" Background="#CCFF0000">
-                            <TextBlock FontWeight="Bold" Foreground="White" Padding="5">
-                <Run FontSize="10" Text="20% "/>
-                <Run FontSize="10" Text="OFF"/>
-                            </TextBlock>
-                        </Border>
-                    </Grid>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                    </StackPanel>
-                </StackPanel>
-                <StackPanel Margin="10">
-                    <Grid>
-                        <!-- Imagen -->
-                        <Button Click="IrADetalles" Margin="10">
-                            <Image Source="Kisschasy__United-Paper-People-by-Debaser_2005.jpg" Width="105" Height="110" RenderTransformOrigin="0.5,0.523"/>
-                        </Button>
-
-                        <!-- Border para el fondo del TextBlock -->
-                        <Border VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0" Background="#CCFF0000">
-                            <TextBlock FontWeight="Bold" Foreground="White" Padding="5">
-                <Run FontSize="10" Text="20% "/>
-                <Run FontSize="10" Text="OFF"/>
-                            </TextBlock>
-                        </Border>
-                    </Grid>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                    </StackPanel>
-                </StackPanel>
-                <StackPanel Margin="10">
-                    <Grid>
-                        <!-- Imagen -->
-                        <Button Click="IrADetalles" Margin="10">
-                            <Image Source="Kisschasy__United-Paper-People-by-Debaser_2005.jpg" Width="105" Height="110" RenderTransformOrigin="0.5,0.523"/>
-                        </Button>
-
-                        <!-- Border para el fondo del TextBlock -->
-                        <Border VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0" Background="#CCFF0000">
-                            <TextBlock FontWeight="Bold" Foreground="White" Padding="5">
-                <Run FontSize="10" Text="20% "/>
-                <Run FontSize="10" Text="OFF"/>
-                            </TextBlock>
-                        </Border>
-                    </Grid>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                    </StackPanel>
-                </StackPanel>
-                <StackPanel Margin="10">
-                    <Grid>
-                        <!-- Imagen -->
-                        <Button Click="IrADetalles" Margin="10">
-                            <Image Source="Kisschasy__United-Paper-People-by-Debaser_2005.jpg" Width="105" Height="110" RenderTransformOrigin="0.5,0.523"/>
-                        </Button>
-
-                        <!-- Border para el fondo del TextBlock -->
-                        <Border VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0" Background="#CCFF0000">
-                            <TextBlock FontWeight="Bold" Foreground="White" Padding="5">
-                <Run FontSize="10" Text="20% "/>
-                <Run FontSize="10" Text="OFF"/>
-                            </TextBlock>
-                        </Border>
-                    </Grid>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                    </StackPanel>
-                </StackPanel>
-                <StackPanel Margin="10">
-                    <Grid>
-                        <!-- Imagen -->
-                        <Button Click="IrADetalles" Margin="10">
-                            <Image Source="Kisschasy__United-Paper-People-by-Debaser_2005.jpg" Width="105" Height="110" RenderTransformOrigin="0.5,0.523"/>
-                        </Button>
-
-                        <!-- Border para el fondo del TextBlock -->
-                        <Border VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0" Background="#CCFF0000">
-                            <TextBlock FontWeight="Bold" Foreground="White" Padding="5">
-                <Run FontSize="10" Text="20% "/>
-                <Run FontSize="10" Text="OFF"/>
-                            </TextBlock>
-                        </Border>
-                    </Grid>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                        <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                    </StackPanel>
-                </StackPanel>
-            </WrapPanel>
-        </ScrollViewer>
     </Grid>
 </Window>
