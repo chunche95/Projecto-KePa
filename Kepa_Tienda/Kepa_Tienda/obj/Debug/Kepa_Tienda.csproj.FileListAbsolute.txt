@@ -34,7 +34,6 @@ C:\Users\34602\source\repos\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tienda.csproj
 C:\Users\34602\source\repos\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tienda.csproj.CoreCompileInputs.cache
 C:\Users\34602\source\repos\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tienda.exe
 C:\Users\34602\source\repos\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tienda.pdb
-D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tienda.csproj.AssemblyReference.cache
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\DatosDePago.baml
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\MainWindow.g.cs
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\Carrito.g.cs
