@@ -11,6 +11,8 @@ namespace Kepa_Tienda.View
         public string Titulo { get; set; }
         public double Precio { get; set; }
         public int Cantidad { get; set; }
+        public int Stock { get; set; }
+
         // Otros campos o propiedades que puedan representar un disco en tu tienda
     }
 
