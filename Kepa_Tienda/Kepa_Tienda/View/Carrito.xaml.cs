@@ -53,11 +53,7 @@ namespace Kepa_Tienda.View
 
  
  
-        private void Carrito_Click(object sender, MouseButtonEventArgs e)
-        {
-            Carrito carritoWindow = new Carrito();
-            carritoWindow.Show();
-        }
+      
 
    
 
@@ -65,6 +61,11 @@ namespace Kepa_Tienda.View
         {
             DatosDePago datosPago = new DatosDePago(discosSeleccionados); // Pasar la lista 'carrito' como argumento
             datosPago.Show(); // Mostrar la ventana de DatosDePago
+        }
+        private void Carrito_Click(object sender, MouseButtonEventArgs e)
+        {
+            Carrito carritoWindow = new Carrito();
+            carritoWindow.Show();
         }
         private void btnMinimize_Click(object sender, RoutedEventArgs e)
         {

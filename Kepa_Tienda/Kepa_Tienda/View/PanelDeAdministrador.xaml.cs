@@ -121,22 +121,30 @@ namespace Kepa_Tienda.View
 
             carritoWindow.Show();
         }
-       
-            private void Salir_Click(object sender, MouseButtonEventArgs e)
-            {
-                LoginView loginWindow = new LoginView(); // Crear una instancia de LoginView
-                loginWindow.Show(); // Mostrar la ventana LoginView
-                Close(); // Cerrar la ventana actual si es necesario
-            }
+
+        private void Salir_Click(object sender, MouseButtonEventArgs e)
+        {
+            LoginView loginWindow = new LoginView(); // Crear una instancia de LoginView
+            loginWindow.Show(); // Mostrar la ventana LoginView
+            Close(); // Cerrar la ventana actual si es necesario
+        }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void borrar(object sender, RoutedEventArgs e)
+        private void Borrar_Click(object sender, RoutedEventArgs e)
+        {
+        }
+        private void Editar_Click(object sender, RoutedEventArgs e)
         {
 
+            // Código para abrir la ventana de DetallesKrisschasy
+            DetallesKrisschasy detallesWindow = new DetallesKrisschasy();
+            detallesWindow.Show();
+
+            Close(); // 
         }
     }
 }
