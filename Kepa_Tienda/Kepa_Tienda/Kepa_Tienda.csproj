@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="View\AnadirDiscos.xaml.cs">
+      <DependentUpon>AnadirDiscos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Carrito.xaml.cs">
       <DependentUpon>Carrito.xaml</DependentUpon>
     </Compile>
@@ -64,9 +67,6 @@
     <Compile Include="View\ConfirmacionDePago.xaml.cs">
       <DependentUpon>ConfirmacionDePago.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\AnadirDisco.xaml.cs">
-      <DependentUpon>AnadirDisco.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\DatosDePago.xaml.cs">
       <DependentUpon>DatosDePago.xaml</DependentUpon>
     </Compile>
@@ -75,9 +75,6 @@
     </Compile>
     <Compile Include="View\Disco.cs" />
     <Compile Include="View\Detalles.cs" />
-    <Compile Include="View\EditarKrissChasy.xaml.cs">
-      <DependentUpon>EditarKrissChasy.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\ListaDeDeseos.xaml.cs">
       <DependentUpon>ListaDeDeseos.xaml</DependentUpon>
     </Compile>
@@ -115,6 +112,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\AnadirDiscos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Carrito.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -127,19 +128,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\AnadirDisco.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="View\DatosDePago.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\DetallesQueens.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\EditarKrissChasy.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
