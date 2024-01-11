@@ -34,7 +34,6 @@ C:\Users\34602\source\repos\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tienda.csproj
 C:\Users\34602\source\repos\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tienda.csproj.CoreCompileInputs.cache
 C:\Users\34602\source\repos\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tienda.exe
 C:\Users\34602\source\repos\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tienda.pdb
-D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tienda.csproj.AssemblyReference.cache
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\AnadirDiscos.baml
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\DatosDePago.baml
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\MainWindow.g.cs
@@ -44,7 +43,6 @@ D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\I
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\ConfirmacionDePago.g.cs
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\DatosDePago.g.cs
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\DetallesQueens.g.cs
-D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\EditarKrissChasy.g.cs
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\ListaDeDeseos.g.cs
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\ListaPedidos.g.cs
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\LoginView.g.cs
@@ -63,7 +61,6 @@ D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\I
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\CompraRealizada.baml
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\ConfirmacionDePago.baml
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\DetallesQueens.baml
-D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\EditarKrissChasy.baml
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\ListaDeDeseos.baml
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\ListaPedidos.baml
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\LoginView.baml

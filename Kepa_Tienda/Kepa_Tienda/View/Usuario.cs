@@ -10,6 +10,7 @@ namespace Kepa_Tienda.View
     {
         public string Nombre { get; set; }
         public RolUsuario Rol { get; set; }
+        public string RutaFotoPerfil { get; set; }
     }
 
 }

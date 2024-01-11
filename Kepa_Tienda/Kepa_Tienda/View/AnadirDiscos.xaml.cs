@@ -25,7 +25,7 @@ namespace Kepa_Tienda.View
         {
             InitializeComponent();
         }
-        public static class     DiscoGlobal
+        public static class DiscoGlobal
         {
             public static List<Disco> DiscosExistentes { get; } = new List<Disco>();
         }
@@ -36,12 +36,10 @@ namespace Kepa_Tienda.View
             {
                 Titulo = txtTitulo.Text,
                 Precio = double.Parse(txtPrecio.Text),
-                Artista =txtArtista.Text,
+                Artista = txtArtista.Text,
                 Stock = int.Parse(txtStock.Text),
                 Genero = txtGenero.Text,
-                
-
-                // Otros campos según tu modelo de datos
+                Imagen = ImagenSeleccionada.Source.ToString() // Asigna la ruta de la imagen
             };
 
             // Agrega el nuevo disco a la lista de discos existentes
@@ -58,15 +56,16 @@ namespace Kepa_Tienda.View
                     listBoxDiscos.Items.Add(nuevoDisco);
                 }
             }
-            DiscoGlobal.DiscosExistentes.Add(nuevoDisco);
             Principal inicio = new Principal();
             inicio.Show();
             // Cierra el formulario de agregar disco
             this.Close();
-        }
+       
+    
+    }
 
-        // Método para buscar un elemento visual en el árbol visual por su nombre
-        private T FindVisualChild<T>(DependencyObject parent, string childName) where T : DependencyObject
+    // Método para buscar un elemento visual en el árbol visual por su nombre
+    private T FindVisualChild<T>(DependencyObject parent, string childName) where T : DependencyObject
         {
             for (int i = 0; i < VisualTreeHelper.GetChildrenCount(parent); i++)
             {

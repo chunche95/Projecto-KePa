@@ -190,7 +190,8 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button Content="Agregar Disco" Click="AgregarDisco_Click" HorizontalAlignment="Left" Margin="210,80,0,415" Width="150" Grid.ColumnSpan="2" Grid.Column="1"/>
+            <Button x:Name="AgregarDisco" Content="AgregarDisco" Click="AgregarDisco_Click" HorizontalAlignment="Left" Margin="220,75,0,410" Width="131" Grid.ColumnSpan="2" Grid.Column="1" Visibility="Collapsed"/>
+
         </Grid>
 
         <!-- Sección central (tienda de vinilos) -->
@@ -287,6 +288,7 @@
                 </ListBoxItem>
             </ListBox>
         </ScrollViewer>
-        <StackPanel x:Name="adminButtonanadir" Orientation="Horizontal"/>
+      
+
     </Grid>
 </Window>
