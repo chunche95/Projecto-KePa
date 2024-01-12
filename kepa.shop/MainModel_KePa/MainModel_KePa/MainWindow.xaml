@@ -29,7 +29,7 @@
 
                 <Label Content="NOTHING HAS CHANGED – " Width="450" Height="80" BorderThickness="15,28,18,0" Margin="0,290,0,0" FontSize="22" FontFamily="Arial"/>
                 <Label Content="THE VERY BEST OF DAVID BOWIE" Width="460" Height="80" BorderThickness="15,28,18,0" Margin="-451,370,0,0" FontSize="22" FontFamily="Arial"/>
-                <Button x:Name="Go" Content=">" Width="72" Margin="57,555,28,36" Background="#FF0A0A0A" FontWeight="Bold" FontSize="48" BorderThickness="2,1,1,1" Foreground="#FFF9F2F2" FontFamily="SimSun" BorderBrush="#FFEDE7E7" VerticalAlignment="Center" HorizontalAlignment="Center" Height="83" MinWidth="57" MinHeight="555" HorizontalContentAlignment="Center" Padding="1,1,1,1" ScrollViewer.CanContentScroll="True" Click="Go_Click"/>
+                <Button x:Name="Go" Content=">" Width="72" Margin="57,555,28,36" Background="#FF0A0A0A" FontWeight="Bold" FontSize="48" BorderThickness="2,1,1,1" Foreground="#FFF9F2F2" FontFamily="SimSun" BorderBrush="#FFEDE7E7" VerticalAlignment="Center" HorizontalAlignment="Center" Height="83" MinWidth="57" MinHeight="555" HorizontalContentAlignment="Center" Padding="1,1,1,1" ScrollViewer.CanContentScroll="True"/>
                 <Button x:Name="Ordenr_now" Content="ORDER NOW" Height="77" RenderTransformOrigin="0.5,0.5" DockPanel.Dock="Bottom" Panel.ZIndex="45" Margin="-587,0,-70,22" Width="267" FontSize="36" FontFamily="Bahnschrift" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="Button_Click" Foreground="#FFEAF701" BorderBrush="#FFE5F108">
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.8" SpreadMethod="Reflect" MappingMode="Absolute">
@@ -59,7 +59,17 @@
                 <Image Source="/Img/acceso.png" Stretch="Fill" Margin="153,1,200,941" Width="87" Height="85" RenderTransformOrigin="1.552,-3.576"/>
                 <Image x:Name="information" Source="/Img/informacion.png" Stretch="Fill" Margin="297,1,0,0" Width="86" Height="85" HorizontalAlignment="Left" VerticalAlignment="Top" StretchDirection="DownOnly"/>
             </Grid>
-            <Image Source="/Img/KEPA MUSIC 2.png" Stretch="Fill" Width="150" Margin="-1900,-860,0,0" Height="150"/>
+            <Image Source="/Img/KEPA MUSIC 2.png" Stretch="Fill" Width="150" Margin="-1900,-860,0,17" Height="150" Panel.ZIndex="1" MinWidth="50" MinHeight="50">
+                <Image.BindingGroup>
+                    <BindingGroup/>
+                </Image.BindingGroup>
+                <Image.CacheMode>
+                    <BitmapCache/>
+                </Image.CacheMode>
+                <Image.Effect>
+                    <DropShadowEffect/>
+                </Image.Effect>
+            </Image>
 
         </DockPanel>
         <Grid Margin="886,881,886,55">

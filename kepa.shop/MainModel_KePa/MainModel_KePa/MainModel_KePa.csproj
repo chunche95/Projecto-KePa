@@ -24,7 +24,6 @@
 
   <ItemGroup>
     <Resource Include="Img\fondo-final-2.jpg" />
-    <Resource Include="Img\giraffes.jpg" />
     <Resource Include="Img\newportada_giraffes.png" />
     <Resource Include="Img\portada_giraffes.png" />
     <Resource Include="raspberry.jpg" />
