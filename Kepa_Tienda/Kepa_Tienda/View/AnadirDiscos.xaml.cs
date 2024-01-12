@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,8 +20,11 @@ namespace Kepa_Tienda.View
     /// <summary>
     /// Lógica de interacción para AnadirDiscos.xaml
     /// </summary>
+    /// 
+
     public partial class AnadirDiscos : Window
     {
+       
         public AnadirDiscos()
         {
             InitializeComponent();
@@ -56,8 +60,17 @@ namespace Kepa_Tienda.View
                     listBoxDiscos.Items.Add(nuevoDisco);
                 }
             }
-            Principal inicio = new Principal();
-            inicio.Show();
+          
+                if (WindowManager.MainWindow != null)
+                {
+                    // Muestra y activa la ventana principal
+                    WindowManager.MainWindow.Show();
+                    WindowManager.MainWindow.Activate();
+                }
+
+                // Oculta la ventana actual en lugar de cerrarla
+                this.Hide();
+            
             // Cierra el formulario de agregar disco
             this.Close();
        
@@ -123,9 +136,15 @@ namespace Kepa_Tienda.View
 
         private void Volver(object sender, RoutedEventArgs e)
         {
-            Principal mainWindow = new Principal(); // Reemplaza 'MainWindow' con el nombre de tu ventana principal
-            mainWindow.Show();
-            this.Close(); // Cierra la ventana actual
+            if (WindowManager.MainWindow != null)
+            {
+                // Muestra y activa la ventana principal
+                WindowManager.MainWindow.Show();
+                WindowManager.MainWindow.Activate();
+            }
+
+            // Oculta la ventana actual en lugar de cerrarla
+            this.Hide();
         }
     }
 

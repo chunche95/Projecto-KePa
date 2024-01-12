@@ -16,6 +16,12 @@ using static Kepa_Tienda.View.AnadirDiscos;
 
 namespace Kepa_Tienda.View
 {
+
+    public static class WindowManager
+    {
+        public static Principal MainWindow { get; set; }
+    }
+
     /// <summary>
     /// Lógica de interacción para Principal.xaml
     /// </summary>
@@ -23,6 +29,34 @@ namespace Kepa_Tienda.View
     {
         private Usuario usuarioActual;
 
+        public Principal(Usuario usuario)
+        {
+            InitializeComponent();
+            CargarDiscos(); // Cargar los discos al iniciar la ventana
+
+            usuarioActual = usuario;
+
+            // Obtener la instancia de LoginView desde las ventanas abiertas
+            LoginView loginView = Application.Current.Windows.OfType<LoginView>().FirstOrDefault();
+
+            // Asegúrate de que loginView no sea null antes de llamar a ObtenerUsuario
+            if (loginView != null)
+            {
+                // Llama a ObtenerUsuario para obtener el usuario actual
+                usuarioActual = loginView.ObtenerUsuario();
+
+                // Asegúrate de que usuarioActual no sea null antes de llamar a ConfigurarUsuarioActual
+                if (usuarioActual != null)
+                {
+                    // Llama a ConfigurarUsuarioActual con el usuario obtenido
+                    ConfigurarUsuarioActual(usuarioActual);
+
+                    // Llama a MostrarDatosUsuario con la información del usuario
+                    MostrarDatosUsuario(usuarioActual.Nombre, usuarioActual.RutaFotoPerfil, usuarioActual.Rol);
+                }
+            }
+            WindowManager.MainWindow = this;
+        }
         public Principal()
         {
             InitializeComponent();
@@ -35,7 +69,7 @@ namespace Kepa_Tienda.View
             if (loginView != null)
             {
                 // Llama a ObtenerUsuario para obtener el usuario actual
-                Usuario usuarioActual = loginView.ObtenerUsuario();
+                usuarioActual = loginView.ObtenerUsuario();
 
                 // Asegúrate de que usuarioActual no sea null antes de llamar a ConfigurarUsuarioActual
                 if (usuarioActual != null)
@@ -48,6 +82,7 @@ namespace Kepa_Tienda.View
                 }
 
             }
+            WindowManager.MainWindow = this;
         }
 
 
@@ -62,7 +97,7 @@ namespace Kepa_Tienda.View
             // Abre un formulario o ventana para agregar discos
             AnadirDiscos anadirDiscos = new AnadirDiscos();
             anadirDiscos.Show();
-            Close();
+            Hide();
         }
 
 
@@ -84,67 +119,68 @@ namespace Kepa_Tienda.View
             }
         }
 
+        
+
+        // Método para obtener el disco seleccionado
+        private Disco ObtenerDiscoSeleccionado()
+        {
+            // Verifica si hay un elemento seleccionado en el ListBox
+            if (ListBoxDiscos.SelectedItem is Disco discoSeleccionado)
+            {
+                return discoSeleccionado;
+            }
+
+            return null;
+        }
+
+        // Método para actualizar la interfaz después de eliminar el disco
         private void Borrar_Click(object sender, RoutedEventArgs e)
         {
-            // Mostrar un MessageBox para confirmar la acción
-            MessageBoxResult result = MessageBox.Show("¿Estás seguro que deseas eliminar este disco?", "Confirmar Eliminación", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            // Obtener el disco seleccionado
+            Disco discoSeleccionado = ListBoxDiscos.SelectedItem as Disco;
 
-            if (result == MessageBoxResult.Yes)
+            if (discoSeleccionado != null)
             {
-                // Obtener el disco seleccionado
-                Disco discoSeleccionado = ObtenerDiscoSeleccionado();
+                // Mostrar un MessageBox para confirmar la acción
+                MessageBoxResult result = MessageBox.Show("¿Estás seguro que deseas eliminar este disco?", "Confirmar Eliminación", MessageBoxButton.YesNo, MessageBoxImage.Warning);
 
-                // Eliminar el disco de la lista
-                if (discoSeleccionado != null)
+                if (result == MessageBoxResult.Yes)
                 {
-                    // Eliminar discoSeleccionado de la lista de discos existentes
+                    // Eliminar el disco de la lista
                     AnadirDiscos.DiscoGlobal.DiscosExistentes.Remove(discoSeleccionado);
 
                     // Actualizar la interfaz para reflejar los cambios
                     ActualizarInterfaz();
                 }
             }
-
-            // Llamada correcta a la función MostrarDatosUsuario
-            MostrarDatosUsuario(usuarioActual.Nombre, usuarioActual.RutaFotoPerfil, usuarioActual.Rol);
         }
-
 
         // Método para actualizar la interfaz después de eliminar el disco
         private void ActualizarInterfaz()
         {
-            // Actualizar la vista del ListBox
-            ListBoxDiscos.Items.Refresh();
+            // Volver a cargar la lista de discos en la interfaz
+            ListBoxDiscos.ItemsSource = AnadirDiscos.DiscoGlobal.DiscosExistentes.ToList();
         }
 
 
-        // Método para obtener el disco seleccionado (adaptar según cómo se obtenga el disco seleccionado)
-        private Disco ObtenerDiscoSeleccionado()
-        {
-            // Implementa la lógica para obtener el disco seleccionado, por ejemplo, desde un ListBox
-            // Puedes acceder al ListBox y obtener el disco seleccionado de la siguiente manera:
-            if (ListBoxDiscos.SelectedItem != null)
-            {
-                return ListBoxDiscos.SelectedItem as Disco;
-            }
-            else
-            {
-                return null;
-            }
-        }
+
+
+
 
         // Método para actualizar la interfaz después de eliminar el disco
 
 
         private void Editar_Click(object sender, RoutedEventArgs e)
         {
-
             // Código para abrir la ventana de DetallesKrisschasy
-            DetallesKrisschasy detallesWindow = new DetallesKrisschasy();
+            DetallesKrisschasy detallesWindow = new DetallesKrisschasy(usuarioActual);
+            detallesWindow.Owner = this;  // Establecer la ventana principal como propietaria de la ventana de detalles
             detallesWindow.Show();
 
-            Close(); // 
+            // Ocultar la ventana principal en lugar de cerrarla
+            this.Hide();
         }
+
 
         private List<Disco> listaDeDiscos = new List<Disco>(); // Declaración de la lista de discos
 
@@ -189,7 +225,7 @@ namespace Kepa_Tienda.View
 
 
             DeseosWindow.Show();
-            this.Close(); // Cierra la ventana actual
+            this.Hide(); // Cierra la ventana actual
         }
         private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {
@@ -214,11 +250,12 @@ namespace Kepa_Tienda.View
         private void IrADetalles(object sender, RoutedEventArgs e)
         {
             // Código para abrir la ventana de DetallesKrisschasy
-            DetallesKrisschasy detallesWindow = new DetallesKrisschasy();
+            DetallesKrisschasy detallesWindow = new DetallesKrisschasy(usuarioActual); // Pasar el usuario
             detallesWindow.Show();
 
-            Close(); // O
+            Hide(); // Opcionalmente, puedes cerrar la ventana principal si es necesario
         }
+
 
 
         private void IrADetallesQueens(object sender, RoutedEventArgs e)
@@ -227,13 +264,13 @@ namespace Kepa_Tienda.View
             DetallesQueens detallesQWindow = new DetallesQueens();
             detallesQWindow.Show();
 
-            Close();
+            Hide();
         }
         private void IrAListaDePedidos(object sender, RoutedEventArgs e)
         {
             ListaPedidos PedidosWindow = new ListaPedidos(PedidoGlobal.PedidosRealizados);
             PedidosWindow.Show();
-            this.Close();
+            this.Hide();
         }
         private void Carrito_Click(object sender, MouseButtonEventArgs e)
         {

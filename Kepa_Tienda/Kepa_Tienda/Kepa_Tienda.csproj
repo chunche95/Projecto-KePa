@@ -85,9 +85,6 @@
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Pago.cs" />
-    <Compile Include="View\PanelDeAdministrador.xaml.cs">
-      <DependentUpon>PanelDeAdministrador.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\Pedido.cs" />
     <Compile Include="View\Pedidos.cs" />
     <Compile Include="View\Principal.xaml.cs">
@@ -145,10 +142,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\LoginView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\PanelDeAdministrador.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
