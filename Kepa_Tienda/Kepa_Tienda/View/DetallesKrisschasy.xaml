@@ -170,14 +170,15 @@ TextBlock.FontSize="22" >
             </StackPanel>
             <Image HorizontalAlignment="Left" Margin="0,14.889,0,0" VerticalAlignment="Top" Width="30" Height="29" Source="shopping-cart-outline-icon-vector.jpg" MouseLeftButtonDown="Carrito_Click" RenderTransformOrigin="0.667,0.483" Grid.RowSpan="2" Grid.Column="6" Grid.Row="1"/>
             <Image HorizontalAlignment="Left" Margin="10,14.889,0,0" VerticalAlignment="Top" Width="30" Height="29" Source="images.png" MouseLeftButtonDown="Salir_Click" Grid.RowSpan="2" Grid.Column="7" RenderTransformOrigin="0.633,1.333" Grid.Row="1"/>
-            <Rectangle Fill="Black" Stroke="Black" Margin="419,64.556,60,240.444" Opacity="0.75" OpacityMask="Black" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="8"/>
+            <Rectangle Fill="Black" Stroke="Black" Margin="419,65,45,240" Opacity="0.95" OpacityMask="Black" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="8"/>
 
         </Grid>
 
         <Image Margin="100,125,395,157" Source="Kisschasy__United-Paper-People-by-Debaser_2005.jpg"/>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="United Paper People" VerticalAlignment="Top" Margin="435,140,0,0" FontSize="30" Foreground="#FFFFF4F4" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="In Stock" VerticalAlignment="Top" Margin="435,195,0,0" Foreground="White" FontSize="14"/>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="5,99 €" VerticalAlignment="Top" Margin="435,245,0,0" FontSize="24" Foreground="White"/>
+        <TextBox x:Name="txtTitulo" HorizontalAlignment="Left" TextWrapping="Wrap" Text="United Paper People" VerticalAlignment="Top" Margin="430,140,0,0" FontSize="30" Foreground="#FFFFF4F4" FontWeight="Bold" IsReadOnly="{Binding IsReadOnly, RelativeSource={RelativeSource AncestorType={x:Type local:DetallesKrisschasy}}}" Background="Black" Width="320" Height="Auto" Padding="5"/>
+        <TextBox x:Name="txtArtista" HorizontalAlignment="Left" TextWrapping="Wrap" Text="KissChassy" VerticalAlignment="Top" Margin="430,195,0,0" Foreground="White" FontSize="14" IsReadOnly="{Binding IsReadOnly, RelativeSource={RelativeSource AncestorType={x:Type local:DetallesKrisschasy}}}" Background="Black" Width="155" Height="Auto" Padding="5"/>
+        <TextBox x:Name="txtPrecio" HorizontalAlignment="Left" TextWrapping="Wrap" Text="5,99 €" VerticalAlignment="Top" Margin="430,262,0,0" FontSize="24" Foreground="White" IsReadOnly="{Binding IsReadOnly, RelativeSource={RelativeSource AncestorType={x:Type local:DetallesKrisschasy}}}" Background="Black" Width="155" Height="Auto" Padding="5"/>
+        <TextBox x:Name="txtStock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="In Stock" VerticalAlignment="Top" Margin="430,226,0,0" Foreground="White" FontSize="14" IsReadOnly="{Binding IsReadOnly, RelativeSource={RelativeSource AncestorType={x:Type local:DetallesKrisschasy}}}" Background="Black" Width="155" Height="Auto" Padding="5"/>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="430,328,0,0">
             <Button Content="-" Width="30" Height="30" Click="RestarCantidad_Click" RenderTransformOrigin="-0.167,1.167"/>
@@ -222,7 +223,7 @@ TextBlock.FontSize="22" >
         FontSize="12"
         FontFamily="Montserrat"
         Cursor="Hand"                           
-        Margin="0,345,135,137"
+        Margin="0,345,155,137"
         Click="addWish" RenderTransformOrigin="0.514,-1.111"
         HorizontalAlignment="Right" Width="100" Background="#FFEBE70D" FontWeight="Bold">
             <Button.Style>
@@ -260,7 +261,28 @@ TextBlock.FontSize="22" >
         <TextBlock HorizontalAlignment="Left" Margin="657,492,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="107" Height="57" TextAlignment="Right" Foreground="Black"><Run Text="Help &amp; Support"/><LineBreak/><Run Text="contac"/><Run Text="t"/><Run Text=" us"/><LineBreak/><Run Text="Frecuently Fixshed"/><LineBreak/><Run/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="35,533,0,0" TextWrapping="Wrap" Text="KEPA Music © 2023" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="35,515,0,0" TextWrapping="Wrap" Text="Tu destino de discos de vinilo desde 2023." VerticalAlignment="Top" FontSize="8"/>
+        <Button Content="Editar Datos" Click="EditarDatos_Click" Margin="657,324,23,194"/>
 
+        <Button x:Name="btnGuardarCambios" 
+        Content="Guardar Cambios" 
+        Width="120" 
+        Height="30" 
+        HorizontalAlignment="Right" 
+        Margin="0,363,23,157"
+        Click="GuardarCambios_Click"
+        IsEnabled="False">
+            <!-- Estilo del botón -->
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#28AEED"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#278BEF"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
 
     </Grid>
 </Window>

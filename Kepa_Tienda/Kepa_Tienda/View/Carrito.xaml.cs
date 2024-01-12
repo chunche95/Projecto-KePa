@@ -25,14 +25,14 @@ namespace Kepa_Tienda.View
     public partial class Carrito : Window
     {
         List<Disco> discosSeleccionados = CarritoGlobal.DiscosSeleccionados;
-       
+
 
         public void VaciarCarrito()
         {
             discosSeleccionados.Clear();
         }
 
-            public Carrito()
+        public Carrito()
         {
             InitializeComponent();
         }
@@ -51,11 +51,11 @@ namespace Kepa_Tienda.View
 
 
 
- 
- 
-      
 
-   
+
+
+
+
 
         private void RealizarCompra_Click(object sender, RoutedEventArgs e)
         {
@@ -79,7 +79,7 @@ namespace Kepa_Tienda.View
         public void MostrarDiscosEnCarrito()
         {
             // Obtener los discos seleccionados desde la lista global
-            
+
 
             // Mostrar los discos en el ListBox (o cualquier otro control que uses)
             ListaDeDiscos.ItemsSource = discosSeleccionados;
@@ -89,7 +89,7 @@ namespace Kepa_Tienda.View
         }
 
         private void Volver(object sender, RoutedEventArgs e)
-        { 
+        {
             Principal mainWindow = new Principal(); // Reemplaza 'MainWindow' con el nombre de tu ventana principal
             mainWindow.Show();
             this.Close(); // Cierra la ventana actual
@@ -101,6 +101,7 @@ namespace Kepa_Tienda.View
             Close(); // Cerrar la ventana actual si es necesario
         }
     }
+
 
 }
 
