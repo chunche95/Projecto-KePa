@@ -51,9 +51,15 @@ namespace Kepa_Tienda.View
             carrito.Clear();
 
             // Mostrar la ventana principal u otra ventana según sea necesario
-            Principal principal = new Principal();
-            principal.Show();
-            Close();
+            if (WindowManager.MainWindow != null)
+            {
+                // Muestra y activa la ventana principal
+                WindowManager.MainWindow.Show();
+                WindowManager.MainWindow.Activate();
+            }
+
+            // Oculta la ventana actual en lugar de cerrarla
+            this.Hide();
         }
         private void Salir_Click(object sender, MouseButtonEventArgs e)
         {

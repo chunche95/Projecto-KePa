@@ -3,9 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-
-          xmlns:local="clr-namespace:WPF_LoginForm.View"
-        mc:Ignorable="d"
+        xmlns:local="clr-namespace:WPF_LoginForm.View" 
+    mc:Ignorable="d"
         Title="Iniciar Sesion" Height="550" Width="800"
         WindowStyle="None"
         ResizeMode="NoResize"
@@ -13,7 +12,17 @@
         Background="Transparent"
         AllowsTransparency="True"
         MouseDown="Window_MouseDown">
-
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="resources/StringResources.en-US.xaml" />
+                <!-- Asegúrate de que la ruta sea correcta -->
+                <ResourceDictionary Source="resources/StringResources.es-ES.xaml" />
+                <!-- Asegúrate de que la ruta sea correcta -->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
     <Border CornerRadius="12" Width="796" Height="559" HorizontalAlignment="Left" Margin="4,0,0,-9" VerticalAlignment="Bottom">
 
         <Border.Background>
@@ -33,13 +42,18 @@
             </Border.Background>
 
             <Grid Margin="0,0,8,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="302*"/>
+                    <ColumnDefinition Width="97*"/>
+                    <ColumnDefinition Width="14*"/>
+                </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <Grid Grid.Row="1" Margin="33,0,-33,421">
+                <Grid Grid.Row="1" Margin="33,0,-19,421" Grid.ColumnSpan="3">
 
                     <Grid.ColumnDefinitions>
 
@@ -157,7 +171,7 @@
 
                 <StackPanel Width="Auto"
                             Orientation="Vertical"
-                            Margin="33,0,28,28" RenderTransformOrigin="0.5,0.5" Height="443" VerticalAlignment="Bottom" Grid.RowSpan="2">
+                            Margin="33,0,28,28" RenderTransformOrigin="0.5,0.5" Height="443" VerticalAlignment="Bottom" Grid.RowSpan="2" Grid.ColumnSpan="2">
 
                     <TextBlock
                         Foreground="White"
@@ -272,7 +286,7 @@
                     Foreground="White"
                     Padding="5"
                     Click="Registrarse_Click"
-                    FontSize="12" RenderTransformOrigin="0.053,0.486" BorderBrush="#FF194721">
+                    FontSize="12" RenderTransformOrigin="0.053,0.486" BorderBrush="#FF194721" Grid.ColumnSpan="2">
                     <Button.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -317,6 +331,19 @@
                 <Button HorizontalAlignment="Left" Margin="-163,18,0,0" VerticalAlignment="Top" Width="45" Height="42" Grid.RowSpan="2" Background="#FF69D3BA">
                     <Image Height="32" Width="45" Source="home.png" RenderTransformOrigin="0.6,0.5"/>
                 </Button>
+
+                <ComboBox x:Name="cbIdiomas" 
+                          HorizontalAlignment="Left"
+                          Margin="48,-16,-86,24" 
+                          VerticalAlignment="Center" Opacity="0.6"
+                            SelectedIndex="0"
+SelectionChanged="cb_elementoSeleccionado" Background="Black" Height="22" Padding="5,3,5,3"
+                          MaxWidth="80" Width="52" Grid.Column="2">
+                    <ComboBoxItem x:Name="cbItem1"
+Content="ES"/>
+                    <ComboBoxItem x:Name="cbItem2"
+Content="EN"/>
+                </ComboBox>
             </Grid>
         </Border>
     </Border>

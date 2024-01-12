@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="WindowTitle">Peliflix</sys:String>
+    <sys:String x:Key="btLogin">Iniciar sesión</sys:String>
+    <sys:String x:Key="cbItem1">ES</sys:String>
+    <sys:String x:Key="lblContraseña">Contraseña</sys:String>
+    <sys:String x:Key="lblLogin">Inicio sesión</sys:String>
+    <sys:String x:Key="lblRecordarContraseña">¿Olvidó su contraseña?</sys:String>
+    <sys:String x:Key="lblUsuario">Usuario</sys:String>
+
+</ResourceDictionary>

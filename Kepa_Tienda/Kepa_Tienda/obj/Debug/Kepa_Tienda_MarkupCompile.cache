@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\App.xaml
-13-1304533780
+15532643384
 
 231405122373
 13-1505183044
-MainWindow.xaml;View\AnadirDiscos.xaml;View\Carrito.xaml;View\CompraRealizada.xaml;View\ConfirmacionDePago.xaml;View\DatosDePago.xaml;View\DetallesQueens.xaml;View\ListaDeDeseos.xaml;View\ListaPedidos.xaml;View\LoginView.xaml;View\Principal.xaml;View\Registrarse.xaml;View\DetallesKrisschasy.xaml;
+MainWindow.xaml;Resources\StringResources.en-US.xaml;Resources\StringResources.es-ES.xaml;View\AnadirDiscos.xaml;View\Carrito.xaml;View\CompraRealizada.xaml;View\ConfirmacionDePago.xaml;View\DatosDePago.xaml;View\DetallesQueens.xaml;View\ListaDeDeseos.xaml;View\ListaPedidos.xaml;View\LoginView.xaml;View\Principal.xaml;View\Registrarse.xaml;View\DetallesKrisschasy.xaml;
 
 False
 

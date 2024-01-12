@@ -73,4 +73,5 @@ D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\I
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tienda.exe
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tienda.pdb
 D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\GeneratedInternalTypeHelper.g.cs
-D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tienda.csproj.AssemblyReference.cache
+D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\Resources\StringResources.en-US.baml
+D:\2.Documentos\Univeridad Kevin\3º año, 1º semestre\ingenieria del sofware\Ikrea\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\Resources\StringResources.es-ES.baml

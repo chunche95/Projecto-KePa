@@ -105,6 +105,32 @@ namespace WPF_LoginForm.View
                 MessageBox.Show("Error en la interfaz de usuario. Inténtelo de nuevo.");
             }
         }
+        private void cb_elementoSeleccionado(object sender, SelectionChangedEventArgs e)
+        {
+            var comboBox = (ComboBox)sender;
+            var selectedItem = comboBox.SelectedItem as ComboBoxItem;
+
+            if (selectedItem != null)
+            {
+                string idioma = selectedItem.Content.ToString();
+
+                // Cambiar los recursos de cadena según el idioma seleccionado
+                if (idioma == "ES")
+                {
+                    // Establecer el idioma español
+                    ResourceDictionary dict = new ResourceDictionary();
+                    dict.Source = new Uri("/Kepa_Tienda;component/resources/StringResources.es-ES.xaml", UriKind.Relative);
+                    Application.Current.Resources.MergedDictionaries.Add(dict);
+                }
+                else if (idioma == "EN")
+                {
+                    // Establecer el idioma inglés
+                    ResourceDictionary dict = new ResourceDictionary();
+                    dict.Source = new Uri("/Kepa_Tienda;component/resources/StringResources.en-US.xaml", UriKind.Relative);
+                    Application.Current.Resources.MergedDictionaries.Add(dict);
+                }
+            }
+        }
 
 
 
