@@ -17,7 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCopyrightAttribute("KEPA 2023")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Tienda de Vinilos KEPA")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91c6a46bdad1a3869b4d54d6d5b8d92ca21c7c6c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07a05e2837c45582601855d761c704701f6979a0")]
 [assembly: System.Reflection.AssemblyProductAttribute("MVC-CRUD-KePa")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MVC-CRUD-KePa")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
