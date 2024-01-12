@@ -15,9 +15,9 @@
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="resources/StringResources.en-US.xaml" />
+                <ResourceDictionary Source="/Kepa_Tienda;component/resources/StringResources.es-ES.xaml" />
                 <!-- Asegúrate de que la ruta sea correcta -->
-                <ResourceDictionary Source="resources/StringResources.es-ES.xaml" />
+                <ResourceDictionary Source="/Kepa_Tienda;component/resources/StringResources.en-US.xaml" />
                 <!-- Asegúrate de que la ruta sea correcta -->
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

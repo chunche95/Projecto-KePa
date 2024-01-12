@@ -178,7 +178,7 @@ namespace Kepa_Tienda.View
             detallesWindow.Show();
 
             // Ocultar la ventana principal en lugar de cerrarla
-            this.Hide();
+            Hide();
         }
 
 
@@ -225,7 +225,7 @@ namespace Kepa_Tienda.View
 
 
             DeseosWindow.Show();
-            this.Hide(); // Cierra la ventana actual
+            Hide(); // Cierra la ventana actual
         }
         private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {
@@ -270,7 +270,7 @@ namespace Kepa_Tienda.View
         {
             ListaPedidos PedidosWindow = new ListaPedidos(PedidoGlobal.PedidosRealizados);
             PedidosWindow.Show();
-            this.Hide();
+            Hide();
         }
         private void Carrito_Click(object sender, MouseButtonEventArgs e)
         {

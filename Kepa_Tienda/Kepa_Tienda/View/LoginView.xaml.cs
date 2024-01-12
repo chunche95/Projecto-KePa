@@ -1,8 +1,10 @@
 ﻿using Kepa_Tienda.View;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -105,36 +107,41 @@ namespace WPF_LoginForm.View
                 MessageBox.Show("Error en la interfaz de usuario. Inténtelo de nuevo.");
             }
         }
-        private void cb_elementoSeleccionado(object sender, SelectionChangedEventArgs e)
+        private void SetLanguage(string languageCode)
         {
-            var comboBox = (ComboBox)sender;
-            var selectedItem = comboBox.SelectedItem as ComboBoxItem;
-
-            if (selectedItem != null)
+           /* try
             {
-                string idioma = selectedItem.Content.ToString();
+                // Cambia la cultura de la aplicación
+                CultureInfo newCulture = new CultureInfo(languageCode);
+                Thread.CurrentThread.CurrentCulture = newCulture;
+                Thread.CurrentThread.CurrentUICulture = newCulture;
 
-                // Cambiar los recursos de cadena según el idioma seleccionado
-                if (idioma == "ES")
-                {
-                    // Establecer el idioma español
-                    ResourceDictionary dict = new ResourceDictionary();
-                    dict.Source = new Uri("/Kepa_Tienda;component/resources/StringResources.es-ES.xaml", UriKind.Relative);
-                    Application.Current.Resources.MergedDictionaries.Add(dict);
-                }
-                else if (idioma == "EN")
-                {
-                    // Establecer el idioma inglés
-                    ResourceDictionary dict = new ResourceDictionary();
-                    dict.Source = new Uri("/Kepa_Tienda;component/resources/StringResources.en-US.xaml", UriKind.Relative);
-                    Application.Current.Resources.MergedDictionaries.Add(dict);
-                }
+                // Carga el diccionario de recursos correspondiente
+                ResourceDictionary dict = new ResourceDictionary();
+                dict.Source = new Uri($"/Kepa_Tienda;component/resources/StringResources.{languageCode}.xaml", UriKind.Relative);
+                this.Resources.MergedDictionaries.Clear();
+                this.Resources.MergedDictionaries.Add(dict);
             }
+            catch (Exception ex)
+            {
+                // Maneja cualquier excepción que pueda ocurrir durante el cambio de idioma
+                MessageBox.Show($"Error cambiando el idioma: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }*/
         }
 
+        private void cb_elementoSeleccionado(object sender, SelectionChangedEventArgs e)
+        {
+            // Cambia el idioma cuando se selecciona un nuevo elemento en el ComboBox
+            ComboBox cb = (ComboBox)sender;
+            ComboBoxItem selectedItem = (ComboBoxItem)cb.SelectedItem;
+            string languageCode = selectedItem.Content.ToString();
+            SetLanguage(languageCode);
+        }
+    
 
 
-        public Usuario ObtenerUsuario()
+
+public Usuario ObtenerUsuario()
         {
             // Devuelve el usuario actual (puede ser un objeto que hayas configurado durante el inicio de sesión)
             return usuarioActual;

@@ -111,8 +111,7 @@ namespace Kepa_Tienda.View
                 else
                 {
                     DeseosWindow = new ListaDeDeseos();
-                    DeseosWindow.MostrarDiscosEnLista();
-                    DeseosWindow.Show();
+          
                 }
             }
         }
@@ -129,9 +128,15 @@ namespace Kepa_Tienda.View
         }
         private void Volver(object sender, RoutedEventArgs e)
         {
-            Principal mainWindow = new Principal(); // Reemplaza 'MainWindow' con el nombre de tu ventana principal
-            mainWindow.Show();
-            this.Close(); // Cierra la ventana actual
+            if (WindowManager.MainWindow != null)
+            {
+                // Muestra y activa la ventana principal
+                WindowManager.MainWindow.Show();
+                WindowManager.MainWindow.Activate();
+            }
+
+            // Oculta la ventana actual en lugar de cerrarla
+            Hide();
         }
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
