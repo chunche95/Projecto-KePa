@@ -7,16 +7,82 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Margin="0,0,0,-6">
+        <Grid.Background>
+            <ImageBrush ImageSource="https://raw.githubusercontent.com/chunche95/Projecto-KePa/img/Imagenes/wallpaper/w5.jpg" Stretch="UniformToFill" TileMode="FlipX"/>
+        </Grid.Background>
         <!-- Cabecera KEPA-->
         <Grid Margin="0,0,0,356">
-            <Image HorizontalAlignment="Left" Height="55" Margin="41,18,0,0" VerticalAlignment="Top" Width="64" Stretch="UniformToFill"/>
+            <Grid x:Name="Cabecera">
+                <Grid.Background>
+                    <SolidColorBrush Color="#FF585858" Opacity="0.77"/>
+                </Grid.Background>
+                <!-- Logo-->
+                <Button Content="" HorizontalAlignment="Left" Margin="41,18,0,0" VerticalAlignment="Top" Height="60" Width="60">
+                    <Button.Background>
+                        <ImageBrush ImageSource="https://raw.githubusercontent.com/chunche95/Projecto-KePa/img/Imagenes/logo/Rectangle%204.png"/>
+                    </Button.Background>
+                </Button>
+                <!-- Caja de busqueda -->
+                <TextBox x:Name="searchTextBox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="320" Height="24" TextChanged="searchTextBox_TextChanged" Text="Search..." UndoLimit="30" SelectionOpacity="12" Cursor="Hand" FontFamily="Century Gothic" FontStyle="Italic" />
+                <!-- Botón de búsqueda -->
+                <Button Content="" HorizontalAlignment="Left" Margin="510,30,0,30" Click="OnSearchButton" Width="50" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="https://raw.githubusercontent.com/chunche95/Projecto-KePa/img/Imagenes/botones/lupa.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <!-- Botones de  idioma, carrito y login -->
+                <!-- Language -->
+                <ComboBox Width="50" Height="22" Margin="590,33,160,29" Background="#FFE0D5D5" SelectedIndex="1">
+                    <ComboBoxItem IsSelected="True" Content="ES" Background="#FFE4DADA"/>
+                    <ComboBoxItem Content="EN"/>
+                </ComboBox>
+                <!-- Carrito -->
+                <Button Content="" HorizontalAlignment="Left" Margin="670,30,0,0" VerticalAlignment="Top" Width="25" Height="25">
+                    <Button.Background>
+                        <ImageBrush ImageSource="https://raw.githubusercontent.com/chunche95/Projecto-KePa/img/Imagenes/botones/carrito.jpg"/>
+                    </Button.Background>
+                </Button>
+                <!-- Usuario -->
+                <Button Content="" HorizontalAlignment="Left" Margin="704,30,0,0" VerticalAlignment="Top" Width="25" Height="25">
+                    <Button.Background>
+                        <ImageBrush ImageSource="https://th.bing.com/th/id/OIP.akxBDw_WHuTIGEAaX-rVfgHaIE?rs=1&amp;pid=ImgDetMain" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+            </Grid>
         </Grid>
+        <DockPanel LastChildFill="False" Margin="0,84,0,70">
+            <Menu Width="165" Background="Black" Opacity="0.6" Height="155" Margin="0,0,0,126">
+                <Button x:Name="inicio_btn" Content="Inicio" Height="22" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click_1" Margin="0,10,0,0"/>
+                <Button x:Name="explorar_btn" Content="Explorar" Height="22" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Button x:Name="micoleccion_btn" Content="Mi colección" Height="21" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Button x:Name="listadeseos_btn" Content="Lista de deseos" Height="22" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Button x:Name="pedidos_btn" Content="Pedidos" Height="22" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click_2"/>
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="155" Background="#FFD4D3D3">
+                    <Image x:Name="FichaUsuario" Height="50" Width="50" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="50,2,0,0" OpacityMask="#FFE0D2D2"/>
+                    <TextBlock TextWrapping="Wrap" Margin="0,60,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Height="22" Width="95"><Run Language="es-es" Text="Texto de pruebas"/></TextBlock>
+                </Grid>
+            </Menu>
+
+
+        </DockPanel>
         <!-- Footer KEPA -->
-        <Grid Height="56" VerticalAlignment="Top" Margin="0,384,0,0">
+        <Grid x:Name="Footer" Height="60" VerticalAlignment="Top" Margin="0,370,0,0" Background="#FF585858"  Opacity="0.77">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0*"/>
                 <ColumnDefinition/>
-                <ColumnDefinition Width="39*"/>
             </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1" HorizontalAlignment="Left" Height="49" Margin="34,0,0,0" VerticalAlignment="Center" Width="155">
+                <TextBlock x:Name="KEPA_MUSIC_COPY_RIGTH" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Cascadia Mono Light" FontSize="22"><Run Language="es-es" Text="KEPA MUSIC"/></TextBlock>
+                <TextBlock x:Name="KEPA_MUSIC_COPY_RIGTH_Copiar" HorizontalAlignment="Center" Margin="0,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Cascadia Mono Light" FontSize="11"><Run Text="The sound of real music"/><Run Language="es-es" Text="."/></TextBlock>
+                <TextBlock x:Name="KEPA_MUSIC_COPY_RIGTH_Copiar1" HorizontalAlignment="Left" Margin="0,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Cascadia Mono Light" FontSize="8"><Run Language="es-es" Text="KEPA Music © 2024"/></TextBlock>
+            </Grid>
+            <Grid Grid.Column="1" HorizontalAlignment="Left" Height="49" Margin="648,0,0,0" VerticalAlignment="Center" Width="129">
+                <TextBlock x:Name="KEPA_MUSIC_COPY_RIGTH_Copiar2" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Cascadia Mono Light" FontSize="11"><Run Language="es-es" Text="Soporte técnico"/></TextBlock>
+                <TextBlock x:Name="KEPA_MUSIC_COPY_RIGTH_Copiar3" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Cascadia Mono Light" FontSize="11"><Run Language="es-es" Text="Contacto"/></TextBlock>
+                <TextBlock x:Name="KEPA_MUSIC_COPY_RIGTH_Copiar4" HorizontalAlignment="Center" Margin="0,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Cascadia Mono Light" FontSize="11"><Run Language="es-es" Text="Preguntas frecuentes"/></TextBlock>
+            </Grid>
         </Grid>
+        <!-- Barra de estado -->
+        <StatusBar Margin="0,430,0,1" Opacity="0.3"/>
     </Grid>
 </Window>

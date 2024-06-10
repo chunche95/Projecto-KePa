@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Kepa_Tienda"
+    "\\Kepa_Tienda",
+    "\\Kepa_Tienda\\kepa_jun_version"
   ],
-  "SelectedNode": "\\Kepa_Tienda",
+  "SelectedNode": "\\Kepa_Tienda\\kepa_jun_version\\MainWindow.xaml",
   "PreviewInSolutionExplorer": false
 }
