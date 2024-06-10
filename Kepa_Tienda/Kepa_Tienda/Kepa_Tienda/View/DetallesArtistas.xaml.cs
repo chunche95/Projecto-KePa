@@ -1,5 +1,10 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,45 +12,114 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
+using WinForms = System.Windows.Forms;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WPF_LoginForm.View;
+using Application = System.Windows.Application;
+using MessageBox = System.Windows.MessageBox;
+using System.Diagnostics;
 
 namespace Kepa_Tienda.View
 {
-    /// <summary>
-    /// Lógica de interacción para DetallesArtistas.xaml
-    /// </summary>
     public partial class DetallesArtistas : Window
     {
-        public List<Disco> discosEnCarrito = new List<Disco>();
-        public List<Disco> discosEnListaDeDeseos = new List<Disco>();
-        private Carrito carritoWindow;
-        private ListaDeDeseos DeseosWindow;
-        private Disco disco;
         private Artista artista;
+
         public DetallesArtistas(Artista artista)
         {
             InitializeComponent();
-            
-          
+            this.artista = artista;
+            CargarDatosArtista();
         }
 
-
-        private void Salir_Click(object sender, MouseButtonEventArgs e)
+        private void CargarDatosArtista()
         {
-            LoginView loginWindow = new LoginView(); // Crear una instancia de LoginView
-            loginWindow.Show(); // Mostrar la ventana LoginView
-            Close(); // Cerrar la ventana actual si es necesario
+            if (artista != null)
+            {
+
+                NombreArtisticoTextBox.Text = artista.NombreArtistico;
+                NombreRealTextBox.Text = artista.NombreReal;
+                ComponentesTextBox.Text = artista.Componentes;
+                FechaNacimientoTextBox.Text = artista.FechaNacimiento.ToShortDateString();
+                DescripcionTextBox.Text = artista.Descripcion;
+                GeneroMusicalTextBox.Text = artista.GeneroMusical;
+               
+                NumeroMeGustasTextBox.Text = artista.NumeroMeGustas.ToString();
+                ImagenImage.Source = new BitmapImage(new Uri(artista.GaleriaImagenes));
+                DiscografiaTextBox.Text = artista.Discografia.ToString();
+
+
+            }
+
+            else
+            {
+                MessageBox.Show("Error: El objeto 'Disco' es nulo.");
+            }
         }
 
-        private void btnMinimize_Click(object sender, RoutedEventArgs e)
+        private void FacebookButton_Click(object sender, RoutedEventArgs e)
         {
-            WindowState = WindowState.Minimized;
+   //desarrollar mas adelante 
         }
-        private void Volver(object sender, RoutedEventArgs e)
+
+        private void Eliminar(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Establece la conexión con tu base de datos
+                using (SqlConnection connection = new SqlConnection("Data Source=localhost;Initial Catalog=vinilos;Integrated Security=True"))
+                {
+                    // Abre la conexión
+                    connection.Open();
+
+                    // Crea una consulta SQL para eliminar el artista
+                    string query = "DELETE FROM Artistas WHERE ArtistaID = @ArtistaID"; // Ajusta el nombre del campo según tu estructura de base de datos
+
+                    // Crea un comando SQL
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Asigna el valor del ArtistaID del artista seleccionado al parámetro del comando SQL
+                        command.Parameters.AddWithValue("@ArtistaID", artista.ArtistaID); // Ajusta el nombre de la propiedad según la estructura de tu clase Artista
+
+                        // Ejecuta el comando SQL
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            // Muestra un mensaje de éxito si se eliminó correctamente
+                            MessageBox.Show("Artista eliminado correctamente de la base de datos.");
+                        }
+                        else
+                        {
+                            // Muestra un mensaje si no se encontró el artista con el ArtistaID proporcionado
+                            MessageBox.Show("No se encontró el artista con el ArtistaID especificado.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Muestra un mensaje de error si ocurre alguna excepción
+                MessageBox.Show("Error al intentar eliminar el artista: " + ex.Message);
+            }
+        }
+        private void Editar(object sender, RoutedEventArgs e)
+        {
+            // Crear una instancia de la clase Editar y pasar el objeto Disco como parámetro al constructor
+            EditarArtista editarArtistaWindow = new EditarArtista(artista);
+
+            // Mostrar la ventana Editar
+            editarArtistaWindow.Show();
+
+            // Cerrar la ventana actual si es necesario
+            Close();
+        }
+
+        private void Volver_Click(object sender, RoutedEventArgs e)
         {
             if (WindowManager.MainWindow != null)
             {
@@ -55,38 +129,33 @@ namespace Kepa_Tienda.View
             }
 
             // Oculta la ventana actual en lugar de cerrarla
-            Hide();
+            this.Hide();
         }
+
+
+        private void Carrito_Click(object sender, MouseButtonEventArgs e)
+        {
+            Carrito carritoWindow = new Carrito();
+            carritoWindow.Show();
+        }
+        private void btnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
-        private void Carrito_Click(object sender, MouseButtonEventArgs e)
+        private void Salir_Click(object sender, MouseButtonEventArgs e)
         {
-            Carrito carritoWindow = new Carrito();
-
-            // Pasar la lista de discos seleccionados al carrito
-            carritoWindow.MostrarDiscosEnCarrito();
-
-            carritoWindow.Show();
-            Close();
+            LoginView loginWindow = new LoginView(); // Crear una instancia de LoginView
+            loginWindow.Show(); // Mostrar la ventana LoginView
+            Close(); // Cerrar la ventana actual si es necesario
         }
 
 
 
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-            // Implementa la lógica para el evento TextBox_TextChanged_1
-        }
-
-        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            // Lógica para el evento Window_MouseDown
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
     }
+
 }

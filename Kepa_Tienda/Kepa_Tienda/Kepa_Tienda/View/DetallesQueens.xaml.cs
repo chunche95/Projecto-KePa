@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,15 +22,18 @@ namespace Kepa_Tienda.View
         
         public List<Disco> discosEnCarrito = new List<Disco>();
         public List<Disco> discosEnListaDeDeseos = new List<Disco>();
-        private Carrito carritoWindow;
-        private ListaDeDeseos DeseosWindow;
-        private Disco disco; 
+        private Disco disco;
+        private Usuario usuarioActual;
 
-        public DetallesQueens(Disco disco)
+        public DetallesQueens(Disco disco, Usuario usuarioActual)
         {
             InitializeComponent();
+            this.usuarioActual = usuarioActual;
             this.disco = disco;
             Console.WriteLine($"Disco seleccionado: {disco.Titulo}");
+
+
+            ConfigurarVisibilidadBotonElimnarDisco();
 
             // Configurar los controles en la ventana con los datos del disco seleccionado
             TituloTextBlock.Text = disco.Titulo;
@@ -39,6 +43,19 @@ namespace Kepa_Tienda.View
             ArtistaTextBlock.Text = disco.Artista;
         }
 
+        private void ConfigurarVisibilidadBotonElimnarDisco()
+        {
+            if (usuarioActual.Tipo == "admin")
+            {
+                Eliminar.Visibility = Visibility.Visible;
+                Editar.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Eliminar.Visibility = Visibility.Collapsed;
+                Editar.Visibility = Visibility.Collapsed;
+            }
+        }
 
         private void RestarCantidad_Click(object sender, RoutedEventArgs e)
         {
@@ -60,12 +77,6 @@ namespace Kepa_Tienda.View
                 CantidadTextBox.Text = cantidadActual.ToString();
             }
         }
-
-
-
-        public List<Disco> discosSeleccionados = new List<Disco>();
-
-
 
         // Ajustar los métodos addCar y addWish para utilizar discoSeleccionado
         private void addCar(object sender, RoutedEventArgs e)
@@ -156,6 +167,52 @@ namespace Kepa_Tienda.View
         }
 
 
+        private void EliminarDisco(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Establece la conexión con tu base de datos
+                SqlConnection connection = new SqlConnection("Data Source=localhost;Initial Catalog=vinilos;Integrated Security=True");
+
+                // Abre la conexión
+                connection.Open();
+
+                // Crea una consulta SQL para eliminar el disco
+                string query = "DELETE FROM DiscosVinilo WHERE DiscoID = @DiscoID"; // Ajusta el nombre del campo según tu estructura de base de datos
+
+                // Crea un comando SQL
+                SqlCommand command = new SqlCommand(query, connection);
+
+                // Asigna el valor de DiscoID del disco seleccionado al parámetro del comando SQL
+                command.Parameters.AddWithValue("@DiscoID", disco.DiscoID); // Ajusta el nombre de la propiedad según la estructura de tu clase Disco
+
+                // Ejecuta el comando SQL
+                command.ExecuteNonQuery();
+
+                // Cierra la conexión
+                connection.Close();
+
+                // Muestra un mensaje de éxito
+                MessageBox.Show("Disco eliminado correctamente de la base de datos.");
+            }
+            catch (Exception ex)
+            {
+                // Muestra un mensaje de error si ocurre alguna excepción
+                MessageBox.Show("Error al intentar eliminar el disco: " + ex.Message);
+            }
+        }
+
+        private void Editar_Click(object sender, RoutedEventArgs e)
+        {
+            // Crear una instancia de la clase Editar y pasar el objeto Disco como parámetro al constructor
+            Editar editarWindow = new Editar(disco);
+
+            // Mostrar la ventana Editar
+            editarWindow.Show();
+
+            // Cerrar la ventana actual si es necesario
+            Close();
+        }
 
         private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {

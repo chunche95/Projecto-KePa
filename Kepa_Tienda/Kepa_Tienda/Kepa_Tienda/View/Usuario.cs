@@ -19,6 +19,6 @@ namespace Kepa_Tienda.View
     public enum RolUsuario
     {
         Usuario,
-        Administrador
+        admin
     }
 }

@@ -18,10 +18,8 @@ using System.Windows.Shapes;
 using WPF_LoginForm.View;
 using static Kepa_Tienda.View.AnadirDiscos;
 
-
 namespace Kepa_Tienda.View
 {
-
     public static class WindowManager
     {
         public static Principal MainWindow { get; set; }
@@ -33,15 +31,15 @@ namespace Kepa_Tienda.View
         private SqlConnection conexion;
         private DataTable tablaVinilos = new DataTable(); // Declaración de la tabla de datos
 
-       
         public Principal(Usuario usuarioActual)
         {
             InitializeComponent();
+            this.usuarioActual = usuarioActual; // Inicializa el usuario actual
 
             // Inicializa la conexión con la base de datos
             string cadenaConexion = "Data Source=localhost;Initial Catalog=vinilos;Integrated Security=True";
             conexion = new SqlConnection(cadenaConexion);
-            
+
             // Obtener la instancia de LoginView desde las ventanas abiertas
             LoginView loginView = Application.Current.Windows.OfType<LoginView>().FirstOrDefault();
 
@@ -49,6 +47,9 @@ namespace Kepa_Tienda.View
             CargarDiscosDesdeBaseDatos();
             MostrarInformacionUsuario(usuarioActual);
             WindowManager.MainWindow = this;
+
+            // Configurar la visibilidad del botón según el rol del usuario
+            ConfigurarVisibilidadBotonAgregarDisco();
         }
 
         private void MostrarInformacionUsuario(Usuario usuario)
@@ -59,13 +60,24 @@ namespace Kepa_Tienda.View
             imgProfile.Source = new BitmapImage(new Uri(usuario.rutaimagen, UriKind.RelativeOrAbsolute));
         }
 
+        private void ConfigurarVisibilidadBotonAgregarDisco()
+        {
+            if (usuarioActual.Tipo == "admin")
+            {
+                AgregarDisco.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                AgregarDisco.Visibility = Visibility.Collapsed;
+            }
+        }
+
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             // Abrir la página DetallesQueens y pasar el objeto Disco como parámetro
             Artistas artistas = new Artistas(usuarioActual);
             artistas.Show();
         }
-
 
         private void CargarDiscosDesdeBaseDatos()
         {
@@ -100,7 +112,6 @@ namespace Kepa_Tienda.View
             }
         }
 
-        // Modificar el método VerDetalles_Click
         private void AbrirDetallesQueens(object sender, RoutedEventArgs e)
         {
             // Obtener la fila seleccionada en el ListBox
@@ -111,6 +122,7 @@ namespace Kepa_Tienda.View
                 // Crear un objeto Disco con la información de la fila seleccionada
                 Disco discoSeleccionado = new Disco
                 {
+                    DiscoID = Convert.ToInt32(selectedRow["DiscoID"]),
                     Titulo = selectedRow["Titulo"].ToString(),
                     Descripcion = selectedRow["Descripcion"].ToString(),
                     Precio = Convert.ToDouble(selectedRow["Precio"]), // Conversión a double
@@ -124,7 +136,7 @@ namespace Kepa_Tienda.View
                 };
 
                 // Abrir la página DetallesQueens y pasar el objeto Disco como parámetro
-                DetallesQueens detallesQueensWindow = new DetallesQueens(discoSeleccionado);
+                DetallesQueens detallesQueensWindow = new DetallesQueens(discoSeleccionado, usuarioActual);
                 detallesQueensWindow.Show();
             }
             else
@@ -133,14 +145,11 @@ namespace Kepa_Tienda.View
             }
         }
 
-
-
-
-
         public void ConfigurarUsuarioActual(Usuario usuario)
         {
             usuarioActual = usuario;
-          //  ConfigurarInterfazSegunRol();
+            // Configurar la visibilidad del botón según el rol del usuario
+            ConfigurarVisibilidadBotonAgregarDisco();
         }
 
         private void AgregarDisco_Click(object sender, RoutedEventArgs e)
@@ -180,13 +189,6 @@ namespace Kepa_Tienda.View
             ListBoxDiscos.ItemsSource = AnadirDiscos.DiscoGlobal.DiscosExistentes.ToList();
         }
 
-
-        // Método para actualizar la interfaz después de eliminar el disco
-
-
-      
-
-
         private void btnMinimize_Click(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
@@ -196,23 +198,18 @@ namespace Kepa_Tienda.View
         {
             Application.Current.Shutdown();
         }
-       
+
         private void IrAListaDeDeseos_Click(object sender, RoutedEventArgs e)
         {
-            ListaDeDeseos DeseosWindow = new ListaDeDeseos(); // 
+            ListaDeDeseos DeseosWindow = new ListaDeDeseos();
 
             DeseosWindow.MostrarDiscosEnLista();
-
 
             DeseosWindow.Show();
             Hide(); // Cierra la ventana actual
         }
+
         private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
         {
 
         }
@@ -222,13 +219,13 @@ namespace Kepa_Tienda.View
 
         }
 
-
         private void IrAListaDePedidos(object sender, RoutedEventArgs e)
         {
             ListaPedidos PedidosWindow = new ListaPedidos(PedidoGlobal.PedidosRealizados);
             PedidosWindow.Show();
             Hide();
         }
+
         private void Carrito_Click(object sender, MouseButtonEventArgs e)
         {
             Carrito carritoWindow = new Carrito();
@@ -238,6 +235,7 @@ namespace Kepa_Tienda.View
 
             carritoWindow.Show();
         }
+
         public void MostrarDatosUsuario(string nombreUsuario, string rutaFotoPerfil, RolUsuario tipoUsuario)
         {
             txtUserName.Text = nombreUsuario; // Asignar el nombre de usuario al TextBlock correspondiente
@@ -245,8 +243,6 @@ namespace Kepa_Tienda.View
             txtUserType.Text = tipoUsuario.ToString(); // Convertir el tipo de usuario a string usando ToString()
             txtLastAccess.Text = $"{DateTime.Now}"; // Asignar la fecha de último acceso (fecha actual)
         }
-
-
 
         private void Salir_Click(object sender, MouseButtonEventArgs e)
         {

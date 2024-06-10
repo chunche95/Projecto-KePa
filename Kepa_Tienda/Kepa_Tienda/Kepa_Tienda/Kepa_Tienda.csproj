@@ -211,6 +211,12 @@
       <DependentUpon>DetallesQueens.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Disco.cs" />
+    <Compile Include="View\Editar.xaml.cs">
+      <DependentUpon>Editar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditarArtista.xaml.cs">
+      <DependentUpon>EditarArtista.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ListaDeDeseos.xaml.cs">
       <DependentUpon>ListaDeDeseos.xaml</DependentUpon>
     </Compile>
@@ -289,6 +295,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\DetallesQueens.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Editar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EditarArtista.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -492,6 +506,12 @@
     <Resource Include="View\key-icon.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Imagenes\añadir_favoritos.png" />
+    <Resource Include="Imagenes\pngtree-love-heart-icon-png-image_2881492.png" />
+    <Resource Include="Imagenes\favorito.png" />
+    <Resource Include="Imagenes\anadir-a-la-cesta.png" />
+    <Resource Include="View\facebook.png" />
+    <Resource Include="View\como-simbolo.png" />
     <Content Include="Vinilos_tienda.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

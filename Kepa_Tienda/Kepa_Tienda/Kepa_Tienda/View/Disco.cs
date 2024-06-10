@@ -4,6 +4,7 @@ namespace Kepa_Tienda.View
 {
     public class Disco
     {
+        public int DiscoID { get; set; }
         public string Titulo { get; set; }
         public double Precio { get; set; }
         public int Cantidad { get; set; } // Campo Cantidad descomentado

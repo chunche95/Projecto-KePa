@@ -87,6 +87,7 @@ namespace Kepa_Tienda.View
                 // Crear un objeto Artista con la información de la fila seleccionada
                 Artista artistaSeleccionado = new Artista
                 {
+                    ArtistaID = Convert.ToInt32(selectedRow["ArtistaID"]),
                     NombreArtistico = selectedRow["NombreArtistico"].ToString(),
 
                     NombreReal = selectedRow["NombreReal"].ToString(),
@@ -95,9 +96,9 @@ namespace Kepa_Tienda.View
                     Descripcion = selectedRow["Descripcion"].ToString(),
                     GeneroMusical = selectedRow["GeneroMusical"].ToString(),
                     EnlacesRedesSociales = selectedRow["EnlacesRedesSociales"].ToString(),
-                    MeGustas = Convert.ToInt32(selectedRow["NumeroMeGustas"]),
-                    GaleriaImagenes = new List<string>(), // Asegúrate de llenar esto si es necesario
-                    Discografia = new List<Disco>() // Asegúrate de llenar esto si es necesario
+                    NumeroMeGustas = Convert.ToInt32(selectedRow["NumeroMeGustas"]),
+                    GaleriaImagenes = selectedRow["GaleriaImagenes"].ToString(), // Asegúrate de llenar esto si es necesario
+                    Discografia = selectedRow["Discografia"].ToString(), // Asegúrate de llenar esto si es necesario
                 };
 
 

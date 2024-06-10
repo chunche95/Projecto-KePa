@@ -123,6 +123,9 @@ C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\Res
 C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\Resources\StringResources.es-ES.baml
 C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\AnadirDiscos.baml
 C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\DatosDePago.baml
+C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\DetallesArtistas.baml
+C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\Editar.baml
+C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\EditarArtista.baml
 C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\LoginView.baml
 C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\MainWindow.g.cs
 C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\AnadirDiscos.g.cs
@@ -131,7 +134,10 @@ C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\Vie
 C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\CompraRealizada.g.cs
 C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\ConfirmacionDePago.g.cs
 C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\DatosDePago.g.cs
+C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\DetallesArtistas.g.cs
 C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\DetallesQueens.g.cs
+C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\Editar.g.cs
+C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\EditarArtista.g.cs
 C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\ListaDeDeseos.g.cs
 C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\ListaPedidos.g.cs
 C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\LoginView.g.cs
@@ -230,5 +236,3 @@ C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kep
 C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tie.23A863AE.Up2Date
 C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tienda.exe
 C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tienda.pdb
-C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\DetallesArtistas.g.cs
-C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\DetallesArtistas.baml

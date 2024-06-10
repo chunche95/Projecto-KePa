@@ -32,6 +32,9 @@
             <Button Content="Ofertas" Height="30" Click="Button_Click_2"/>
             <Button Content="Lista de Deseos" Height="30" Click="IrAListaDeDeseos_Click"/>
             <Button Content="Pedidos" Height="30" Click="IrAListaDePedidos"/>
+            <Button x:Name="AgregarDisco" Content="Agregar Disco" Height="30" Click="AgregarDisco_Click" Visibility="Collapsed"/>
+            
+
         </StackPanel>
 
         <!-- Sección superior -->
@@ -99,7 +102,7 @@
 
 
             <!-- Opciones de idioma, carrito, etc. -->
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,5,70,519" Width="65" Grid.ColumnSpan="2" Grid.Column="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,89,39,435" Width="65" Grid.Column="2">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,524">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -113,6 +116,8 @@
                     <Button Content="Salir"/>
                 </StackPanel>
             </StackPanel>
+
+           
             <!-- Para mostrar el nombre de usuario -->
             <TextBlock x:Name="txtUserName" HorizontalAlignment="Left" Margin="50,324,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65"/>
             <!-- Para mostrar la foto de perfil -->
@@ -122,7 +127,7 @@
             <!-- Para mostrar la fecha de último acceso -->
             <TextBlock x:Name="txtLastAccess" HorizontalAlignment="Left" Margin="20,370,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110"/>
             <Image HorizontalAlignment="Left" Height="75" Margin="41,-5,0,0" VerticalAlignment="Top" Width="110" Source="Rectangle 4.png"/>
-            <Rectangle Fill="#FFE8E8E8" HorizontalAlignment="Left" Height="76" Margin="0,464,-1,0" Stroke="White" VerticalAlignment="Top" Width="801" Grid.ColumnSpan="3"/>
+            <Rectangle Fill="#FFE8E8E8" HorizontalAlignment="Left" Height="76" Margin="0,464,0,0" Stroke="White" VerticalAlignment="Top" Width="801" Grid.ColumnSpan="3"/>
             <TextBox HorizontalAlignment="Left" Height="30" Margin="24,467,0,0" TextWrapping="Wrap" Text="KEPA MUSIC" VerticalAlignment="Top" Width="135" TextChanged="TextBox_TextChanged_1" Background="#FFE8E8E8" FontSize="22" Foreground="Black" FlowDirection="RightToLeft"/>
             <TextBlock HorizontalAlignment="Left" Margin="5,479,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="107" Height="57" TextAlignment="Right" Foreground="Black" Grid.Column="2"><Run Text="Help &amp; Support"/><LineBreak/><Run Text="contac"/><Run Text="t"/><Run Text=" us"/><LineBreak/><Run Text="Frecuently Fixshed"/><LineBreak/><Run/></TextBlock>
             <TextBlock HorizontalAlignment="Left" Margin="173,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="423"><Run FontWeight="Bold"  FontSize="30" Text="Nuevos Lanzamientos"/><LineBreak/><Run FontWeight="Bold"/></TextBlock>
@@ -228,9 +233,10 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="AgregarDisco" Content="AgregarDisco" Click="AgregarDisco_Click" HorizontalAlignment="Left" Margin="220,75,0,410" Width="131" Grid.ColumnSpan="2" Grid.Column="1" Visibility="Collapsed"/>
 
         </Grid>
+
+       
 
         <!-- Sección central (tienda de vinilos) -->
         <ScrollViewer Margin="56,150,20,160" Grid.Column="1" Grid.ColumnSpan="5">

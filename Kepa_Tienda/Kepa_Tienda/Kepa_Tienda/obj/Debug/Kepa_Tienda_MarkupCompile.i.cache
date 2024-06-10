@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\App.xaml
-161855053253
+18-2070479293
 1-1081244643
-281712807885
+301016685439
 54-583889549
-MainWindow.xaml;Resources\StringResources.en-US.xaml;Resources\StringResources.es-ES.xaml;View\AnadirDiscos.xaml;View\Artistas.xaml;View\Carrito.xaml;View\CompraRealizada.xaml;View\ConfirmacionDePago.xaml;View\DatosDePago.xaml;View\DetallesArtistas.xaml;View\DetallesQueens.xaml;View\ListaDeDeseos.xaml;View\ListaPedidos.xaml;View\LoginView.xaml;View\Principal.xaml;View\Registrarse.xaml;
+MainWindow.xaml;Resources\StringResources.en-US.xaml;Resources\StringResources.es-ES.xaml;View\AnadirDiscos.xaml;View\Artistas.xaml;View\Carrito.xaml;View\CompraRealizada.xaml;View\ConfirmacionDePago.xaml;View\DatosDePago.xaml;View\DetallesArtistas.xaml;View\DetallesQueens.xaml;View\Editar.xaml;View\EditarArtista.xaml;View\ListaDeDeseos.xaml;View\ListaPedidos.xaml;View\LoginView.xaml;View\Principal.xaml;View\Registrarse.xaml;
 
-False
+True
 
