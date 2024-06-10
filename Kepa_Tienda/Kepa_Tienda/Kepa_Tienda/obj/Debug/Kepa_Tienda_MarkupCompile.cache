@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\
+D:\Documentos\_RepositoriosGitHub\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\
 Kepa_Tienda
 none
 false
 DEBUG;TRACE
-C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\App.xaml
+D:\Documentos\_RepositoriosGitHub\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\App.xaml
 161855053253
 1-1081244643
 27-500070793
-54-583889549
+541333706651
 MainWindow.xaml;Resources\StringResources.en-US.xaml;Resources\StringResources.es-ES.xaml;View\AnadirDiscos.xaml;View\Artistas.xaml;View\Carrito.xaml;View\CompraRealizada.xaml;View\ConfirmacionDePago.xaml;View\DatosDePago.xaml;View\DetallesArtistas.xaml;View\DetallesQueens.xaml;View\ListaDeDeseos.xaml;View\ListaPedidos.xaml;View\LoginView.xaml;View\Principal.xaml;View\Registrarse.xaml;
 
-False
+True
 
