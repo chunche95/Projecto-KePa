@@ -272,14 +272,13 @@
 
         <!-- Precio Original -->
         <TextBlock x:Name="PrecioOriginalTextBlock"
-                   HorizontalAlignment="Left"
-                   TextWrapping="Wrap"
-                   VerticalAlignment="Top"
-                   Margin="430,236,0,0"
-                   FontSize="14"
-                   Foreground="White"
-                   TextDecorations="Strikethrough"
-                   Visibility="Collapsed" />
+            HorizontalAlignment="Left"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Margin="430,236,0,0"
+            FontSize="14"
+            Foreground="White"
+            Visibility="Collapsed" />
 
         <!-- Precio con Descuento -->
         <TextBlock x:Name="PrecioDescuentoTextBlock"

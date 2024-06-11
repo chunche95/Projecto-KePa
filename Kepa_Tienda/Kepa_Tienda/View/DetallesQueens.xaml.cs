@@ -66,27 +66,43 @@ namespace Kepa_Tienda.View
                     if (reader.Read())
                     {
                         decimal precioOriginal = reader.GetDecimal(0);
-                        decimal porcentajeOferta = reader.GetDecimal(1);
+                        decimal? porcentajeOferta = reader.IsDBNull(1) ? null : (decimal?)reader.GetDecimal(1);
 
-                        if (porcentajeOferta > 0)
+                        if (porcentajeOferta.HasValue && porcentajeOferta > 0)
                         {
-                            decimal precioConDescuento = precioOriginal - (precioOriginal * porcentajeOferta / 100);
+                            // Calcular el precio con descuento
+                            decimal precioConDescuento = precioOriginal - (precioOriginal * porcentajeOferta.Value / 100);
 
-                            PrecioOriginalTextBlock.Text = precioOriginal.ToString("C2");
-                            PrecioDescuentoTextBlock.Text = precioConDescuento.ToString("C2");
-
+                            PrecioOriginalTextBlock.Text = $"{precioOriginal:C2} (Antes)";
+                            PrecioOriginalTextBlock.Foreground = Brushes.White; // Restaurar el color original
                             PrecioOriginalTextBlock.Visibility = Visibility.Visible;
+
+                            PrecioDescuentoTextBlock.Text = $"{precioConDescuento:C2} (Ahora)";
+                            PrecioDescuentoTextBlock.Foreground = Brushes.Red; // Cambiar el color a rojo
                             PrecioDescuentoTextBlock.Visibility = Visibility.Visible;
                         }
                         else
                         {
+                            // Mostrar solo el precio original si no hay oferta
                             PrecioOriginalTextBlock.Text = precioOriginal.ToString("C2");
+                            PrecioOriginalTextBlock.Foreground = Brushes.White; // Restaurar el color original
                             PrecioOriginalTextBlock.Visibility = Visibility.Visible;
+
+                            PrecioDescuentoTextBlock.Visibility = Visibility.Collapsed;
                         }
                     }
                 }
             }
         }
+
+
+
+
+
+
+
+
+
         private void RestarCantidad_Click(object sender, RoutedEventArgs e)
         {
             if (int.TryParse(CantidadTextBox.Text, out int cantidadActual))
