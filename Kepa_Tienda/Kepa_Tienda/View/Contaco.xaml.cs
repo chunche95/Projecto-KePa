@@ -15,7 +15,7 @@ using WPF_LoginForm.View;
 
 namespace Kepa_Tienda.View
 {
-    /
+    
     public partial class Contaco : Window
     {
         public Contaco()

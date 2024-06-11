@@ -37,5 +37,5 @@ namespace Kepa_Tienda.View
             Hide();
         }
     }
-    }
+    
 }

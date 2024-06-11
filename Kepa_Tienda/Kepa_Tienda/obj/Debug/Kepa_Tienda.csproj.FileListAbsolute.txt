@@ -362,3 +362,5 @@ C:\Users\Kevin\Documents\GitHub\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\
 C:\Users\Kevin\Documents\GitHub\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tie.23A863AE.Up2Date
 C:\Users\Kevin\Documents\GitHub\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tienda.exe
 C:\Users\Kevin\Documents\GitHub\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tienda.pdb
+C:\Users\Kevin\Documents\GitHub\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\Ayuda.baml
+C:\Users\Kevin\Documents\GitHub\Projecto-KePa\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\Ayuda.g.cs
