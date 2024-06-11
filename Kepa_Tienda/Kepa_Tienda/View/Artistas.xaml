@@ -128,7 +128,7 @@
             <Image HorizontalAlignment="Left" Height="75" Margin="50,-5,0,0" VerticalAlignment="Top" Width="110" Source="Rectangle 4.png"/>
             <Rectangle Fill="#FFE8E8E8" HorizontalAlignment="Left" Height="76" Margin="0,464,-1,0" Stroke="White" VerticalAlignment="Top" Width="801" Grid.ColumnSpan="3"/>
             <TextBox HorizontalAlignment="Left" Height="30" Margin="24,467,0,0" TextWrapping="Wrap" Text="KEPA MUSIC" VerticalAlignment="Top" Width="135" TextChanged="TextBox_TextChanged_1" Background="#FFE8E8E8" FontSize="22" Foreground="Black" FlowDirection="RightToLeft"/>
-            <TextBlock HorizontalAlignment="Left" Margin="5,479,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="107" Height="57" TextAlignment="Right" Foreground="Black" Grid.Column="2"><Run Text="Help &amp; Support"/><LineBreak/><Run Text="contac"/><Run Text="t"/><Run Text=" us"/><LineBreak/><Run Text="Frecuently Fixshed"/><LineBreak/><Run/></TextBlock>
+            <Button Content="Contact Us" Height="30" Click="AbrirVentanaContacUs" Margin="37,485,-1,25" Grid.Column="2"/>
             <TextBlock HorizontalAlignment="Left" Margin="173,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
             <Run FontWeight="Bold" FontSize="20" Text="Artistas"/>
             </TextBlock>

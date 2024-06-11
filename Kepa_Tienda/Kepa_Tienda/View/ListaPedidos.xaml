@@ -69,6 +69,7 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <!-- Sección de la izquierda -->
+
                     <StackPanel Background="#FFABB6B9" Margin="-19,90,14,75" Grid.ColumnSpan="2">
                         <!-- Elementos del menú lateral -->
                         <Button Content="Inicio" Height="30" Click="IrInicio" />
@@ -100,10 +101,13 @@
                     </Rectangle>
                     <Image HorizontalAlignment="Left" Margin="275,23,0,0" VerticalAlignment="Top" Width="30" Height="39" Source="images.png" MouseLeftButtonDown="Salir_Click" RenderTransformOrigin="0.067,-0.026" Grid.Column="5"/>
                     <Button Click="Volver" Margin="10,3,35,497">
-                        <Image Source="Rectangle 4.png" Width="65" Height="72" />
+                        <Image Source="Rectangle 4.png" Width="66" Height="70" />
                     </Button>
+                    
                     <Rectangle Fill="#FFE8E8E8" Margin="-20,500,-20,-20" Stroke="White" Grid.ColumnSpan="6" Grid.RowSpan="2"/>
                     <TextBox HorizontalAlignment="Left" Height="30" Margin="-4,500,0,0" TextWrapping="Wrap" Text="KEPA MUSIC" VerticalAlignment="Top" Width="135"  Background="#FFE8E8E8" FontSize="22" Foreground="Black" FlowDirection="RightToLeft" Grid.ColumnSpan="2"/>
+                    
+
                     <TextBlock HorizontalAlignment="Left" Margin="224,520,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="107" Height="57" TextAlignment="Right" Foreground="Black" Grid.Column="5" Grid.RowSpan="2"><Run Text="Help &amp; Support"/><LineBreak/><Run Text="contac"/><Run Text="t"/><Run Text=" us"/><LineBreak/><Run Text="Frecuently Fixshed"/><LineBreak/><Run/></TextBlock>
 
                     <TextBlock HorizontalAlignment="Left" Margin="1,554,0,0" TextWrapping="Wrap" Text="KEPA Music © 2023" VerticalAlignment="Top" RenderTransformOrigin="0.294,2.519"/>
