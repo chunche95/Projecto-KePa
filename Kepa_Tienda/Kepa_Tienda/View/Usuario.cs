@@ -8,14 +8,17 @@ namespace Kepa_Tienda.View
 {
     public class Usuario
     {
-        public string Nombre { get; set; }
-        public string RutaFotoPerfil { get; set; }
-        public RolUsuario Rol { get; set; }
+        
+            public string Nombre { get; set; }
+            public string Tipo { get; set; }
+            public DateTime HoraEntrada { get; set; }
+            public string rutaimagen { get; set; } // Ruta de la foto
+
     }
 
     public enum RolUsuario
     {
         Usuario,
-        Administrador
+        admin
     }
 }

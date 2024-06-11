@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media.Imaging;
 using WPF_LoginForm.View;
 
 namespace Kepa_Tienda.View
@@ -8,25 +10,92 @@ namespace Kepa_Tienda.View
     public static class PedidoGlobal
     {
         public static List<Pedido> PedidosRealizados { get; } = new List<Pedido>();
+
+        public static void AgregarPedido(Pedido nuevoPedido)
+        {
+            PedidosRealizados.Add(nuevoPedido);
+        }
     }
 
-    /// <summary>
-    /// Lógica de interacción para ListaPedidos.xaml
-    /// </summary>
     public partial class ListaPedidos : Window
     {
-        private List<Pedido> pedidosRealizados = PedidoGlobal.PedidosRealizados;
+        private List<Pedido> pedidosRealizados;
+        private Usuario usuarioActual;
 
-        public ListaPedidos(List<Pedido> pedidosRealizados)
+        public ListaPedidos(List<Pedido> pedidosRealizados, Usuario usuarioActual)
         {
             InitializeComponent();
+            this.usuarioActual = usuarioActual;
+            this.pedidosRealizados = pedidosRealizados;
             MostrarPedidos();
+            MostrarInformacionUsuario(usuarioActual);
+            ConfigurarVisibilidadBotonAgregarDisco();
         }
 
         private void MostrarPedidos()
         {
             ListBoxPedidos.ItemsSource = pedidosRealizados;
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            // Abrir la página DetallesQueens y pasar el objeto Disco como parámetro
+            Artistas artistas = new Artistas(usuarioActual);
+            artistas.Show();
+        }
+        private void AgregarDisco_Click(object sender, RoutedEventArgs e)
+        {
+            // Abre un formulario o ventana para agregar discos
+            AnadirDiscos anadirDiscos = new AnadirDiscos();
+            anadirDiscos.Show();
+            Hide();
+        }
+
+        private void IrInicio(object sender, RoutedEventArgs e)
+        {
+            Principal inicio = new Principal(usuarioActual);
+            inicio.Show();
+            Hide();
+        }
+        private void MostrarInformacionUsuario(Usuario usuario)
+        {
+            txtUserName.Text = usuario.Nombre;
+            txtUserType.Text = usuario.Tipo;
+            txtLastAccess.Text = usuario.HoraEntrada.ToString("g"); // Formato de fecha y hora general
+            imgProfile.Source = new BitmapImage(new Uri(usuario.rutaimagen, UriKind.RelativeOrAbsolute));
+        }
+        private void IrAListaDeDeseos_Click(object sender, RoutedEventArgs e)
+        {
+            ListaDeDeseos DeseosWindow = new ListaDeDeseos(usuarioActual); // 
+
+            DeseosWindow.MostrarDiscosEnLista();
+
+
+            DeseosWindow.Show();
+            Hide(); // Cierra la ventana actual
+        }
+        private void IrAListaDePedidos(object sender, RoutedEventArgs e)
+        {
+            ListaPedidos PedidosWindow = new ListaPedidos(PedidoGlobal.PedidosRealizados, usuarioActual);
+            PedidosWindow.Show();
+            Hide();
+        }
+        private void IrOfertas(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void ConfigurarVisibilidadBotonAgregarDisco()
+        {
+            if (usuarioActual.Tipo == "admin")
+            {
+                AgregarDisco.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                AgregarDisco.Visibility = Visibility.Collapsed;
+            }
+        }
+       
 
         // Otros métodos y lógica que puedas necesitar...
 

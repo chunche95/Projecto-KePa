@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kepa_Tienda.View"
         mc:Ignorable="d"
-        Title="CompraRealizada" Height="681.667" Width="1068.833">
+        Title="CompraRealizada" Height="675" Width="1060">
     <Window.Resources>
         <Style TargetType="{x:Type TextBox}">
             <Setter Property="Foreground" Value="Black"/>
@@ -36,7 +36,7 @@
                     <ImageBrush ImageSource="Contenedor de contenido -Panel de administracion.png" Stretch="UniformToFill" Opacity="2"/>
 
                 </Border.Background>
-                <Rectangle Fill="#FFC3C012" HorizontalAlignment="Left" Height="415" Margin="280,140,0,0" Stroke="Black" VerticalAlignment="Top" Width="440" Opacity="0.75"/>
+                <Rectangle Fill="#FFC3C012" HorizontalAlignment="Left" Height="489" Margin="260,140,0,0" Stroke="Black" VerticalAlignment="Top" Width="460" Opacity="0.75"/>
 
 
 
@@ -62,14 +62,57 @@
 
 
                 <!-- Buscador -->
-                <Border x:Name="SearchBorder" CornerRadius="20" BorderBrush="Black" BorderThickness="1" Width="490" HorizontalAlignment="Center" Margin="126,21,193.333,73" Grid.RowSpan="3">
-                    <Grid Margin="-1.333,-0.333,44,-0.333">
+                <Border x:Name="SearchBorder" CornerRadius="20" BorderBrush="Gray" BorderThickness="1" Background="White" Width="400" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,7,264,0" Height="35" Grid.RowSpan="2" Grid.Row="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="8*"/>
+                            <RowDefinition Height="3*"/>
+                        </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="67*"/>
-                            <ColumnDefinition Width="319*"/>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
-                        <TextBox x:Name="SearchTextBox" Text="Buscar..." Background="Transparent" BorderThickness="0" Margin="10,-15,55.667,-11.001" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
-                        <Image Source="lupa.png" RenderTransformOrigin="-0.46,0.486" Grid.Column="1" Margin="367.667,8,-35.333,12.999"/>
+
+                        <TextBox x:Name="SearchTextBox" Text="Buscar..." Foreground="Gray" BorderThickness="0" Margin="16,-16,34,-16" VerticalContentAlignment="Center" Background="Transparent" FontSize="16" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                            <TextBox.Style>
+                                <Style TargetType="TextBox">
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="TextBox">
+                                                <Border Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" BorderThickness="0">
+                                                    <ScrollViewer x:Name="PART_ContentHost" />
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </TextBox.Style>
+                            <TextBox.InputBindings>
+                                <KeyBinding Key="Enter" Command="{Binding Path=SearchCommand}" CommandParameter="{Binding Text, ElementName=SearchTextBox}" />
+                            </TextBox.InputBindings>
+                        </TextBox>
+
+                        <Button Width="30" Height="30" Margin="0,2,10,0" VerticalAlignment="Top" Background="Transparent" BorderThickness="0" Grid.Column="1" Command="{Binding Path=SearchCommand}" CommandParameter="{Binding Text, ElementName=SearchTextBox}" Grid.RowSpan="2">
+                            <Image Source="lupa.png" Width="20" Height="20" />
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <Border Background="Transparent">
+                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Cursor" Value="Hand"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
                     </Grid>
                 </Border>
 
@@ -90,38 +133,6 @@
                 </StackPanel>
                 <Image HorizontalAlignment="Left" Margin="769,34,0,0" VerticalAlignment="Top" Width="30" Height="39" Source="shopping-cart-outline-icon-vector.jpg" MouseLeftButtonDown="Carrito_Click" RenderTransformOrigin="0.667,0.483" Grid.RowSpan="3"/>
                 <Image HorizontalAlignment="Left" Margin="9.667,34,0,0" VerticalAlignment="Top" Width="30" Height="39" Source="images.png" MouseLeftButtonDown="Salir_Click" Grid.RowSpan="3" RenderTransformOrigin="0.067,-0.026" Grid.Column="1"/>
-                <Button x:Name="confirmar"                          
-                        BorderThickness="0"
-                        Content="confirmar"
-                        Foreground="Black                             "
-                        FontSize="12"
-                        FontFamily="Montserrat"
-                        Cursor="Hand"                           
-                        Margin="0,443,278.333,-148"
-                        Click="confirmar_Click" RenderTransformOrigin="0.514,-1.111" HorizontalAlignment="Right" Width="340" Background="White" FontWeight="Bold" Grid.Row="3">
-
-                    <Button.Style>
-                        <Style TargetType="{x:Type Button}">
-                            <Setter Property="Background" Value="#462AD8"/>
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="#28AEED"/>
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
-
-                    <Button.Template>
-                        <ControlTemplate TargetType="{x:Type Button}">
-                            <Border Width="150" Height="40"
-                                    CornerRadius="20"
-                                    Background="{TemplateBinding Background}">
-                                <ContentPresenter VerticalAlignment="Center"
-                                        HorizontalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
                 <Image Source="happy.png" Margin="393,10,199.667,269.667" Grid.Row="3"/>
 
             </Grid>
@@ -172,6 +183,37 @@
                                 HorizontalAlignment="Center"
                                 Margin="0,15,0,0"/>
                 </StackPanel>
+                <Button x:Name="confirmar"                          
+                        BorderThickness="0"
+                        Content="confirmar"
+                        Foreground="Black                             "
+                        FontSize="12"
+                        FontFamily="Montserrat"
+                        Cursor="Hand"
+                        Click="confirmar_Click" RenderTransformOrigin="0.514,-1.111" Background="White" FontWeight="Bold" Margin="85,311,119,19" Grid.Row="1">
+
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="#462AD8"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#28AEED"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Width="150" Height="40"
+                                    CornerRadius="20"
+                                    Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
                 <!-- Botón "Register" -->
             </Grid>
         </Border>

@@ -15,27 +15,39 @@ using WPF_LoginForm.View;
 
 namespace Kepa_Tienda.View
 {
+
     public partial class ConfirmacionDePago : Window
     {
-        private List<Pedido> pedidos = new List<Pedido>();
-        private List<Disco> discosCarrito;
+        List<Disco> discosSeleccionados;
+        private Usuario usuarioActual;
+        double total = 0;
 
-        public ConfirmacionDePago(List<Pago> datosPago, List<Disco> discosCarrito)
+        public ConfirmacionDePago(List<Disco> discosCarrito)
         {
             InitializeComponent();
-            this.DataContext = datosPago;
-            this.discosCarrito = discosCarrito;
-            ListaDiscos.ItemsSource = discosCarrito;
+            discosSeleccionados =discosCarrito;
+            MostrarDiscosEnCarrito();
         }
 
-        private void Comprar_Click(object sender, RoutedEventArgs e)
+        public void MostrarTotal()
         {
-            // Transferir los discos del carrito a la lista de pedidos
-            List<Pedido> pedidos = new List<Pedido>(); // Crear la lista local para los pedidos de esta transacción
+            total = 0;
 
-            foreach (var disco in discosCarrito)
+            foreach (var disco in discosSeleccionados)
             {
-                pedidos.Add(new Pedido
+                total += disco.Precio * disco.Cantidad;
+            }
+
+            TotalTextBlock.Text = $"Total: {total:C2}";
+            // Muestra el total en formato de moneda
+        }
+
+        private void RealizarCompra_Click(object sender, RoutedEventArgs e)
+        {
+            // Agregar los pedidos a la lista global de pedidos
+            foreach (var disco in discosSeleccionados)
+            {
+                PedidoGlobal.AgregarPedido(new Pedido
                 {
                     Titulo = disco.Titulo,
                     Precio = disco.Precio,
@@ -43,35 +55,26 @@ namespace Kepa_Tienda.View
                 });
             }
 
-            // Agregar los pedidos a la lista global de pedidos
-            foreach (var pedido in pedidos)
-            {
-                ListaPedidos.AgregarPedido(pedido);
-            }
-
             // Limpiar el carrito después de realizar la compra
-            discosCarrito.Clear();
+            discosSeleccionados.Clear();
 
             // Mostrar la ventana de compra realizada
             CompraRealizada compraWindow = new CompraRealizada();
             compraWindow.Show();
             Close();
         }
+
+
+        private void VaciarCarrito()
+        {
+            discosSeleccionados.Clear();
+        }
+
+
         private void Carrito_Click(object sender, MouseButtonEventArgs e)
         {
-            // Lógica para manejar el evento del carrito
-            // ...
-        }
-       
-
-        private void ListaDeDiscos_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
+            Carrito carritoWindow = new Carrito();
+            carritoWindow.Show();
         }
 
         private void btnMinimize_Click(object sender, RoutedEventArgs e)
@@ -83,18 +86,22 @@ namespace Kepa_Tienda.View
         {
             Application.Current.Shutdown();
         }
+
+        public void MostrarDiscosEnCarrito()
+        {
+            
+            ListaDeDiscos.ItemsSource = discosSeleccionados;
+            // Mostrar el total u otras operaciones si es necesario
+            MostrarTotal();
+        }
+
         private void Volver(object sender, RoutedEventArgs e)
         {
-            if (WindowManager.MainWindow != null)
-            {
-                // Muestra y activa la ventana principal
-                WindowManager.MainWindow.Show();
-                WindowManager.MainWindow.Activate();
-            }
-
-            // Oculta la ventana actual en lugar de cerrarla
-            this.Hide();
+            Principal mainWindow = new Principal(usuarioActual); 
+            mainWindow.Show();
+            Close(); // Cierra la ventana actual
         }
+
         private void Salir_Click(object sender, MouseButtonEventArgs e)
         {
             LoginView loginWindow = new LoginView(); // Crear una instancia de LoginView

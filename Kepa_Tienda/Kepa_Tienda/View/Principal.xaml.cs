@@ -1,7 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Diagnostics.Contracts;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -16,80 +21,139 @@ using static Kepa_Tienda.View.AnadirDiscos;
 
 namespace Kepa_Tienda.View
 {
-
     public static class WindowManager
     {
         public static Principal MainWindow { get; set; }
     }
 
-    /// <summary>
-    /// Lógica de interacción para Principal.xaml
-    /// </summary>
     public partial class Principal : Window
     {
         private Usuario usuarioActual;
+        private SqlConnection conexion;
+        private DataTable tablaVinilos = new DataTable(); // Declaración de la tabla de datos
 
-        public Principal(Usuario usuario)
+        public Principal(Usuario usuarioActual)
         {
             InitializeComponent();
-            CargarDiscos(); // Cargar los discos al iniciar la ventana
+            this.usuarioActual = usuarioActual; // Inicializa el usuario actual
 
-            usuarioActual = usuario;
+            // Inicializa la conexión con la base de datos
+            string cadenaConexion = "Data Source=localhost;Initial Catalog=vinilos;Integrated Security=True";
+            conexion = new SqlConnection(cadenaConexion);
 
             // Obtener la instancia de LoginView desde las ventanas abiertas
             LoginView loginView = Application.Current.Windows.OfType<LoginView>().FirstOrDefault();
 
-            // Asegúrate de que loginView no sea null antes de llamar a ObtenerUsuario
-            if (loginView != null)
-            {
-                // Llama a ObtenerUsuario para obtener el usuario actual
-                usuarioActual = loginView.ObtenerUsuario();
-
-                // Asegúrate de que usuarioActual no sea null antes de llamar a ConfigurarUsuarioActual
-                if (usuarioActual != null)
-                {
-                    // Llama a ConfigurarUsuarioActual con el usuario obtenido
-                    ConfigurarUsuarioActual(usuarioActual);
-
-                    // Llama a MostrarDatosUsuario con la información del usuario
-                    MostrarDatosUsuario(usuarioActual.Nombre, usuarioActual.RutaFotoPerfil, usuarioActual.Rol);
-                }
-            }
+            // Cargar los discos desde la base de datos
+            CargarDiscosDesdeBaseDatos();
+            MostrarInformacionUsuario(usuarioActual);
             WindowManager.MainWindow = this;
-        }
-        public Principal()
-        {
-            InitializeComponent();
-            CargarDiscos(); // Cargar los discos al iniciar la ventana
 
-            // Obtener la instancia de LoginView desde las ventanas abiertas
-            LoginView loginView = Application.Current.Windows.OfType<LoginView>().FirstOrDefault();
-
-            // Asegúrate de que loginView no sea null antes de llamar a ObtenerUsuario
-            if (loginView != null)
-            {
-                // Llama a ObtenerUsuario para obtener el usuario actual
-                usuarioActual = loginView.ObtenerUsuario();
-
-                // Asegúrate de que usuarioActual no sea null antes de llamar a ConfigurarUsuarioActual
-                if (usuarioActual != null)
-                {
-                    // Llama a ConfigurarUsuarioActual con el usuario obtenido
-                    ConfigurarUsuarioActual(usuarioActual);
-
-                    // Llama a MostrarDatosUsuario con la información del usuario
-                    MostrarDatosUsuario(usuarioActual.Nombre, usuarioActual.RutaFotoPerfil, usuarioActual.Rol);
-                }
-
-            }
-            WindowManager.MainWindow = this;
+            // Configurar la visibilidad del botón según el rol del usuario
+            ConfigurarVisibilidadBotonAgregarDisco();
         }
 
-
-        public void ConfigurarUsuarioActual(Usuario usuario)
+        private void MostrarInformacionUsuario(Usuario usuario)
         {
-            usuarioActual = usuario;
-            ConfigurarInterfazSegunRol();
+            txtUserName.Text = usuario.Nombre;
+            txtUserType.Text = usuario.Tipo;
+            txtLastAccess.Text = usuario.HoraEntrada.ToString("g"); // Formato de fecha y hora general
+            imgProfile.Source = new BitmapImage(new Uri(usuario.rutaimagen, UriKind.RelativeOrAbsolute));
+        }
+        private void AbrirVentanaContacUs(object sender, RoutedEventArgs e)
+        {
+            Contaco contacUsWindow = new Contaco();
+            contacUsWindow.Show();
+        }
+
+        private void AbrirVentanaAyuda(object sender, RoutedEventArgs e)
+        {
+            Ayuda contacUsWindow = new Ayuda();
+            contacUsWindow.Show();
+        }
+        private void ConfigurarVisibilidadBotonAgregarDisco()
+        {
+            if (usuarioActual.Tipo == "admin")
+            {
+                AgregarDisco.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                AgregarDisco.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            // Abrir la página DetallesQueens y pasar el objeto Disco como parámetro
+            Artistas artistas = new Artistas(usuarioActual);
+            artistas.Show();
+        }
+
+        private void CargarDiscosDesdeBaseDatos()
+        {
+            try
+            {
+                // Abrir la conexión
+                conexion.Open();
+
+                // Consulta SQL para seleccionar todos los discos
+                string consulta = "SELECT * FROM DiscosVinilo";
+
+                // Crear un adaptador de datos para ejecutar la consulta y llenar un DataTable
+                SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conexion);
+
+                // Limpiar la tabla de discos antes de llenarla
+                tablaVinilos.Clear();
+
+                // Llenar el DataTable con los resultados de la consulta
+                adaptador.Fill(tablaVinilos);
+
+                // Asignar la tabla de discos como origen de datos para el ListBox
+                ListBoxDiscos.ItemsSource = tablaVinilos.DefaultView;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los discos desde la base de datos: " + ex.Message);
+            }
+            finally
+            {
+                // Cerrar la conexión
+                conexion.Close();
+            }
+        }
+
+        private void AbrirDetallesQueens(object sender, RoutedEventArgs e)
+        {
+            // Obtener la fila seleccionada en el ListBox
+            DataRowView selectedRow = ListBoxDiscos.SelectedItem as DataRowView;
+
+            if (selectedRow != null)
+            {
+                // Crear un objeto Disco con la información de la fila seleccionada
+                Disco discoSeleccionado = new Disco
+                {
+                    DiscoID = Convert.ToInt32(selectedRow["DiscoID"]),
+                    Titulo = selectedRow["Titulo"].ToString(),
+                    Descripcion = selectedRow["Descripcion"].ToString(),
+                    Precio = Convert.ToDouble(selectedRow["Precio"]), // Conversión a double
+                    Imagen = selectedRow["Imagen"].ToString(),
+                    Stock = Convert.ToInt32(selectedRow["Stock"]), // Conversión a int
+                    AnioPublicacion = selectedRow["AnioPublicacion"].ToString(),
+                    Genero = selectedRow["Genero"].ToString(),
+                    Pais = selectedRow["Pais"].ToString(),
+                    SelloDiscografico = selectedRow["SelloDiscografico"].ToString(),
+                    Artista = selectedRow["Artista"].ToString()
+                };
+
+                // Abrir la página DetallesQueens y pasar el objeto Disco como parámetro
+                DetallesQueens detallesQueensWindow = new DetallesQueens(discoSeleccionado, usuarioActual);
+                detallesQueensWindow.Show();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un disco antes de abrir los detalles.");
+            }
         }
 
         private void AgregarDisco_Click(object sender, RoutedEventArgs e)
@@ -100,109 +164,7 @@ namespace Kepa_Tienda.View
             Hide();
         }
 
-
-        private void ConfigurarInterfazSegunRol()
-        {
-            if (usuarioActual.Rol == RolUsuario.Administrador)
-            {
-                // Si es un administrador, habilitar ciertas funcionalidades
-                adminButtonsQueens.Visibility = Visibility.Visible;
-                adminButtonsKissChasy.Visibility = Visibility.Visible;// Mostrar los botones para el administrador
-                AgregarDisco.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                // Si es un usuario normal, deshabilitar ciertas funcionalidades
-                adminButtonsQueens.Visibility = Visibility.Collapsed; // Ocultar los botones para el administrador
-                adminButtonsKissChasy.Visibility = Visibility.Collapsed;
-
-            }
-        }
-
         
-
-        // Método para obtener el disco seleccionado
-        private Disco ObtenerDiscoSeleccionado()
-        {
-            // Verifica si hay un elemento seleccionado en el ListBox
-            if (ListBoxDiscos.SelectedItem is Disco discoSeleccionado)
-            {
-                return discoSeleccionado;
-            }
-
-            return null;
-        }
-
-        // Método para actualizar la interfaz después de eliminar el disco
-        private void Borrar_Click(object sender, RoutedEventArgs e)
-        {
-            // Obtener el disco seleccionado
-            Disco discoSeleccionado = ListBoxDiscos.SelectedItem as Disco;
-
-            if (discoSeleccionado != null)
-            {
-                // Mostrar un MessageBox para confirmar la acción
-                MessageBoxResult result = MessageBox.Show("¿Estás seguro que deseas eliminar este disco?", "Confirmar Eliminación", MessageBoxButton.YesNo, MessageBoxImage.Warning);
-
-                if (result == MessageBoxResult.Yes)
-                {
-                    // Eliminar el disco de la lista
-                    AnadirDiscos.DiscoGlobal.DiscosExistentes.Remove(discoSeleccionado);
-
-                    // Actualizar la interfaz para reflejar los cambios
-                    ActualizarInterfaz();
-                }
-            }
-        }
-
-        // Método para actualizar la interfaz después de eliminar el disco
-        private void ActualizarInterfaz()
-        {
-            // Volver a cargar la lista de discos en la interfaz
-            ListBoxDiscos.ItemsSource = AnadirDiscos.DiscoGlobal.DiscosExistentes.ToList();
-        }
-
-
-
-
-
-
-        // Método para actualizar la interfaz después de eliminar el disco
-
-
-        private void Editar_Click(object sender, RoutedEventArgs e)
-        {
-            // Código para abrir la ventana de DetallesKrisschasy
-            DetallesKrisschasy detallesWindow = new DetallesKrisschasy(usuarioActual);
-            detallesWindow.Owner = this;  // Establecer la ventana principal como propietaria de la ventana de detalles
-            detallesWindow.Show();
-
-            // Ocultar la ventana principal en lugar de cerrarla
-            Hide();
-        }
-
-
-        private List<Disco> listaDeDiscos = new List<Disco>(); // Declaración de la lista de discos
-
-        // Método para cargar la lista de discos (puede variar dependiendo de tu aplicación)
-        private void CargarDiscos()
-        {
-            // Verifica si la ListBox tiene elementos
-            if (ListBoxDiscos.Items.IsEmpty)
-            {
-                // Si está vacía, establece el ItemsSource
-                ListBoxDiscos.ItemsSource = AnadirDiscos.DiscoGlobal.DiscosExistentes;
-            }
-            else
-            {
-                // Si tiene elementos, itera sobre la colección y actualiza
-                foreach (var item in AnadirDiscos.DiscoGlobal.DiscosExistentes)
-                {
-                    ListBoxDiscos.Items.Add(item);
-                }
-            }
-        }
-
 
         private void btnMinimize_Click(object sender, RoutedEventArgs e)
         {
@@ -213,31 +175,18 @@ namespace Kepa_Tienda.View
         {
             Application.Current.Shutdown();
         }
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
 
-        }
         private void IrAListaDeDeseos_Click(object sender, RoutedEventArgs e)
         {
-            ListaDeDeseos DeseosWindow = new ListaDeDeseos(); // 
+            ListaDeDeseos DeseosWindow = new ListaDeDeseos(usuarioActual);
 
             DeseosWindow.MostrarDiscosEnLista();
-
 
             DeseosWindow.Show();
             Hide(); // Cierra la ventana actual
         }
+
         private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged_2(object sender, TextChangedEventArgs e)
         {
 
         }
@@ -247,31 +196,13 @@ namespace Kepa_Tienda.View
 
         }
 
-        private void IrADetalles(object sender, RoutedEventArgs e)
-        {
-            // Código para abrir la ventana de DetallesKrisschasy
-            DetallesKrisschasy detallesWindow = new DetallesKrisschasy(usuarioActual); // Pasar el usuario
-            detallesWindow.Show();
-
-            Hide(); // Opcionalmente, puedes cerrar la ventana principal si es necesario
-        }
-
-
-
-        private void IrADetallesQueens(object sender, RoutedEventArgs e)
-        {
-            // Código para abrir la ventana de DetallesQueens
-            DetallesQueens detallesQWindow = new DetallesQueens();
-            detallesQWindow.Show();
-
-            Hide();
-        }
         private void IrAListaDePedidos(object sender, RoutedEventArgs e)
         {
-            ListaPedidos PedidosWindow = new ListaPedidos(PedidoGlobal.PedidosRealizados);
+            ListaPedidos PedidosWindow = new ListaPedidos(PedidoGlobal.PedidosRealizados, usuarioActual);
             PedidosWindow.Show();
             Hide();
         }
+
         private void Carrito_Click(object sender, MouseButtonEventArgs e)
         {
             Carrito carritoWindow = new Carrito();
@@ -281,15 +212,8 @@ namespace Kepa_Tienda.View
 
             carritoWindow.Show();
         }
-        public void MostrarDatosUsuario(string nombreUsuario, string rutaFotoPerfil, RolUsuario tipoUsuario)
-        {
-            txtUserName.Text = nombreUsuario; // Asignar el nombre de usuario al TextBlock correspondiente
-            imgProfile.Source = new BitmapImage(new Uri(rutaFotoPerfil)); // Asignar la imagen de perfil
-            txtUserType.Text = tipoUsuario.ToString(); // Convertir el tipo de usuario a string usando ToString()
-            txtLastAccess.Text = $"{DateTime.Now}"; // Asignar la fecha de último acceso (fecha actual)
-        }
 
-
+    
 
         private void Salir_Click(object sender, MouseButtonEventArgs e)
         {
@@ -298,6 +222,17 @@ namespace Kepa_Tienda.View
             Close(); // Cerrar la ventana actual si es necesario
         }
 
+        private void IrOfertas(object sender, RoutedEventArgs e)
+        {
+            Ofertas PedidosWindow = new Ofertas(usuarioActual);
+            PedidosWindow.Show();
+            Hide();
 
+        }
+
+        private void ListBoxDiscos_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

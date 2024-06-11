@@ -25,13 +25,16 @@
             <ColumnDefinition Width="70*"/>
         </Grid.ColumnDefinitions>
         <!-- Sección de la izquierda -->
-        <StackPanel Background="#FFABB6B9" Margin="0,85,528,84" Grid.ColumnSpan="2">
+        <StackPanel Background="#FFABB6B9" Margin="0,85,528,75" Grid.ColumnSpan="2">
             <!-- Elementos del menú lateral -->
             <Button Content="Inicio" Height="30" Background="#FF98E4DD"/>
-            <Button Content="Explorar" Height="30"/>
-            <Button Content="Mi Colección" Height="30"/>
+            <Button Content="Artistas" Height="30" Click="Button_Click_1"/>
+            <Button Content="Ofertas" Height="30" Click="IrOfertas"/>
             <Button Content="Lista de Deseos" Height="30" Click="IrAListaDeDeseos_Click"/>
             <Button Content="Pedidos" Height="30" Click="IrAListaDePedidos"/>
+            <Button x:Name="AgregarDisco" Content="Agregar Disco" Height="30" Click="AgregarDisco_Click" Visibility="Collapsed"/>
+
+
         </StackPanel>
 
         <!-- Sección superior -->
@@ -43,23 +46,63 @@
             </Grid.ColumnDefinitions>
             <Rectangle Fill="#FF979797" HorizontalAlignment="Left" Height="85" Stroke="Black" VerticalAlignment="Top" Width="801" Margin="0,-10,-1,0" Opacity="0.5" RenderTransformOrigin="0.499,0.706" Grid.ColumnSpan="3"/>
 
-
             <!-- Buscador -->
-            <Border x:Name="SearchBorder" CornerRadius="20" BorderBrush="Black" BorderThickness="1" Width="400" HorizontalAlignment="Center" Margin="204,11,70,490" Grid.ColumnSpan="2">
-                <Grid Margin="-1,-9,13,9">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="7*"/>
-                        <RowDefinition Height="6*"/>
-                    </Grid.RowDefinitions>
-                    <TextBox x:Name="SearchTextBox" Text="Buscar..." Background="Transparent" BorderThickness="0" Margin="13,0,21.667,-16" VerticalContentAlignment="Center" Grid.RowSpan="2"/>
-                    <Button Width="25" Height="25" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,2,-3.333,-13.667" RenderTransformOrigin="0.6,0.88" Grid.RowSpan="2">
-                        <Image Source="lupa.png" Width="15" Height="15" RenderTransformOrigin="0.667,1.467"/>
+            <Border x:Name="SearchBorder" CornerRadius="20" BorderBrush="Gray" BorderThickness="1" Background="White" Width="400" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="211,23,0,0" Grid.ColumnSpan="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Cuadro de texto para buscar -->
+                    <TextBox x:Name="SearchTextBox" Text="Buscar..." Foreground="Gray" BorderThickness="0" Margin="10,0,0,0" VerticalContentAlignment="Center" Background="Transparent" FontSize="16" Grid.Column="0">
+                        <TextBox.Style>
+                            <Style TargetType="TextBox">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="TextBox">
+                                            <Border Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" BorderThickness="0">
+                                                <ScrollViewer x:Name="PART_ContentHost" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </TextBox.Style>
+                        <TextBox.InputBindings>
+                            <KeyBinding Key="Enter" Command="{Binding Path=SearchCommand}" CommandParameter="{Binding Text, ElementName=SearchTextBox}" />
+                        </TextBox.InputBindings>
+                    </TextBox>
+
+                    <!-- Botón de búsqueda con ícono -->
+                    <Button Width="30" Height="30" Margin="0,0,10,0" VerticalAlignment="Center" Background="Transparent" BorderThickness="0" Grid.Column="1" Command="{Binding Path=SearchCommand}" CommandParameter="{Binding Text, ElementName=SearchTextBox}">
+                        <Image Source="lupa.png" Width="20" Height="20" />
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Background="Transparent">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Cursor" Value="Hand"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
                     </Button>
                 </Grid>
             </Border>
 
+
+
             <!-- Opciones de idioma, carrito, etc. -->
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,5,70,519" Width="65" Grid.ColumnSpan="2" Grid.Column="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,89,39,435" Width="65" Grid.Column="2">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,524">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -75,8 +118,6 @@
             </StackPanel>
 
 
-            <Button Content="Configuración" HorizontalAlignment="Right" Width="151" Margin="-1,391,280,110"/>
-            <Button Content="Soporte Técnico" Margin="0,421,280,76" Click="Button_Click"/>
             <!-- Para mostrar el nombre de usuario -->
             <TextBlock x:Name="txtUserName" HorizontalAlignment="Left" Margin="50,324,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65"/>
             <!-- Para mostrar la foto de perfil -->
@@ -85,12 +126,15 @@
             <TextBlock x:Name="txtUserType" HorizontalAlignment="Left" Margin="50,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground ="#FF010101" Width="65"/>
             <!-- Para mostrar la fecha de último acceso -->
             <TextBlock x:Name="txtLastAccess" HorizontalAlignment="Left" Margin="20,370,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110"/>
-            <Image HorizontalAlignment="Left" Height="75" Margin="50,-5,0,0" VerticalAlignment="Top" Width="110" Source="Rectangle 4.png"/>
-            <Rectangle Fill="#FFE8E8E8" HorizontalAlignment="Left" Height="76" Margin="0,464,-1,0" Stroke="White" VerticalAlignment="Top" Width="801" Grid.ColumnSpan="3"/>
+
+
+            <Image HorizontalAlignment="Left" Height="75" Margin="41,-5,0,0" VerticalAlignment="Top" Width="110" Source="Rectangle 4.png"/>
+            <Rectangle Fill="#FFE8E8E8" HorizontalAlignment="Left" Height="76" Margin="0,464,0,0" Stroke="White" VerticalAlignment="Top" Width="801" Grid.ColumnSpan="3"/>
             <TextBox HorizontalAlignment="Left" Height="30" Margin="24,467,0,0" TextWrapping="Wrap" Text="KEPA MUSIC" VerticalAlignment="Top" Width="135" TextChanged="TextBox_TextChanged_1" Background="#FFE8E8E8" FontSize="22" Foreground="Black" FlowDirection="RightToLeft"/>
-            <TextBlock HorizontalAlignment="Left" Margin="5,479,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="107" Height="57" TextAlignment="Right" Foreground="Black" Grid.Column="2"><Run Text="Help &amp; Support"/><LineBreak/><Run Text="contac"/><Run Text="t"/><Run Text=" us"/><LineBreak/><Run Text="Frecuently Fixshed"/><LineBreak/><Run/></TextBlock>
-            <TextBlock HorizontalAlignment="Left" Margin="173,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="Nuevos Lanzamientos"/><LineBreak/><Run FontWeight="Bold"/></TextBlock>
-            <TextBlock HorizontalAlignment="Left" Margin="180,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontWeight="Bold" Text="Ofertas"/></TextBlock>
+            <Button Content="Contact Us" Height="30" Click="AbrirVentanaContacUs" Margin="37,470,-1,40" Grid.Column="2"/>
+            <Button Content="Ayuda" Height="30" Click="AbrirVentanaAyuda" Margin="37,500,-1,10" Grid.Column="2"/>
+            <TextBlock HorizontalAlignment="Left" Margin="173,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="423"><Run FontWeight="Bold"  FontSize="30" Text="Nuevos Lanzamientos"/><LineBreak/><Run FontWeight="Bold"/></TextBlock>
+
             <TextBlock HorizontalAlignment="Left" Margin="35,520,0,0" TextWrapping="Wrap" Text="KEPA Music © 2023" VerticalAlignment="Top"/>
             <TextBlock HorizontalAlignment="Left" Margin="20,497,0,0" TextWrapping="Wrap" Text="Tu destino de discos de vinilo desde 2023." VerticalAlignment="Top" FontSize="8"/>
             <Image HorizontalAlignment="Left" Margin="82,26,0,0" VerticalAlignment="Top" Width="30" Height="29" Source="images.png" MouseLeftButtonDown="Salir_Click" Grid.Column="2"/>
@@ -107,6 +151,8 @@
                 <ComboBoxItem x:Name="cbItem1" Content="ES"/>
                 <ComboBoxItem x:Name="cbItem2" Content="EN"/>
             </ComboBox>
+
+
             <Button x:Name="btnMinimize"                           
                             BorderThickness="0"
                             Content="-"
@@ -190,105 +236,46 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button x:Name="AgregarDisco" Content="AgregarDisco" Click="AgregarDisco_Click" HorizontalAlignment="Left" Margin="220,75,0,410" Width="131" Grid.ColumnSpan="2" Grid.Column="1" Visibility="Collapsed"/>
 
         </Grid>
 
+
+
         <!-- Sección central (tienda de vinilos) -->
         <ScrollViewer Margin="56,150,20,160" Grid.Column="1" Grid.ColumnSpan="5">
-            <ListBox Name="ListBoxDiscos" BorderThickness="0" Background="Transparent" Height="561" Width="623" >
+            <ListBox Name="ListBoxDiscos" BorderThickness="0" Background="Transparent" Height="561" Width="623" SelectionChanged="ListBoxDiscos_SelectionChanged">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <WrapPanel Height="589"/>
+                        <WrapPanel/>
                     </ItemsPanelTemplate>
                 </ListBox.ItemsPanel>
-
-                <!-- Agregar ListBoxItems -->
-
 
                 <!-- DataTemplate para los elementos Disco -->
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel>
-                            <!-- Imagen del artículo -->
-                            <Button Click="IrADetallesQueens" Margin="10">
-                                <Image Source="{Binding Imagen}" Width="105" Height="110" RenderTransformOrigin="0.5,0.523"/>
-                            </Button>
-
-                            <!-- Valoración de estrellas -->
-                            <StackPanel Orientation="Horizontal" Margin="5">
-                                <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                                <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                                <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                                <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                                <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                            </StackPanel>
-
-                            <!-- Botones de editar y borrar -->
-                            <StackPanel x:Name="adminButtonsNew" Orientation="Horizontal">
-                                <Button Click="Editar_Click" Content="Editar" Margin="5"/>
-                                <Button Click="Borrar_Click" Content="Borrar" Margin="5"/>
-                            </StackPanel>
-                        </StackPanel>
+                        <Button Click="AbrirDetallesQueens" Margin="10" Width="120" Height="160" Background="Transparent" BorderBrush="Transparent" BorderThickness="0">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <StackPanel>
+                                        <Border CornerRadius="10" Background="White" Padding="5" Margin="0">
+                                            <StackPanel>
+                                                <Image Source="{Binding Imagen}" Width="100" Height="100"/>
+                                                <TextBlock Text="{Binding Titulo}" FontWeight="Bold" Margin="5,5,5,0" FontSize="12" HorizontalAlignment="Center" TextWrapping="Wrap" TextTrimming="CharacterEllipsis"/>
+                                            </StackPanel>
+                                        </Border>
+                                        <TextBlock Text="{Binding PorcentajeOferta, StringFormat={}{0}% de descuento}" Foreground="Red" HorizontalAlignment="Center"/>
+                                    </StackPanel>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
 
-                <ListBoxItem>
-                    <StackPanel>
-                        <!-- Imagen del artículo -->
-                        <Button Click="IrADetallesQueens" Margin="10">
-                            <Image Source="queens.jpg" Width="105" Height="110" RenderTransformOrigin="0.5,0.523"/>
-                        </Button>
-
-                        <!-- Valoración de estrellas -->
-                        <StackPanel Orientation="Horizontal" Margin="5">
-                            <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                            <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                            <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                            <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                            <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                        </StackPanel>
-
-                        <!-- Botones de editar y borrar -->
-                        <StackPanel x:Name="adminButtonsQueens" Orientation="Horizontal">
-                            <Button Click="Editar_Click" Content="Editar" Margin="5"/>
-                            <Button Click="Borrar_Click" Content="Borrar" Margin="5"/>
-                        </StackPanel>
-                    </StackPanel>
-
-
-
-                </ListBoxItem>
-
-                <ListBoxItem>
-                    <StackPanel>
-                        <!-- Imagen del artículo -->
-                        <Button Click="IrADetalles" Margin="10">
-                            <Image Source="Kisschasy__United-Paper-People-by-Debaser_2005.jpg" Width="105" Height="110" RenderTransformOrigin="0.5,0.523"/>
-                        </Button>
-
-                        <!-- Valoración de estrellas -->
-                        <StackPanel Orientation="Horizontal" Margin="5">
-                            <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                            <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                            <ToggleButton Content="★" FontSize="20" IsChecked="True" Foreground="Yellow"/>
-                            <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                            <ToggleButton Content="★" FontSize="20" IsChecked="False" Foreground="#FFD4D4D4"/>
-                        </StackPanel>
-
-                        <!-- Botones de editar y borrar -->
-                        <StackPanel x:Name="adminButtonsKissChasy" Orientation="Horizontal">
-                            <Button Click="Editar_Click" Content="Editar" Margin="5"/>
-                            <Button Click="Borrar_Click" Content="Borrar" Margin="5"/>
-                        </StackPanel>
-                    </StackPanel>
-
-
-
-                </ListBoxItem>
             </ListBox>
         </ScrollViewer>
-      
+
+
+
 
     </Grid>
 </Window>

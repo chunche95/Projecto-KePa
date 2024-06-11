@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,17 +16,91 @@ using WPF_LoginForm.View;
 
 namespace Kepa_Tienda.View
 {
+
     public partial class DetallesQueens : Window
     {
-        public List<Disco> discosEnCarrito = new List<Disco>();
-        public List<Disco> discosEnListaDeDeseos = new List<Disco>();
-        private Carrito carritoWindow;
-        private ListaDeDeseos DeseosWindow;
-        public DetallesQueens()
+        private Disco disco;
+        private Usuario usuarioActual;
+
+        public DetallesQueens(Disco disco, Usuario usuarioActual)
         {
             InitializeComponent();
-            carritoWindow = new Carrito(); // Crear la instancia de Carrito en el constructor
+            this.usuarioActual = usuarioActual;
+            this.disco = disco;
+
+            ConfigurarVisibilidadBotonElimnarDisco();
+            MostrarDetallesDisco();
         }
+
+        private void ConfigurarVisibilidadBotonElimnarDisco()
+        {
+            if (usuarioActual.Tipo == "admin")
+            {
+                Eliminar.Visibility = Visibility.Visible;
+                Editar.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Eliminar.Visibility = Visibility.Collapsed;
+                Editar.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void MostrarDetallesDisco()
+        {
+            TituloTextBlock.Text = disco.Titulo;
+            DescripcionTextBox.Text = disco.Descripcion;
+            ImagenImage.Source = new BitmapImage(new Uri(disco.Imagen));
+            ArtistaTextBlock.Text = disco.Artista;
+
+            // Consulta a la base de datos para obtener la oferta
+            using (SqlConnection connection = new SqlConnection("Data Source=localhost;Initial Catalog=vinilos;Integrated Security=True"))
+            {
+                connection.Open();
+                string query = "SELECT Precio, PorcentajeOferta FROM DiscosVinilo WHERE DiscoID = @DiscoID";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@DiscoID", disco.DiscoID);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        decimal precioOriginal = reader.GetDecimal(0);
+                        decimal? porcentajeOferta = reader.IsDBNull(1) ? null : (decimal?)reader.GetDecimal(1);
+
+                        if (porcentajeOferta.HasValue && porcentajeOferta > 0)
+                        {
+                            // Calcular el precio con descuento
+                            decimal precioConDescuento = precioOriginal - (precioOriginal * porcentajeOferta.Value / 100);
+
+                            PrecioOriginalTextBlock.Text = $"{precioOriginal:C2} (Antes)";
+                            PrecioOriginalTextBlock.Foreground = Brushes.White; // Restaurar el color original
+                            PrecioOriginalTextBlock.Visibility = Visibility.Visible;
+
+                            PrecioDescuentoTextBlock.Text = $"{precioConDescuento:C2} (Ahora)";
+                            PrecioDescuentoTextBlock.Foreground = Brushes.Red; // Cambiar el color a rojo
+                            PrecioDescuentoTextBlock.Visibility = Visibility.Visible;
+                        }
+                        else
+                        {
+                            // Mostrar solo el precio original si no hay oferta
+                            PrecioOriginalTextBlock.Text = precioOriginal.ToString("C2");
+                            PrecioOriginalTextBlock.Foreground = Brushes.White; // Restaurar el color original
+                            PrecioOriginalTextBlock.Visibility = Visibility.Visible;
+
+                            PrecioDescuentoTextBlock.Visibility = Visibility.Collapsed;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+
 
 
         private void RestarCantidad_Click(object sender, RoutedEventArgs e)
@@ -49,72 +124,79 @@ namespace Kepa_Tienda.View
             }
         }
 
-
-
-        public List<Disco> discosSeleccionados = new List<Disco>();
-
+        // Ajustar los métodos addCar y addWish para utilizar discoSeleccionado
         private void addCar(object sender, RoutedEventArgs e)
         {
-            int cantidadSeleccionada;
-            if (int.TryParse(CantidadTextBox.Text, out cantidadSeleccionada))
+            if (int.TryParse(CantidadTextBox.Text, out int cantidadSeleccionada))
             {
-                Disco disco = new Disco
+                if (disco != null)
                 {
-                    Titulo = "Hot Space",
-                    Precio = 8.99,
-                    Cantidad = cantidadSeleccionada
-                };
+                    disco.Cantidad = cantidadSeleccionada;
 
-                // Agregar el disco a la lista global de discos seleccionados
-                CarritoGlobal.DiscosSeleccionados.Add(disco);
+                    // Crear una nueva instancia de Disco con los detalles necesarios
+                    Disco discoCarrito = new Disco
+                    {
+                        DiscoID = disco.DiscoID,
+                        Titulo = disco.Titulo,
+                        Descripcion = disco.Descripcion,
+                        Imagen = disco.Imagen,
+                        Artista = disco.Artista,
+                        Precio = disco.PorcentajeOferta > 0 ? disco.PrecioConDescuento : disco.Precio,
+                        Cantidad = disco.Cantidad,
+                        PorcentajeOferta = disco.PorcentajeOferta,
+                        
+                    };
 
-                // Si la ventana Carrito ya está abierta, usar esa instancia para mostrar los discos
-                if (carritoWindow != null && carritoWindow.IsVisible)
-                {
-                    // Mostrar los discos en la ventana Carrito
-                    carritoWindow.MostrarDiscosEnCarrito();
-                }
-                else // Si la ventana Carrito no está abierta, abrir una nueva instancia y pasar la lista de discos seleccionados
-                {
-                    Carrito nuevaInstanciaCarrito = new Carrito();
-                    nuevaInstanciaCarrito.MostrarDiscosEnCarrito();
-                    
-                }
+                    // Agregar el disco seleccionado a la lista global de discos seleccionados
+                    CarritoGlobal.DiscosSeleccionados.Add(discoCarrito);
 
-                // Mostrar un mensaje de confirmación
-                MessageBox.Show($"Se han agregado {cantidadSeleccionada} disco(s) '{disco.Titulo}' al carrito.");
-            }
-        }
-
-      
-        private void addWish(object sender, RoutedEventArgs e)
-        {
-            int cantidadSeleccionada;
-            if (int.TryParse(CantidadTextBox.Text, out cantidadSeleccionada))
-            {
-                Disco disco = new Disco
-                {
-                    Titulo = "hot Space",
-                    Precio = 8.99,
-                    Cantidad = cantidadSeleccionada
-                };
-
-                // Agregar el disco a la lista de deseos
-                ListaGlobal.DiscosSeleccionados.Add(disco);
-                
-                // Crear o mostrar la ventana de ListaDeDeseos y pasar la lista de deseos
-                if (DeseosWindow != null && DeseosWindow.IsVisible)
-                {
-                    DeseosWindow.MostrarDiscosEnLista();
-                    DeseosWindow.Show();
+                    // Mostrar un cuadro de diálogo de confirmación
+                    MessageBox.Show($"Se ha agregado \"{disco.Titulo}\" al carrito.", "Disco Agregado", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
-                    DeseosWindow = new ListaDeDeseos();
-          
+                    MessageBox.Show("No se ha seleccionado ningún disco.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }
+    
+
+    private void addWish(object sender, RoutedEventArgs e)
+        {
+            if (int.TryParse(CantidadTextBox.Text, out int cantidadSeleccionada))
+            {
+                if (disco != null)
+                {
+                    disco.Cantidad = cantidadSeleccionada;
+
+                    // Crear una nueva instancia de Disco con los detalles necesarios
+                    Disco discoDeseo = new Disco
+                    {
+                        DiscoID = disco.DiscoID,
+                        Titulo = disco.Titulo,
+                        Descripcion = disco.Descripcion,
+                        Imagen = disco.Imagen,
+                        Artista = disco.Artista,
+                        Precio = disco.PorcentajeOferta > 0 ? disco.PrecioConDescuento : disco.Precio,
+                        Cantidad = disco.Cantidad,
+                        PorcentajeOferta = disco.PorcentajeOferta
+                    };
+
+                    // Agregar el disco seleccionado a la lista de deseos
+                    ListaGlobal.DiscosSeleccionados.Add(discoDeseo);
+
+                    // Mostrar un cuadro de diálogo de confirmación
+                    MessageBox.Show($"Se ha agregado \"{disco.Titulo}\" a la lista de deseos.", "Disco Agregado", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se ha seleccionado ningún disco.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
+
+
+
         private void Salir_Click(object sender, MouseButtonEventArgs e)
         {
             LoginView loginWindow = new LoginView(); // Crear una instancia de LoginView
@@ -154,6 +236,52 @@ namespace Kepa_Tienda.View
         }
 
 
+        private void EliminarDisco(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Establece la conexión con tu base de datos
+                SqlConnection connection = new SqlConnection("Data Source=localhost;Initial Catalog=vinilos;Integrated Security=True");
+
+                // Abre la conexión
+                connection.Open();
+
+                // Crea una consulta SQL para eliminar el disco
+                string query = "DELETE FROM DiscosVinilo WHERE DiscoID = @DiscoID"; // Ajusta el nombre del campo según tu estructura de base de datos
+
+                // Crea un comando SQL
+                SqlCommand command = new SqlCommand(query, connection);
+
+                // Asigna el valor de DiscoID del disco seleccionado al parámetro del comando SQL
+                command.Parameters.AddWithValue("@DiscoID", disco.DiscoID); // Ajusta el nombre de la propiedad según la estructura de tu clase Disco
+
+                // Ejecuta el comando SQL
+                command.ExecuteNonQuery();
+
+                // Cierra la conexión
+                connection.Close();
+
+                // Muestra un mensaje de éxito
+                MessageBox.Show("Disco eliminado correctamente de la base de datos.");
+            }
+            catch (Exception ex)
+            {
+                // Muestra un mensaje de error si ocurre alguna excepción
+                MessageBox.Show("Error al intentar eliminar el disco: " + ex.Message);
+            }
+        }
+
+        private void Editar_Click(object sender, RoutedEventArgs e)
+        {
+            // Crear una instancia de la clase Editar y pasar el objeto Disco como parámetro al constructor
+            Editar editarWindow = new Editar(disco);
+
+            // Mostrar la ventana Editar
+            editarWindow.Show();
+
+            // Cerrar la ventana actual si es necesario
+            Close();
+        }
 
         private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {

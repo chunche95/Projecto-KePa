@@ -28,8 +28,12 @@
                 <RowDefinition Height="361*"/>
             </Grid.RowDefinitions>
 
+            <Image HorizontalAlignment="Left" Margin="275,23,0,0" VerticalAlignment="Top" Width="30" Height="39" Source="images.png" MouseLeftButtonDown="Salir_Click" RenderTransformOrigin="0.067,-0.026" Grid.Column="1"/>
+            <Button Click="Volver" Margin="10,3,340,497">
+                <Image Source="Rectangle 4.png" Width="65" Height="72" />
+            </Button>
 
-            <!-- Buscador -->
+
 
             <!-- Opciones de idioma, carrito, etc. -->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,387.333,57.333,-121.333" Width="155" Grid.Row="3">
@@ -42,9 +46,10 @@
                         </Grid.ColumnDefinitions>
                         <Button Content="Carrito" Grid.ColumnSpan="3"/>
                     </Grid>
-                    <Button Content="Salir"/>
+
                 </StackPanel>
             </StackPanel>
+
             <Border CornerRadius="12" Width="801" Height="555" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.75" Margin="-135,-15,0,-153.333" Grid.RowSpan="4" Grid.ColumnSpan="3">
                 <Border.Background>
                     <ImageBrush ImageSource="Contenedor de contenido -Panel de administracion.png" Stretch="UniformToFill"/>
@@ -52,8 +57,10 @@
 
                 <Grid Margin="20">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="481*"/>
-                        <ColumnDefinition Width="391*"/>
+                        <ColumnDefinition Width="251*"/>
+                        <ColumnDefinition Width="169*"/>
+                        <ColumnDefinition Width="246*"/>
+                        <ColumnDefinition Width="95*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
@@ -61,58 +68,128 @@
                     </Grid.RowDefinitions>
 
                     <!-- Lista de discos -->
-                    <ListBox x:Name="ListaDeDiscos" Margin="185,115,186.333,86.667" BorderBrush="Transparent" Background="#FF878787" Opacity="0.98" Grid.Row="0" Grid.ColumnSpan="2">
+                    <ListBox x:Name="ListaDeDiscos" Margin="41,110,130,5" BorderBrush="Transparent" Background="White" Opacity="0.9" Grid.Row="0" Grid.ColumnSpan="3">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel>
-                                    <TextBlock Text="{Binding Titulo}" FontWeight="Bold" FontSize="18"/>
-                                    <TextBlock Text="{Binding Precio}" Foreground="White" FontSize="16"/>
-                                    <TextBlock Text="{Binding Cantidad}" Foreground="White" FontSize="16"/>
-                                </StackPanel>
+                                <Border Background="White" CornerRadius="10" Padding="10" Margin="5" BorderBrush="Gray" BorderThickness="1" Width="280">
+                                    <StackPanel Orientation="Vertical">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="{Binding Imagen}" Width="80" Height="80" Margin="0,0,10,0"/>
+                                            <StackPanel>
+                                                <TextBlock Text="{Binding Titulo}" FontWeight="Bold" FontSize="14" Foreground="Black" TextWrapping="Wrap" Width="180"/>
+                                                <TextBlock Text="{Binding Precio, StringFormat='Precio: {0}'}" Foreground="Black" FontSize="14"/>
+                                                <TextBlock Text="{Binding Cantidad, StringFormat='Cantidad: {0}'}" Foreground="Black" FontSize="14"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Border>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
 
-                    <!-- Total -->
 
-                    <Border BorderBrush="Black" BorderThickness="1" Margin="320,385,321.333,99.667" Grid.ColumnSpan="2">
-                        <TextBlock x:Name="TotalTextBlock" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Foreground="White" Grid.Row="1" Margin="0,0.333,0,0"/>
+
+
+                    <!-- Total -->
+                    <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="10" Background="White" Opacity="0.9" Margin="152,250,5,210" Grid.Column="2" Grid.ColumnSpan="2">
+                        <TextBlock x:Name="TotalTextBlock" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" Foreground="Black" Margin="10"/>
                     </Border>
+
                     <!-- Botón "Realizar compra" -->
-                    <Button Content="Realizar compra" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="RealizarCompra_Click" Height="45" Width="185" Background="#FFFCFFFA" FontSize="18" Margin="290,0,286.333,9.667" Grid.ColumnSpan="2">
-                        <!-- Estilo del botón -->
+                    <Button Content="Tramitar compra" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="RealizarCompra_Click" Height="45" Width="185" Background="LawnGreen" FontSize="18" Margin="151,0,0,145" Grid.Column="2" Grid.ColumnSpan="2">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="1" CornerRadius="10" Opacity="0.9">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#32CD32"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
                     </Button>
-                    <Rectangle Fill="#FF979797" HorizontalAlignment="Left" Height="111" Stroke="Black" VerticalAlignment="Top" Width="800" Margin="-20,-20,-18.667,0" Opacity="0.95" Grid.ColumnSpan="2"/>
-                    <TextBox x:Name="SearchTextBox" Text="Buscar..." Background="Transparent" BorderThickness="0" Margin="200,23,9,464.667" VerticalContentAlignment="Center"/>
-                    <Border x:Name="SearchBorder" CornerRadius="20" BorderBrush="Black" BorderThickness="1" Width="390" HorizontalAlignment="Center" Margin="185,23,186.333,452.667" Grid.ColumnSpan="2">
-                        <Grid Margin="-6.333,76.667,18.667,-76.667">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="69*"/>
-                                <ColumnDefinition Width="105*"/>
-                                <ColumnDefinition Width="221*"/>
-                            </Grid.ColumnDefinitions>
-                            <Button Width="25" Height="25" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,-71,-5.333,82" Grid.Column="2">
-                                <Image Source="lupa.png" Width="15" Height="15"/>
-                            </Button>
-                        </Grid>
-                    </Border>
-                    <Image HorizontalAlignment="Left" Margin="275,23,0,0" VerticalAlignment="Top" Width="30" Height="39" Source="images.png" MouseLeftButtonDown="Salir_Click" RenderTransformOrigin="0.067,-0.026" Grid.Column="1"/>
-                    <Image HorizontalAlignment="Left" Height="90" Margin="10,-10,0,0" VerticalAlignment="Top" Width="85" Source="Rectangle 4.png"/>
+
+
+                    <Rectangle Fill="#FF979797" Height="111" Stroke="Black" VerticalAlignment="Top" Margin="-24,-20,-40,0" Opacity="0.95" Grid.ColumnSpan="4" RenderTransformOrigin="0.501,0.768"/>
+
+                    <Button Click="Volver" Margin="6,-5,165,440">
+                        <Image Source="Rectangle 4.png" Height="79" Width="75" />
+                    </Button>
+                    <Image HorizontalAlignment="Left" Margin="0,20,0,0" VerticalAlignment="Top" Width="30" Height="39" Source="images.png" MouseLeftButtonDown="Salir_Click" RenderTransformOrigin="0.067,-0.026" Grid.Column="3"/>
                 </Grid>
             </Border>
+            <!-- Buscador -->
+            <Border x:Name="SearchBorder" CornerRadius="20" BorderBrush="Gray" BorderThickness="1" Background="White" Width="400" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,1,136,0" Height="35" Grid.RowSpan="2" Grid.Row="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox x:Name="SearchTextBox" Text="Buscar..." Foreground="Gray" BorderThickness="0" Margin="14,-16,36,-16" VerticalContentAlignment="Center" Background="Transparent" FontSize="16" Grid.Column="0" Grid.ColumnSpan="2">
+                        <TextBox.Style>
+                            <Style TargetType="TextBox">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="TextBox">
+                                            <Border Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" BorderThickness="0">
+                                                <ScrollViewer x:Name="PART_ContentHost" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </TextBox.Style>
+                        <TextBox.InputBindings>
+                            <KeyBinding Key="Enter" Command="{Binding Path=SearchCommand}" CommandParameter="{Binding Text, ElementName=SearchTextBox}" />
+                        </TextBox.InputBindings>
+                    </TextBox>
+
+                    <Button Width="30" Height="30" Margin="0,0,10,0" VerticalAlignment="Center" Background="Transparent" BorderThickness="0" Grid.Column="1" Command="{Binding Path=SearchCommand}" CommandParameter="{Binding Text, ElementName=SearchTextBox}">
+                        <Image Source="lupa.png" Width="20" Height="20" />
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Background="Transparent">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Cursor" Value="Hand"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </Grid>
+            </Border>
+            <!-- Botón de minimizar -->
             <Button x:Name="btnMinimize"
-        BorderThickness="0"
-        Content="-"
-        Foreground="White"
-        FontSize="16"
-        FontFamily="Montserrat"
-        Cursor="Hand"
-        Click="btnMinimize_Click"
-        HorizontalAlignment="Right"
-        VerticalAlignment="Top"
-        Margin="0,-19,26,0"
-        Height="30"
-        Width="30" Grid.Column="2">
+                    BorderThickness="0"
+                    Content="-"
+                    Foreground="White"
+                    FontSize="16"
+                    FontFamily="Montserrat"
+                    Cursor="Hand"
+                    Click="btnMinimize_Click"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="0,-19,26,0"
+                    Height="30"
+                    Width="30" Grid.Column="2">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Background" Value="#28AEED"/>
@@ -122,35 +199,30 @@
                             </Trigger>
                         </Style.Triggers>
                     </Style>
-
                 </Button.Style>
-
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Width="18" Height="18"
-                                        CornerRadius="9"
-                                        Background="{TemplateBinding Background}">
-                            <ContentPresenter VerticalAlignment="Center"
-                                                      HorizontalAlignment="Center"/>
+                        <Border Width="18" Height="18" CornerRadius="9" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
-
                 </Button.Template>
             </Button>
 
+            <!-- Botón de cerrar -->
             <Button x:Name="btnClose"
-        BorderThickness="0"
-        Content="X"
-        Foreground="White"
-        FontSize="12"
-        FontFamily="Montserrat"
-        Cursor="Hand"
-        Click="btnClose_Click"
-        HorizontalAlignment="Right"
-        VerticalAlignment="Top"
-        Margin="0,-19,0,0"
-        Height="30"
-        Width="30" Grid.Column="2" Background="#FFFF2F00">
+                    BorderThickness="0"
+                    Content="X"
+                    Foreground="White"
+                    FontSize="12"
+                    FontFamily="Montserrat"
+                    Cursor="Hand"
+                    Click="btnClose_Click"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="0,-19,0,0"
+                    Height="30"
+                    Width="30" Grid.Column="2" Background="#FFFF2F00">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Background" Value="#DA34AE"/>
@@ -161,20 +233,14 @@
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
-
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
-                        <Border Width="18" Height="18"
-                                        CornerRadius="9"
-                                        Background="{TemplateBinding Background}">
-                            <ContentPresenter VerticalAlignment="Center"
-                                                      HorizontalAlignment="Center"/>
+                        <Border Width="18" Height="18" CornerRadius="9" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-
         </Grid>
     </Grid>
 </Window>
-

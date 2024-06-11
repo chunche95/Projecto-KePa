@@ -1,123 +1,24 @@
-﻿using Microsoft.Win32;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using System.Data.SqlClient;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using WPF_LoginForm.View;
 
 namespace Kepa_Tienda.View
 {
-    /// <summary>
-    /// Lógica de interacción para AnadirDiscos.xaml
-    /// </summary>
-    /// 
-
     public partial class AnadirDiscos : Window
     {
-       
         public AnadirDiscos()
         {
             InitializeComponent();
         }
-        public static class DiscoGlobal
-        {
-            public static List<Disco> DiscosExistentes { get; } = new List<Disco>();
-        }
-        private void Guardar_Click(object sender, RoutedEventArgs e)
-        {
-            // Crea un nuevo disco con los detalles ingresados por el usuario
-            Disco nuevoDisco = new Disco
-            {
-                Titulo = txtTitulo.Text,
-                Precio = double.Parse(txtPrecio.Text),
-                Artista = txtArtista.Text,
-                Stock = int.Parse(txtStock.Text),
-                Genero = txtGenero.Text,
-                Imagen = ImagenSeleccionada.Source.ToString() // Asigna la ruta de la imagen
-            };
-
-            // Agrega el nuevo disco a la lista de discos existentes
-            DiscoGlobal.DiscosExistentes.Add(nuevoDisco);
-
-            // Encuentra la ventana Principal abierta
-            Principal mainWindow = Application.Current.Windows.OfType<Principal>().FirstOrDefault();
-            if (mainWindow != null)
-            {
-                // Actualiza la lista de discos en la ventana Principal
-                ListBox listBoxDiscos = mainWindow.FindName("ListBoxDiscos") as ListBox;
-                if (listBoxDiscos != null)
-                {
-                    listBoxDiscos.Items.Add(nuevoDisco);
-                }
-            }
-          
-                if (WindowManager.MainWindow != null)
-                {
-                    // Muestra y activa la ventana principal
-                    WindowManager.MainWindow.Show();
-                    WindowManager.MainWindow.Activate();
-                }
-
-                // Oculta la ventana actual en lugar de cerrarla
-                this.Hide();
-            
-            // Cierra el formulario de agregar disco
-            this.Close();
-       
-    
-    }
-
-    // Método para buscar un elemento visual en el árbol visual por su nombre
-    private T FindVisualChild<T>(DependencyObject parent, string childName) where T : DependencyObject
-        {
-            for (int i = 0; i < VisualTreeHelper.GetChildrenCount(parent); i++)
-            {
-                var child = VisualTreeHelper.GetChild(parent, i);
-                string controlName = child.GetValue(Control.NameProperty) as string;
-
-                if (controlName == childName)
-                {
-                    return child as T;
-                }
-                else
-                {
-                    T result = FindVisualChild<T>(child, childName);
-                    if (result != null)
-                        return result;
-                }
-            }
-            return null;
-        }
-
-        private void SeleccionarImagen_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
-
-            if (openFileDialog.ShowDialog() == true)
-            {
-                string rutaImagen = openFileDialog.FileName;
-                BitmapImage bitmap = new BitmapImage(new Uri(rutaImagen));
-                ImagenSeleccionada.Source = bitmap;
-            }
-        }
-
 
         private void Carrito_Click(object sender, MouseButtonEventArgs e)
         {
             Carrito carritoWindow = new Carrito();
             carritoWindow.Show();
         }
+
         private void btnMinimize_Click(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
@@ -127,6 +28,7 @@ namespace Kepa_Tienda.View
         {
             Application.Current.Shutdown();
         }
+
         private void Salir_Click(object sender, MouseButtonEventArgs e)
         {
             LoginView loginWindow = new LoginView(); // Crear una instancia de LoginView
@@ -134,7 +36,57 @@ namespace Kepa_Tienda.View
             Close(); // Cerrar la ventana actual si es necesario
         }
 
-        private void Volver(object sender, RoutedEventArgs e)
+        private void Guardar_Click(object sender, RoutedEventArgs e)
+        {
+            string connectionString = "Data Source=localhost;Initial Catalog=vinilos;Integrated Security=True";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = @"
+                    INSERT INTO DiscosVinilo (Titulo, Precio, Stock, Artista, Genero, AnioPublicacion, Imagen, Pais, SelloDiscografico, Descripcion, Oferta, PorcentajeOferta) 
+                    VALUES (@Titulo, @Precio, @Stock, @Artista, @Genero, @AnioPublicacion, @Imagen, @Pais, @SelloDiscografico, @Descripcion@Oferta, @PorcentajeOferta)";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Titulo", TituloTextBox.Text);
+                    command.Parameters.AddWithValue("@Precio", double.Parse(PrecioTextBox.Text));
+                    command.Parameters.AddWithValue("@Stock", int.Parse(StockTextBox.Text));
+                    command.Parameters.AddWithValue("@Artista", ArtistaTextBox.Text);
+                    command.Parameters.AddWithValue("@Genero", GeneroTextBox.Text);
+                    command.Parameters.AddWithValue("@AnioPublicacion", AnioPublicacionTextBox.Text);
+                    command.Parameters.AddWithValue("@Imagen", ImagenTextBox.Text);
+                    command.Parameters.AddWithValue("@Pais", PaisTextBox.Text);
+                    command.Parameters.AddWithValue("@SelloDiscografico", SelloDiscograficoTextBox.Text);
+                    command.Parameters.AddWithValue("@Descripcion", DescripcionTextBox.Text);
+                    command.Parameters.AddWithValue("@Oferta", Convert.ToBoolean(OfertaCheckBox.IsChecked));
+                    command.Parameters.AddWithValue("@PorcentajeOferta", double.Parse(PorcentajeOfertaTextBox.Text));
+
+                    try
+                    {
+                        connection.Open();
+                        int result = command.ExecuteNonQuery();
+                        if (result > 0)
+                        {
+                            MessageBox.Show("Disco añadido correctamente.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error al añadir el disco.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+            }
+        }
+        private void AbrirVentanaContacUs(object sender, RoutedEventArgs e)
+        {
+            Contaco contacUsWindow = new Contaco();
+            contacUsWindow.Show();
+        }
+        private void Volver_Click(object sender, RoutedEventArgs e)
         {
             if (WindowManager.MainWindow != null)
             {
@@ -147,5 +99,4 @@ namespace Kepa_Tienda.View
             this.Hide();
         }
     }
-
 }

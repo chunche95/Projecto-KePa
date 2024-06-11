@@ -1,54 +1,53 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using WPF_LoginForm.View;
 
 namespace Kepa_Tienda.View
 {
     public partial class DatosDePago : Window
     {
-        private List<Pago> datosDePago = new List<Pago>();
-        private List<Disco> carrito = new List<Disco>(); // Lista de discos en el carrito
+        private List<Disco> carrito; // Lista de discos en el carrito
 
-        public DatosDePago(List<Disco> discosEnCarrito) // Modifica el constructor para recibir la lista de discos en el carrito
+        public DatosDePago(List<Disco> discosEnCarrito, double total) // Modifica el constructor para recibir la lista de discos en el carrito y el total
         {
             InitializeComponent();
             carrito = discosEnCarrito; // Asigna la lista de discos al campo local carrito
+            MostrarTotal(total); // Muestra el total en la interfaz de usuario
         }
 
+        private void MostrarTotal(double total)
+        {
+            PagarTextBox.Text = $"Total a pagar: {total:C2}";
+           
+        }
 
         private void Carrito_Click(object sender, MouseButtonEventArgs e)
         {
-            // Lógica para manejar el evento del carrito
-            // ...
         }
-        private void confirmar_Click(object sender, RoutedEventArgs e)
+            
+
+        private void Guardar_Click(object sender, RoutedEventArgs e)
         {
             Pago nuevoPago = new Pago
             {
-                Nombre = txtUser.Text,
-                NumeroTarjeta = txtUser_Copy.Text,
-                FechaVencimiento = txtUser_Copy1.Text,
-                CodigoSeguridad = txtUser_Copy2.Text
+                Nombre = TitularTextBox.Text,
+                NumeroTarjeta = TarjetaTextBox.Text,
+                FechaVencimiento = FechaTextBox.Text,
+                CodigoSeguridad = CVVTextBox.Text
             };
 
+            // Crear una instancia de la lista de pagos
+            List<Pago> datosDePago = new List<Pago>();
             datosDePago.Add(nuevoPago);
 
             // Pasar ambas listas al constructor de ConfirmacionDePago
-            ConfirmacionDePago confirmacionWindow = new ConfirmacionDePago(datosDePago, carrito);
+            ConfirmacionDePago confirmacionWindow = new ConfirmacionDePago(carrito);
             confirmacionWindow.Show();
             Close();
         }
+
         private void btnMinimize_Click(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
@@ -58,7 +57,8 @@ namespace Kepa_Tienda.View
         {
             Application.Current.Shutdown();
         }
-        private void Volver(object sender, RoutedEventArgs e)
+
+        private void Volver_Click(object sender, RoutedEventArgs e)
         {
             if (WindowManager.MainWindow != null)
             {
@@ -68,8 +68,9 @@ namespace Kepa_Tienda.View
             }
 
             // Oculta la ventana actual en lugar de cerrarla
-            this.Hide();
+            Hide();
         }
+
         private void Salir_Click(object sender, MouseButtonEventArgs e)
         {
             LoginView loginWindow = new LoginView(); // Crear una instancia de LoginView
@@ -78,4 +79,3 @@ namespace Kepa_Tienda.View
         }
     }
 }
-

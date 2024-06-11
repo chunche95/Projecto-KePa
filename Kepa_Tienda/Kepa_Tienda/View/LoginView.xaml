@@ -1,10 +1,6 @@
 ﻿<Window x:Class="WPF_LoginForm.View.LoginView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WPF_LoginForm.View" 
-    mc:Ignorable="d"
         Title="Iniciar Sesion" Height="550" Width="800"
         WindowStyle="None"
         ResizeMode="NoResize"
@@ -22,8 +18,9 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-    
+
     <Border CornerRadius="12" Width="796" Height="559" HorizontalAlignment="Left" Margin="4,0,0,-9" VerticalAlignment="Bottom">
+
 
         <Border.Background>
             <ImageBrush ImageSource="Rectangle 3.png" Stretch="UniformToFill" Opacity="2"/>
@@ -170,78 +167,77 @@
                 </Grid>
 
                 <StackPanel Width="Auto"
-                            Orientation="Vertical"
-                            Margin="33,0,28,28" RenderTransformOrigin="0.5,0.5" Height="443" VerticalAlignment="Bottom" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                    Orientation="Vertical"
+                    Margin="33,0,28,28" RenderTransformOrigin="0.5,0.5" Height="443" VerticalAlignment="Bottom" Grid.RowSpan="2" Grid.ColumnSpan="2">
 
                     <TextBlock
-                        Foreground="White"
-                               FontSize="25"
-                               FontWeight="Medium"
-                               FontFamily="Montserrat"
-                               HorizontalAlignment="Center"/>
+                Foreground="White"
+                FontSize="25"
+                FontWeight="Medium"
+                FontFamily="Montserrat"
+                HorizontalAlignment="Center"/>
                     <Image Source="Rectangle 4.png" Height="105" Margin="30,0,70,0" RenderTransformOrigin="0.57,1.385"/>
                     <TextBlock
-                               Foreground="White"
-                               FontSize="16"
-                               FontWeight="Medium"
-                               FontFamily="Montserrat"                             
-                               Margin="0,35,0,0" RenderTransformOrigin="0.494,-6.465" HorizontalAlignment="Left" Width="195" Height="24" Text="User"/>
+                Foreground="White"
+                FontSize="16"
+                FontWeight="Medium"
+                FontFamily="Montserrat"                             
+                Margin="0,35,0,0" RenderTransformOrigin="0.494,-6.465" HorizontalAlignment="Left" Width="195" Height="24" Text="User"/>
                     <TextBox x:Name="txtUser"
-                             FontSize="13"
-                             FontWeight="Medium"
-                             FontFamily="Montserrat"                            
-                             Foreground="White"
-                             CaretBrush="White"
-                             BorderBrush="White"
-                             BorderThickness="0,0,0,2"
-                             Height="28"
-                             VerticalContentAlignment="Center"
-                             Margin="0,5,30,0"
-                             Padding="20,0,0,0" SelectionBrush="#FFEBF1F5">
+                     FontSize="13"
+                     FontWeight="Medium"
+                     FontFamily="Montserrat"                            
+                     Foreground="White"
+                     CaretBrush="White"
+                     BorderBrush="White"
+                     BorderThickness="0,0,0,2"
+                     Height="28"
+                     VerticalContentAlignment="Center"
+                     Margin="0,5,30,0"
+                     Padding="20,0,0,0" SelectionBrush="#FFEBF1F5">
 
                         <TextBox.Background>
                             <ImageBrush ImageSource="user-icon.png"
-                                        Stretch="None"
-                                        AlignmentX="Left"/>
+                                Stretch="None"
+                                AlignmentX="Left"/>
                         </TextBox.Background>
                     </TextBox>
 
                     <TextBlock Text="Password"
-                               Foreground="White"
-                               FontSize="16"
-                               FontWeight="Medium"
-                               FontFamily="Montserrat"                             
-                               Margin="0,15,0,0"/>
+                       Foreground="White"
+                       FontSize="16"
+                       FontWeight="Medium"
+                       FontFamily="Montserrat"                             
+                       Margin="0,15,0,0"/>
 
                     <PasswordBox x:Name="txtPass"
-                             FontSize="13"
-                             FontWeight="Medium"
-                             FontFamily="Montserrat"                            
-                             Foreground="White
-"
-                             CaretBrush="White"
-                             BorderBrush="White"
-                             BorderThickness="0,0,0,2"
-                             Height="28"
-                             VerticalContentAlignment="Center"
-                             Margin="0,5,30,0"
-                             Padding="20,0,0,0" SelectionBrush="#FFF3F3F3">
+                         FontSize="13"
+                         FontWeight="Medium"
+                         FontFamily="Montserrat"                            
+                         Foreground="White"
+                         CaretBrush="White"
+                         BorderBrush="White"
+                         BorderThickness="0,0,0,2"
+                         Height="28"
+                         VerticalContentAlignment="Center"
+                         Margin="0,5,30,0"
+                         Padding="20,0,0,0" SelectionBrush="#FFF3F3F3">
 
                         <PasswordBox.Background>
                             <ImageBrush ImageSource="key-icon.png"
-                                        Stretch="None"
-                                        AlignmentX="Left"/>
+                                Stretch="None"
+                                AlignmentX="Left"/>
                         </PasswordBox.Background>
                     </PasswordBox>
                     <Button x:Name="btnLogin"                          
-                            BorderThickness="0"
-                            Content="LOGIN"
-                            Foreground="Black                             "
-                            FontSize="12"
-                            FontFamily="Montserrat"
-                            Cursor="Hand"                           
-                            Margin="-8,5,20,0"
-                            Click="btnLogin_Click" RenderTransformOrigin="0.514,-1.111" Height="167" HorizontalAlignment="Right" Width="340" Background="White" FontWeight="Bold">
+                    BorderThickness="0"
+                    Content="LOGIN"
+                    Foreground="Black                             "
+                    FontSize="12"
+                    FontFamily="Montserrat"
+                    Cursor="Hand"                           
+                    Margin="-8,5,20,0"
+                    Click="btnLogin_Click" RenderTransformOrigin="0.514,-1.111" Height="167" HorizontalAlignment="Right" Width="340" Background="White" FontWeight="Bold">
 
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
@@ -257,15 +253,14 @@
                         <Button.Template>
                             <ControlTemplate TargetType="{x:Type Button}">
                                 <Border Width="150" Height="40"
-                                        CornerRadius="20"
-                                        Background="{TemplateBinding Background}">
+                                CornerRadius="20"
+                                Background="{TemplateBinding Background}">
                                     <ContentPresenter VerticalAlignment="Center"
-                                                      HorizontalAlignment="Center"/>
+                                              HorizontalAlignment="Center"/>
                                 </Border>
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
-
 
                     <StackPanel Orientation="Horizontal"
                                 HorizontalAlignment="Center"
@@ -332,18 +327,19 @@
                     <Image Height="32" Width="45" Source="home.png" RenderTransformOrigin="0.6,0.5"/>
                 </Button>
 
+                <!-- ComboBox para seleccionar el idioma -->
                 <ComboBox x:Name="cbIdiomas" 
-                          HorizontalAlignment="Left"
-                          Margin="48,-16,-86,24" 
-                          VerticalAlignment="Center" Opacity="0.6"
-                            SelectedIndex="0"
-SelectionChanged="cb_elementoSeleccionado" Background="Black" Height="22" Padding="5,3,5,3"
-                          MaxWidth="80" Width="52" Grid.Column="2">
-                    <ComboBoxItem x:Name="cbItem1"
-Content="ES"/>
-                    <ComboBoxItem x:Name="cbItem2"
-Content="EN"/>
+                      HorizontalAlignment="Left"
+                      Margin="48,-16,-86,24" 
+                      VerticalAlignment="Center" Opacity="0.6"
+                      SelectedIndex="0"
+                      SelectionChanged="cbIdiomas_SelectionChanged" Background="Black" Height="22" Padding="5,3,5,3"
+                      MaxWidth="80" Width="52" Grid.Column="2">
+                    <!-- <ComboBoxItem x:Name="cbItem1" Content="ES" PreviewMouseDown="cbIdiomas_SelectionChanged"/> -->
+                   <!-- <ComboBoxItem x:Name="cbItem2" Content="EN" PreviewMouseDown="cbIdiomas_SelectionChanged"/> -->
                 </ComboBox>
+
+
             </Grid>
         </Border>
     </Border>
