@@ -218,6 +218,9 @@ namespace Kepa_Tienda.View
 
         private void IrOfertas(object sender, RoutedEventArgs e)
         {
+            Ofertas PedidosWindow = new Ofertas(usuarioActual);
+            PedidosWindow.Show();
+            Hide();
 
         }
 

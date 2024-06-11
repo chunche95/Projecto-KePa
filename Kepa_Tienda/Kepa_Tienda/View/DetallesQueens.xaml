@@ -270,37 +270,46 @@
                Foreground="Black" Width="585"/>
         </ScrollViewer>
 
-        <!-- Precio -->
-        <TextBlock x:Name="PrecioTextBlock" 
-            HorizontalAlignment="Left" 
-            TextWrapping="Wrap" 
-            Text="{Binding Path=Precio, StringFormat=C2}" 
-            VerticalAlignment="Top" 
-            Margin="430,236,0,0" 
-            FontSize="14"
-            Foreground="White"/>
+        <!-- Precio Original -->
+        <TextBlock x:Name="PrecioOriginalTextBlock"
+                   HorizontalAlignment="Left"
+                   TextWrapping="Wrap"
+                   VerticalAlignment="Top"
+                   Margin="430,236,0,0"
+                   FontSize="14"
+                   Foreground="White"
+                   TextDecorations="Strikethrough"
+                   Visibility="Collapsed" />
 
-
+        <!-- Precio con Descuento -->
+        <TextBlock x:Name="PrecioDescuentoTextBlock"
+                   HorizontalAlignment="Left"
+                   TextWrapping="Wrap"
+                   VerticalAlignment="Top"
+                   Margin="430,260,0,0"
+                   FontSize="14"
+                   Foreground="Red"
+                   Visibility="Collapsed" />
 
         <!-- Stock -->
-        <TextBlock x:Name="StockTextBlock" 
-            HorizontalAlignment="Left" 
-            TextWrapping="Wrap" 
-            Text="{Binding Path=Stock}" 
-            VerticalAlignment="Top" 
-            Margin="430,200,20,0" 
-            FontSize="14"
-            Foreground="White"/>
+        <TextBlock x:Name="StockTextBlock"
+                   HorizontalAlignment="Left"
+                   TextWrapping="Wrap"
+                   Text="{Binding Path=Stock}"
+                   VerticalAlignment="Top"
+                   Margin="430,200,20,0"
+                   FontSize="14"
+                   Foreground="White" />
 
         <!-- Artista -->
-        <TextBlock x:Name="ArtistaTextBlock" 
-            HorizontalAlignment="Left" 
-            TextWrapping="Wrap" 
-            Text="{Binding Path=Artista}" 
-            VerticalAlignment="Top" 
-            Margin="430,190,0,0" 
-            FontSize="14"
-            Foreground="White"/>
+        <TextBlock x:Name="ArtistaTextBlock"
+                   HorizontalAlignment="Left"
+                   TextWrapping="Wrap"
+                   Text="{Binding Path=Artista}"
+                   VerticalAlignment="Top"
+                   Margin="430,190,0,0"
+                   FontSize="14"
+                   Foreground="White" />
 
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="430,328,0,0">

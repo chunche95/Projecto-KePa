@@ -335,11 +335,11 @@
                       SelectedIndex="0"
                       SelectionChanged="cbIdiomas_SelectionChanged" Background="Black" Height="22" Padding="5,3,5,3"
                       MaxWidth="80" Width="52" Grid.Column="2">
-                    <ComboBoxItem x:Name="cbItem1"
-                              Content="ES"/>
-                    <ComboBoxItem x:Name="cbItem2"
-                              Content="EN"/>
+                    <!-- <ComboBoxItem x:Name="cbItem1" Content="ES" PreviewMouseDown="cbIdiomas_SelectionChanged"/> -->
+                   <!-- <ComboBoxItem x:Name="cbItem2" Content="EN" PreviewMouseDown="cbIdiomas_SelectionChanged"/> -->
                 </ComboBox>
+
+
             </Grid>
         </Border>
     </Border>

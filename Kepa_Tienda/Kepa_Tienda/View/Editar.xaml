@@ -226,10 +226,10 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Border Margin="0,0,0,15">
+            <Border Margin="-8,-15,8,15" Grid.RowSpan="2">
                 <StackPanel Width="Auto"
                     Orientation="Vertical"
-                    Margin="22,0,12,-69" RenderTransformOrigin="0.5,0.5" Height="469" VerticalAlignment="Bottom" Grid.RowSpan="2">
+                    Margin="22,0,12,-54" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
 
                     <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
                         <TextBlock Text="Título: "/>
@@ -279,6 +279,16 @@
                     <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
                         <TextBlock Text="Descripción: "/>
                         <TextBox x:Name="DescripcionTextBox"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                        <TextBlock Text="Oferta: "/>
+                        <CheckBox x:Name="OfertaCheckBox"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                        <TextBlock Text="Porcentaje de oferta: "/>
+                        <TextBox x:Name="PorcentajeOfertaTextBox"/>
                     </StackPanel>
 
                 </StackPanel>

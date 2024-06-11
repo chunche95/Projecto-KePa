@@ -238,3 +238,5 @@ C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kep
 C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\Kepa_Tienda.pdb
 C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\Contaco.baml
 C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\Contaco.g.cs
+C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\Ofertas.g.cs
+C:\Users\Kevin\Documents\kevin\Kepa_Tienda\Kepa_Tienda\Kepa_Tienda\obj\Debug\View\Ofertas.baml

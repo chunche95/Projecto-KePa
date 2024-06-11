@@ -49,6 +49,8 @@ namespace Kepa_Tienda.View
                 PaisTextBox.Text = disco.Pais;
                 SelloDiscograficoTextBox.Text = disco.SelloDiscografico;
                 DescripcionTextBox.Text = disco.Descripcion;
+                OfertaCheckBox.IsChecked = disco.Oferta;
+                PorcentajeOfertaTextBox.Text = disco.PorcentajeOferta.ToString();
             }
             else
             {
@@ -62,9 +64,10 @@ namespace Kepa_Tienda.View
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = @"
-                    UPDATE DiscosVinilo
-                    SET Titulo = @Titulo, Precio = @Precio, Stock = @Stock, Artista = @Artista, Genero = @Genero, AnioPublicacion = @AnioPublicacion, Imagen = @Imagen, Pais = @Pais, SelloDiscografico = @SelloDiscografico, Descripcion = @Descripcion
-                    WHERE DiscoID = @DiscoID";
+            UPDATE DiscosVinilo
+            SET Titulo = @Titulo, Precio = @Precio, Stock = @Stock, Artista = @Artista, Genero = @Genero, AnioPublicacion = @AnioPublicacion, Imagen = @Imagen, Pais = @Pais, SelloDiscografico = @SelloDiscografico, Descripcion = @Descripcion,
+                Oferta = @Oferta, PorcentajeOferta = @PorcentajeOferta
+            WHERE DiscoID = @DiscoID";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -79,6 +82,10 @@ namespace Kepa_Tienda.View
                     command.Parameters.AddWithValue("@SelloDiscografico", SelloDiscograficoTextBox.Text);
                     command.Parameters.AddWithValue("@Descripcion", DescripcionTextBox.Text);
                     command.Parameters.AddWithValue("@DiscoID", disco.DiscoID);
+
+                    // Agregar parámetros para las nuevas columnas
+                    command.Parameters.AddWithValue("@Oferta", OfertaCheckBox.IsChecked);
+                    command.Parameters.AddWithValue("@PorcentajeOferta", double.Parse(PorcentajeOfertaTextBox.Text));
 
                     try
                     {
@@ -98,9 +105,9 @@ namespace Kepa_Tienda.View
                         MessageBox.Show("Error: " + ex.Message);
                     }
                 }
+
             }
         }
-
         private void Volver_Click(object sender, RoutedEventArgs e)
         {
             if (WindowManager.MainWindow != null)

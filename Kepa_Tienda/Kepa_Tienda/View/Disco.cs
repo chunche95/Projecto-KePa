@@ -16,7 +16,15 @@ namespace Kepa_Tienda.View
         public string Pais { get; set; }
         public string SelloDiscografico { get; set; }
         public string Descripcion { get; set; }
+        public bool Oferta { get; set; } 
+        public double PorcentajeOferta { get; set; }
+        public double PrecioConDescuento
+        {
+            get
+            {
+                return (Precio - (Precio * PorcentajeOferta / 100));
+            }
+        }
 
-        // Otros campos o propiedades que puedan representar un disco en tu tienda
     }
 }

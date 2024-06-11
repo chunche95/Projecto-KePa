@@ -262,6 +262,7 @@
                                                 <TextBlock Text="{Binding Titulo}" FontWeight="Bold" Margin="5,5,5,0" FontSize="12" HorizontalAlignment="Center" TextWrapping="Wrap" TextTrimming="CharacterEllipsis"/>
                                             </StackPanel>
                                         </Border>
+                                        <TextBlock Text="{Binding PorcentajeOferta, StringFormat={}{0}% de descuento}" Foreground="Red" HorizontalAlignment="Center"/>
                                     </StackPanel>
                                 </ControlTemplate>
                             </Button.Template>

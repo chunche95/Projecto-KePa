@@ -281,6 +281,15 @@
                         <TextBox  x:Name="DescripcionTextBox" Text="{Binding Descripcion}"/>
                     </StackPanel>
                     
+                    <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                        <TextBlock Text="Oferta: "/>
+                        <CheckBox x:Name="OfertaCheckBox" IsChecked="{Binding Oferta}"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                        <TextBlock Text="Porcentaje de Oferta: "/>
+                        <TextBox x:Name="PorcentajeOfertaTextBox" Text="{Binding PorcentajeOferta}"/>
+                    </StackPanel>
 
                 </StackPanel>
             </Border>

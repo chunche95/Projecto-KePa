@@ -96,29 +96,6 @@ namespace WPF_LoginForm.View
             }
         }
 
-
-        private void SetLanguage(string languageCode)
-        {
-           /* try
-            {
-                // Cambia la cultura de la aplicación
-                CultureInfo newCulture = new CultureInfo(languageCode);
-                Thread.CurrentThread.CurrentCulture = newCulture;
-                Thread.CurrentThread.CurrentUICulture = newCulture;
-
-                // Carga el diccionario de recursos correspondiente
-                ResourceDictionary dict = new ResourceDictionary();
-                dict.Source = new Uri($"/Kepa_Tienda;component/resources/StringResources.{languageCode}.xaml", UriKind.Relative);
-                this.Resources.MergedDictionaries.Clear();
-                this.Resources.MergedDictionaries.Add(dict);
-            }
-            catch (Exception ex)
-            {
-                // Maneja cualquier excepción que pueda ocurrir durante el cambio de idioma
-                MessageBox.Show($"Error cambiando el idioma: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }*/
-        }
-
         private void cb_elementoSeleccionado(object sender, SelectionChangedEventArgs e)
         {
             // Cambia el idioma cuando se selecciona un nuevo elemento en el ComboBox
@@ -154,14 +131,35 @@ namespace WPF_LoginForm.View
 
             
         }
+        // Método para cambiar el idioma de la aplicación
+        private void SetLanguage(string languageCode)
+        {
+            try
+            {
+                // Cambiar la cultura de la aplicación
+                CultureInfo newCulture = new CultureInfo(languageCode);
+                Thread.CurrentThread.CurrentCulture = newCulture;
+                Thread.CurrentThread.CurrentUICulture = newCulture;
 
+                // Cargar el diccionario de recursos correspondiente
+                ResourceDictionary dict = new ResourceDictionary();
+                dict.Source = new Uri($"/Kepa_Tienda;component/resources/StringResources.{languageCode}.xaml", UriKind.Relative);
+                this.Resources.MergedDictionaries.Clear();
+                this.Resources.MergedDictionaries.Add(dict);
+            }
+            catch (Exception ex)
+            {
+                // Manejar cualquier excepción que pueda ocurrir durante el cambio de idioma
+                MessageBox.Show($"Error cambiando el idioma: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
 
-        public Usuario ObtenerUsuario()
+            public Usuario ObtenerUsuario()
         {
             // Devuelve el usuario actual (puede ser un objeto que hayas configurado durante el inicio de sesión)
             return usuarioActual;
         }
-        private void Registrarse_Click(object sender, RoutedEventArgs e)
+            private void Registrarse_Click(object sender, RoutedEventArgs e)
         {
             // Crear una instancia de la ventana Registrarse
             Registrarse registroView = new Registrarse();

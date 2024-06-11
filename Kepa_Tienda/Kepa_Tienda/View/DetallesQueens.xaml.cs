@@ -19,9 +19,6 @@ namespace Kepa_Tienda.View
 
     public partial class DetallesQueens : Window
     {
-        
-        public List<Disco> discosEnCarrito = new List<Disco>();
-        public List<Disco> discosEnListaDeDeseos = new List<Disco>();
         private Disco disco;
         private Usuario usuarioActual;
 
@@ -30,17 +27,9 @@ namespace Kepa_Tienda.View
             InitializeComponent();
             this.usuarioActual = usuarioActual;
             this.disco = disco;
-            Console.WriteLine($"Disco seleccionado: {disco.Titulo}");
-
 
             ConfigurarVisibilidadBotonElimnarDisco();
-
-            // Configurar los controles en la ventana con los datos del disco seleccionado
-            TituloTextBlock.Text = disco.Titulo;
-            DescripcionTextBox.Text = disco.Descripcion;
-            PrecioTextBlock.Text = disco.Precio.ToString("C2"); 
-            ImagenImage.Source = new BitmapImage(new Uri(disco.Imagen));
-            ArtistaTextBlock.Text = disco.Artista;
+            MostrarDetallesDisco();
         }
 
         private void ConfigurarVisibilidadBotonElimnarDisco()
@@ -57,6 +46,47 @@ namespace Kepa_Tienda.View
             }
         }
 
+        private void MostrarDetallesDisco()
+        {
+            TituloTextBlock.Text = disco.Titulo;
+            DescripcionTextBox.Text = disco.Descripcion;
+            ImagenImage.Source = new BitmapImage(new Uri(disco.Imagen));
+            ArtistaTextBlock.Text = disco.Artista;
+
+            // Consulta a la base de datos para obtener la oferta
+            using (SqlConnection connection = new SqlConnection("Data Source=localhost;Initial Catalog=vinilos;Integrated Security=True"))
+            {
+                connection.Open();
+                string query = "SELECT Precio, PorcentajeOferta FROM DiscosVinilo WHERE DiscoID = @DiscoID";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@DiscoID", disco.DiscoID);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        decimal precioOriginal = reader.GetDecimal(0);
+                        decimal porcentajeOferta = reader.GetDecimal(1);
+
+                        if (porcentajeOferta > 0)
+                        {
+                            decimal precioConDescuento = precioOriginal - (precioOriginal * porcentajeOferta / 100);
+
+                            PrecioOriginalTextBlock.Text = precioOriginal.ToString("C2");
+                            PrecioDescuentoTextBlock.Text = precioConDescuento.ToString("C2");
+
+                            PrecioOriginalTextBlock.Visibility = Visibility.Visible;
+                            PrecioDescuentoTextBlock.Visibility = Visibility.Visible;
+                        }
+                        else
+                        {
+                            PrecioOriginalTextBlock.Text = precioOriginal.ToString("C2");
+                            PrecioOriginalTextBlock.Visibility = Visibility.Visible;
+                        }
+                    }
+                }
+            }
+        }
         private void RestarCantidad_Click(object sender, RoutedEventArgs e)
         {
             if (int.TryParse(CantidadTextBox.Text, out int cantidadActual))
@@ -81,20 +111,31 @@ namespace Kepa_Tienda.View
         // Ajustar los métodos addCar y addWish para utilizar discoSeleccionado
         private void addCar(object sender, RoutedEventArgs e)
         {
-            int cantidadSeleccionada;
-            if (int.TryParse(CantidadTextBox.Text, out cantidadSeleccionada))
+            if (int.TryParse(CantidadTextBox.Text, out int cantidadSeleccionada))
             {
                 if (disco != null)
                 {
                     disco.Cantidad = cantidadSeleccionada;
 
+                    // Crear una nueva instancia de Disco con los detalles necesarios
+                    Disco discoCarrito = new Disco
+                    {
+                        DiscoID = disco.DiscoID,
+                        Titulo = disco.Titulo,
+                        Descripcion = disco.Descripcion,
+                        Imagen = disco.Imagen,
+                        Artista = disco.Artista,
+                        Precio = disco.PorcentajeOferta > 0 ? disco.PrecioConDescuento : disco.Precio,
+                        Cantidad = disco.Cantidad,
+                        PorcentajeOferta = disco.PorcentajeOferta,
+                        
+                    };
+
                     // Agregar el disco seleccionado a la lista global de discos seleccionados
-                    CarritoGlobal.DiscosSeleccionados.Add(disco);
+                    CarritoGlobal.DiscosSeleccionados.Add(discoCarrito);
 
                     // Mostrar un cuadro de diálogo de confirmación
                     MessageBox.Show($"Se ha agregado \"{disco.Titulo}\" al carrito.", "Disco Agregado", MessageBoxButton.OK, MessageBoxImage.Information);
-
-                    // Resto del código para mostrar la ventana del carrito si es necesario
                 }
                 else
                 {
@@ -102,23 +143,34 @@ namespace Kepa_Tienda.View
                 }
             }
         }
+    
 
-        private void addWish(object sender, RoutedEventArgs e)
+    private void addWish(object sender, RoutedEventArgs e)
         {
-            int cantidadSeleccionada;
-            if (int.TryParse(CantidadTextBox.Text, out cantidadSeleccionada))
+            if (int.TryParse(CantidadTextBox.Text, out int cantidadSeleccionada))
             {
                 if (disco != null)
                 {
                     disco.Cantidad = cantidadSeleccionada;
 
+                    // Crear una nueva instancia de Disco con los detalles necesarios
+                    Disco discoDeseo = new Disco
+                    {
+                        DiscoID = disco.DiscoID,
+                        Titulo = disco.Titulo,
+                        Descripcion = disco.Descripcion,
+                        Imagen = disco.Imagen,
+                        Artista = disco.Artista,
+                        Precio = disco.PorcentajeOferta > 0 ? disco.PrecioConDescuento : disco.Precio,
+                        Cantidad = disco.Cantidad,
+                        PorcentajeOferta = disco.PorcentajeOferta
+                    };
+
                     // Agregar el disco seleccionado a la lista de deseos
-                    ListaGlobal.DiscosSeleccionados.Add(disco);
+                    ListaGlobal.DiscosSeleccionados.Add(discoDeseo);
 
                     // Mostrar un cuadro de diálogo de confirmación
                     MessageBox.Show($"Se ha agregado \"{disco.Titulo}\" a la lista de deseos.", "Disco Agregado", MessageBoxButton.OK, MessageBoxImage.Information);
-
-                    // Resto del código para mostrar la ventana de deseos si es necesario
                 }
                 else
                 {
@@ -126,6 +178,7 @@ namespace Kepa_Tienda.View
                 }
             }
         }
+
 
 
         private void Salir_Click(object sender, MouseButtonEventArgs e)

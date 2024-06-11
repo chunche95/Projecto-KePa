@@ -154,41 +154,6 @@ namespace Kepa_Tienda.View
                 Hide();
             }
 
-            // Método para actualizar la interfaz después de eliminar el disco
-            private void Borrar_Click(object sender, RoutedEventArgs e)
-            {
-                // Obtener el disco seleccionado
-                Disco discoSeleccionado = ListBoxArtistas.SelectedItem as Disco;
-
-                if (discoSeleccionado != null)
-                {
-                    // Mostrar un MessageBox para confirmar la acción
-                    MessageBoxResult result = MessageBox.Show("¿Estás seguro que deseas eliminar este disco?", "Confirmar Eliminación", MessageBoxButton.YesNo, MessageBoxImage.Warning);
-
-                    if (result == MessageBoxResult.Yes)
-                    {
-                        // Eliminar el disco de la lista
-                        AnadirDiscos.DiscoGlobal.DiscosExistentes.Remove(discoSeleccionado);
-
-                        // Actualizar la interfaz para reflejar los cambios
-                        ActualizarInterfaz();
-                    }
-                }
-            }
-
-            // Método para actualizar la interfaz después de eliminar el disco
-            private void ActualizarInterfaz()
-            {
-                // Volver a cargar la lista de discos en la interfaz
-                ListBoxArtistas.ItemsSource = AnadirDiscos.DiscoGlobal.DiscosExistentes.ToList();
-            }
-
-
-            // Método para actualizar la interfaz después de eliminar el disco
-
-
-
-
 
             private void btnMinimize_Click(object sender, RoutedEventArgs e)
             {
