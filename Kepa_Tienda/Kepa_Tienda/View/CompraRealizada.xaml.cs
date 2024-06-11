@@ -41,22 +41,10 @@ namespace Kepa_Tienda.View
 
         private void confirmar_Click(object sender, RoutedEventArgs e)
         {
-
-            List<Disco> discosComprados = new List<Disco>(carrito); // Haciendo una copia de los discos en el carrito
-
-            // Agregar los discos a la lista de pedidos
-            Pedidos.AgregarPedido(discosComprados);
-
             // Vaciar el carrito
             carrito.Clear();
-
-            // Mostrar la ventana principal u otra ventana según sea necesario
-            if (WindowManager.MainWindow != null)
-            {
-                // Muestra y activa la ventana principal
-                WindowManager.MainWindow.Show();
-                WindowManager.MainWindow.Activate();
-            }
+            WindowManager.MainWindow.Show();
+            WindowManager.MainWindow.Activate();
 
             // Oculta la ventana actual en lugar de cerrarla
             this.Hide();

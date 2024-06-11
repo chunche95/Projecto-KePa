@@ -28,7 +28,7 @@ namespace Kepa_Tienda.View
             string direccion = "C%2F+Escritor+Rafael+Ferreres,+22,+Quatre+Carreres,+46013+Valencia";
 
             // Crea la URL del mapa de Google Maps
-            string url = $"https://www.google.com/maps/embed/v1/place?key=TU_API_KEY&q={direccion}";
+            string url = $"https://www.waze.com/en/live-map/directions/es/vc/valencia/c-de-lescriptor-rafael-ferreres,-22?place=ChIJrd0bst1IYA0RszPDyfiMBBU{direccion}";
 
             // Carga la URL en el control WebBrowser
             MapaBrowser.Navigate(url);
@@ -75,6 +75,11 @@ namespace Kepa_Tienda.View
             LoginView loginWindow = new LoginView(); // Crear una instancia de LoginView
             loginWindow.Show(); // Mostrar la ventana LoginView
             Close(); // Cerrar la ventana actual si es necesario
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 

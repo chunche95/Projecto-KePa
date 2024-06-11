@@ -3,27 +3,67 @@
   "WorkspaceRootPath": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\detallesqueens.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\comprarealizada.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\comprarealizada.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\comprarealizada.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\comprarealizada.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\kepa_tienda\\view\\editar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\editar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\contaco.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\contaco.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\contaco.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\contaco.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\contaco.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\contaco.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\kepa_tienda\\view\\detallesqueens.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\detallesqueens.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\editar.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\editar.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\kepa_tienda\\view\\ofertas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\ofertas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\principal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\principal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\disco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\disco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\detallesqueens.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\kepa_tienda\\view\\detallesqueens.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\detallesqueens.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\editar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\kepa_tienda\\view\\ofertas.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\ofertas.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\kepa_tienda\\view\\principal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\principal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\kepa_tienda\\view\\anadirdiscos.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\anadirdiscos.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\kepa_tienda\\view\\anadirdiscos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\anadirdiscos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\artistas.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\artistas.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\kepa_tienda\\view\\disco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\disco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\kepa_tienda\\view\\editar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\editar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -31,52 +71,16 @@
       "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\principal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\ofertas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\ofertas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\kepa_tienda\\view\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\artistas.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\artistas.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\ofertas.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\ofertas.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\anadirdiscos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\anadirdiscos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\anadirdiscos.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\anadirdiscos.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\editar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\editar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\ofertas.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\ofertas.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\listapedidos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\kepa_tienda\\view\\listapedidos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\listapedidos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\kepa_tienda\\view\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\loginview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\loginview.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\kevin\\kepa_tienda\\kepa_tienda\\kepa_tienda\\view\\confirmaciondepago.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\confirmaciondepago.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,7 +94,57 @@
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CompraRealizada.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\CompraRealizada.xaml.cs",
+              "RelativeDocumentMoniker": "Kepa_Tienda\\View\\CompraRealizada.xaml.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\CompraRealizada.xaml.cs",
+              "RelativeToolTip": "Kepa_Tienda\\View\\CompraRealizada.xaml.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACsAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T13:55:30.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CompraRealizada.xaml",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\CompraRealizada.xaml",
+              "RelativeDocumentMoniker": "Kepa_Tienda\\View\\CompraRealizada.xaml",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\CompraRealizada.xaml",
+              "RelativeToolTip": "Kepa_Tienda\\View\\CompraRealizada.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-11T13:53:29.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Contaco.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\Contaco.xaml.cs",
+              "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Contaco.xaml.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\Contaco.xaml.cs",
+              "RelativeToolTip": "Kepa_Tienda\\View\\Contaco.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T13:39:07.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Contaco.xaml",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\Contaco.xaml",
+              "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Contaco.xaml",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\Contaco.xaml",
+              "RelativeToolTip": "Kepa_Tienda\\View\\Contaco.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-11T13:39:04.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "DetallesQueens.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\DetallesQueens.xaml.cs",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\DetallesQueens.xaml.cs",
@@ -103,7 +157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "DetallesQueens.xaml",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\DetallesQueens.xaml",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\DetallesQueens.xaml",
@@ -115,20 +169,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "Artistas.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\Artistas.xaml.cs",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Artistas.xaml.cs",
               "ToolTip": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\Artistas.xaml.cs",
               "RelativeToolTip": "Kepa_Tienda\\View\\Artistas.xaml.cs",
-              "ViewState": "AQIAAJ8AAAAAAAAAAAAAwJoAAAANAAAA",
+              "ViewState": "AQIAAJUAAAAAAAAAAAAAAJoAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-11T12:12:01.628Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "AnadirDiscos.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\AnadirDiscos.xaml.cs",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\AnadirDiscos.xaml.cs",
@@ -141,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "AnadirDiscos.xaml",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\AnadirDiscos.xaml",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\AnadirDiscos.xaml",
@@ -153,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 14,
               "Title": "Disco.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\Disco.cs",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Disco.cs",
@@ -166,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
               "Title": "Editar.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\Editar.xaml.cs",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Editar.xaml.cs",
@@ -179,7 +233,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 2,
               "Title": "Editar.xaml",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\Editar.xaml",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Editar.xaml",
@@ -191,7 +245,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "ListaPedidos.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\ListaPedidos.xaml.cs",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\ListaPedidos.xaml.cs",
@@ -204,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "Ofertas.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\Ofertas.xaml.cs",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Ofertas.xaml.cs",
@@ -217,7 +271,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "Principal.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\Principal.xaml.cs",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Principal.xaml.cs",
@@ -230,7 +284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 16,
               "Title": "Principal.xaml",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\Principal.xaml",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Principal.xaml",
@@ -254,7 +308,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "LoginView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\LoginView.xaml.cs",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\LoginView.xaml.cs",
@@ -267,7 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 17,
               "Title": "LoginView.xaml",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\LoginView.xaml",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\LoginView.xaml",
@@ -285,78 +339,10 @@
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "FloatingWindowState": {
-        "Id": "89a33750-741e-4631-8eec-36f469aafce8",
-        "Display": 1,
-        "X": 23,
-        "Y": 207,
-        "Width": 924,
-        "Height": 389,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ConfirmacionDePago.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\ConfirmacionDePago.xaml.cs",
-              "RelativeDocumentMoniker": "Kepa_Tienda\\View\\ConfirmacionDePago.xaml.cs",
-              "ToolTip": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\ConfirmacionDePago.xaml.cs",
-              "RelativeToolTip": "Kepa_Tienda\\View\\ConfirmacionDePago.xaml.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAADwvysAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T09:11:43.746Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "b1b93b56-f2ea-4618-9da0-66eb39c1804e",
-        "Display": 1,
-        "X": 0,
-        "Y": 82,
-        "Width": 800,
-        "Height": 600,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "LoginView.xaml",
-              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\LoginView.xaml",
-              "RelativeDocumentMoniker": "Kepa_Tienda\\View\\LoginView.xaml",
-              "ToolTip": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\LoginView.xaml",
-              "RelativeToolTip": "Kepa_Tienda\\View\\LoginView.xaml",
-              "ViewState": "AQIAADkBAAAAAAAAAAAIwFYBAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-11T11:41:33.315Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "9c366147-284e-4ec5-bc67-56b776d84e03",
+        "Id": "ccf9e7d7-b704-427a-b519-75ebfd6d3387",
         "Display": 0,
-        "X": 459,
-        "Y": 112,
+        "X": 306,
+        "Y": 486,
         "Width": 800,
         "Height": 600,
         "WindowState": 0
@@ -368,49 +354,15 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Ofertas.xaml",
-              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\Ofertas.xaml",
-              "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Ofertas.xaml",
-              "ToolTip": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\Ofertas.xaml",
-              "RelativeToolTip": "Kepa_Tienda\\View\\Ofertas.xaml",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAkwCgAAAANAAAA",
+              "DocumentIndex": 5,
+              "Title": "Contaco.xaml",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\Contaco.xaml",
+              "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Contaco.xaml",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\Contaco.xaml",
+              "RelativeToolTip": "Kepa_Tienda\\View\\Contaco.xaml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAIwCcAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-11T11:46:18.286Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "645dabd9-e477-4a45-8c27-1c345f35c64f",
-        "Display": 1,
-        "X": 40,
-        "Y": 122,
-        "Width": 800,
-        "Height": 600,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Editar.xaml",
-              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\Editar.xaml",
-              "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Editar.xaml",
-              "ToolTip": "C:\\Users\\Kevin\\Documents\\kevin\\Kepa_Tienda\\Kepa_Tienda\\Kepa_Tienda\\View\\Editar.xaml",
-              "RelativeToolTip": "Kepa_Tienda\\View\\Editar.xaml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAlwCUAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-11T11:58:07.595Z",
+              "WhenOpened": "2024-06-11T13:52:52.689Z",
               "EditorCaption": ""
             }
           ]
