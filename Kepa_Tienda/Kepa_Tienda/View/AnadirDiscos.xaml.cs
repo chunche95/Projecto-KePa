@@ -81,7 +81,11 @@ namespace Kepa_Tienda.View
                 }
             }
         }
-
+        private void AbrirVentanaContacUs(object sender, RoutedEventArgs e)
+        {
+            Contaco contacUsWindow = new Contaco();
+            contacUsWindow.Show();
+        }
         private void Volver_Click(object sender, RoutedEventArgs e)
         {
             if (WindowManager.MainWindow != null)

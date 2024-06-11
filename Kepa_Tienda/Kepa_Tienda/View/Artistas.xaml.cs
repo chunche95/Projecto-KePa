@@ -60,7 +60,12 @@ namespace Kepa_Tienda.View
             inicio.Show();
             Hide();
         }
-        
+        private void AbrirVentanaContacUs(object sender, RoutedEventArgs e)
+        {
+            Contaco contacUsWindow = new Contaco();
+            contacUsWindow.Show();
+        }
+
         public void CargarArtistasDesdeBaseDatos()
         {
             try

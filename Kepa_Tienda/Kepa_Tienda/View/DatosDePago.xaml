@@ -227,10 +227,8 @@
                         <TextBox x:Name="CVVTextBox" Text="{Binding Artista}"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
-                        <TextBlock Text="Total a Pagar: "/>
                         <TextBox x:Name="PagarTextBox" Text="{Binding Artista}"/>
                     </StackPanel>
-
                     <Button x:Name="confirmar"                          
                 BorderThickness="0"
                 Content="Confirmar"

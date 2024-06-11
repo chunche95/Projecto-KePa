@@ -73,6 +73,11 @@ namespace Kepa_Tienda.View
             // Mostrar el total u otras operaciones si es necesario
             MostrarTotal();
         }
+        private void AbrirVentanaContacUs(object sender, RoutedEventArgs e)
+        {
+            Contaco contacUsWindow = new Contaco();
+            contacUsWindow.Show();
+        }
 
         private void Volver(object sender, RoutedEventArgs e)
         {
