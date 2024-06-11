@@ -39,12 +39,12 @@ namespace Kepa_Tienda.View
             }
 
             TotalTextBlock.Text = $"Total: {total:C2}";
-            // Muestra el total en formato de moneda
+            
         }
 
         private void RealizarCompra_Click(object sender, RoutedEventArgs e)
         {
-            DatosDePago datosPago = new DatosDePago(discosSeleccionados, total); // Pasar la lista 'carrito' como argumento
+            DatosDePago datosPago = new DatosDePago(discosSeleccionados, total); 
             datosPago.Show(); // Mostrar la ventana de DatosDePago
             Hide();
         }
@@ -67,7 +67,7 @@ namespace Kepa_Tienda.View
 
         public void MostrarDiscosEnCarrito()
         {
-            // Obtener los discos seleccionados desde la lista global
+            
             // Mostrar los discos en el ListBox (o cualquier otro control que uses)
             ListaDeDiscos.ItemsSource = discosSeleccionados;
             // Mostrar el total u otras operaciones si es necesario

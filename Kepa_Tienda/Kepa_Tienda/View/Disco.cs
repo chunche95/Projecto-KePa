@@ -7,7 +7,7 @@ namespace Kepa_Tienda.View
         public int DiscoID { get; set; }
         public string Titulo { get; set; }
         public double Precio { get; set; }
-        public int Cantidad { get; set; } // Campo Cantidad descomentado
+        public int Cantidad { get; set; } 
         public int Stock { get; set; }
         public string Artista { get; set; }
         public string Genero { get; set; }

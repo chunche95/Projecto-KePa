@@ -15,23 +15,19 @@ using WPF_LoginForm.View;
 
 namespace Kepa_Tienda.View
 {
-    /// <summary>
-    /// Lógica de interacción para Contaco.xaml
-    /// </summary>
+    /
     public partial class Contaco : Window
     {
         public Contaco()
         {
             InitializeComponent();
 
-            // Define la dirección como una cadena codificada para la URL de Google Maps
-            string direccion = "C%2F+Escritor+Rafael+Ferreres,+22,+Quatre+Carreres,+46013+Valencia";
+          
+            //string direccion = "C%2F+Escritor+Rafael+Ferreres,+22,+Quatre+Carreres,+46013+Valencia";
+           
+            //string url = $"https://www.waze.com/en/live-map/directions/es/vc/valencia/c-de-lescriptor-rafael-ferreres,-22?place=ChIJrd0bst1IYA0RszPDyfiMBBU{direccion}";
 
-            // Crea la URL del mapa de Google Maps
-            string url = $"https://www.waze.com/en/live-map/directions/es/vc/valencia/c-de-lescriptor-rafael-ferreres,-22?place=ChIJrd0bst1IYA0RszPDyfiMBBU{direccion}";
-
-            // Carga la URL en el control WebBrowser
-            MapaBrowser.Navigate(url);
+           // MapaBrowser.Navigate(url);
         }
         private void Enviar_Click(object sender, RoutedEventArgs e)
         {
@@ -51,7 +47,7 @@ namespace Kepa_Tienda.View
         {
             Carrito carritoWindow = new Carrito();
 
-            // Pasar la lista de discos seleccionados al carrito
+            
             carritoWindow.MostrarDiscosEnCarrito();
 
             carritoWindow.Show();
@@ -62,7 +58,7 @@ namespace Kepa_Tienda.View
         {
             if (WindowManager.MainWindow != null)
             {
-                // Muestra y activa la ventana principal
+              
                 WindowManager.MainWindow.Show();
                 WindowManager.MainWindow.Activate();
             }

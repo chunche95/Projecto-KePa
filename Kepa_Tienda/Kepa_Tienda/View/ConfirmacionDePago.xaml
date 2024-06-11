@@ -90,13 +90,12 @@
 
 
 
-                    <!-- Total -->
-                    <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="10" Background="White" Opacity="0.9" Margin="96,390,61,70" Grid.Column="2" Grid.ColumnSpan="2">
+                    <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="10" Background="White" Opacity="0.9" Margin="96,295,61,165" Grid.Column="2" Grid.ColumnSpan="2">
                         <TextBlock x:Name="TotalTextBlock" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" Foreground="Black" Margin="10"/>
                     </Border>
 
                     <!-- Botón "Realizar compra" -->
-                    <Button Content="Realizar compra" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="RealizarCompra_Click" Height="45" Width="185" Background="LawnGreen" FontSize="18" Margin="96,0,0,10" Grid.Column="2" Grid.ColumnSpan="2">
+                    <Button Content="Realizar compra" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="RealizarCompra_Click" Height="45" Width="185" Background="LawnGreen" FontSize="18" Margin="96,0,0,100" Grid.Column="2" Grid.ColumnSpan="2">
                         <Button.Style>
                             <Style TargetType="Button">
                                 <Setter Property="Template">
@@ -125,7 +124,6 @@
                     </Button>
                     <Image HorizontalAlignment="Left" Margin="0,20,0,0" VerticalAlignment="Top" Width="30" Height="39" Source="images.png" MouseLeftButtonDown="Salir_Click" RenderTransformOrigin="0.067,-0.026" Grid.Column="3"/>
                     <TextBlock HorizontalAlignment="Left" Margin="9,107,0,0" TextWrapping="Wrap" Text="Articulos" VerticalAlignment="Top" FontSize="25" FontWeight="Bold"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="81,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="25" FontWeight="Bold" Grid.Column="2" Grid.ColumnSpan="2" Width="230"><Run Language="es-es" Text="Datos Personales"/></TextBlock>
 
 
                 </Grid>

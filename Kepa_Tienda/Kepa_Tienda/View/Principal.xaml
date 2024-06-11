@@ -33,7 +33,7 @@
             <Button Content="Lista de Deseos" Height="30" Click="IrAListaDeDeseos_Click"/>
             <Button Content="Pedidos" Height="30" Click="IrAListaDePedidos"/>
             <Button x:Name="AgregarDisco" Content="Agregar Disco" Height="30" Click="AgregarDisco_Click" Visibility="Collapsed"/>
-            
+
 
         </StackPanel>
 
@@ -117,7 +117,7 @@
                 </StackPanel>
             </StackPanel>
 
-           
+
             <!-- Para mostrar el nombre de usuario -->
             <TextBlock x:Name="txtUserName" HorizontalAlignment="Left" Margin="50,324,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65"/>
             <!-- Para mostrar la foto de perfil -->
@@ -126,12 +126,13 @@
             <TextBlock x:Name="txtUserType" HorizontalAlignment="Left" Margin="50,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground ="#FF010101" Width="65"/>
             <!-- Para mostrar la fecha de último acceso -->
             <TextBlock x:Name="txtLastAccess" HorizontalAlignment="Left" Margin="20,370,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110"/>
-            
-            
+
+
             <Image HorizontalAlignment="Left" Height="75" Margin="41,-5,0,0" VerticalAlignment="Top" Width="110" Source="Rectangle 4.png"/>
             <Rectangle Fill="#FFE8E8E8" HorizontalAlignment="Left" Height="76" Margin="0,464,0,0" Stroke="White" VerticalAlignment="Top" Width="801" Grid.ColumnSpan="3"/>
             <TextBox HorizontalAlignment="Left" Height="30" Margin="24,467,0,0" TextWrapping="Wrap" Text="KEPA MUSIC" VerticalAlignment="Top" Width="135" TextChanged="TextBox_TextChanged_1" Background="#FFE8E8E8" FontSize="22" Foreground="Black" FlowDirection="RightToLeft"/>
-            <Button Content="Contact Us" Height="30" Click="AbrirVentanaContacUs" Margin="37,485,-1,25" Grid.Column="2"/>
+            <Button Content="Contact Us" Height="30" Click="AbrirVentanaContacUs" Margin="37,470,-1,40" Grid.Column="2"/>
+            <Button Content="Ayuda" Height="30" Click="AbrirVentanaAyuda" Margin="37,500,-1,10" Grid.Column="2"/>
             <TextBlock HorizontalAlignment="Left" Margin="173,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="423"><Run FontWeight="Bold"  FontSize="30" Text="Nuevos Lanzamientos"/><LineBreak/><Run FontWeight="Bold"/></TextBlock>
 
             <TextBlock HorizontalAlignment="Left" Margin="35,520,0,0" TextWrapping="Wrap" Text="KEPA Music © 2023" VerticalAlignment="Top"/>
@@ -238,7 +239,7 @@
 
         </Grid>
 
-       
+
 
         <!-- Sección central (tienda de vinilos) -->
         <ScrollViewer Margin="56,150,20,160" Grid.Column="1" Grid.ColumnSpan="5">

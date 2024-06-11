@@ -65,6 +65,12 @@ namespace Kepa_Tienda.View
             Contaco contacUsWindow = new Contaco();
             contacUsWindow.Show();
         }
+
+        private void AbrirVentanaAyuda(object sender, RoutedEventArgs e)
+        {
+            Ayuda contacUsWindow = new Ayuda();
+            contacUsWindow.Show();
+        }
         private void ConfigurarVisibilidadBotonAgregarDisco()
         {
             if (usuarioActual.Tipo == "admin")

@@ -192,6 +192,9 @@
     <Compile Include="View\Artistas.xaml.cs">
       <DependentUpon>Artistas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Ayuda.xaml.cs">
+      <DependentUpon>Ayuda.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Carrito.xaml.cs">
       <DependentUpon>Carrito.xaml</DependentUpon>
     </Compile>
@@ -277,6 +280,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Artistas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Ayuda.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

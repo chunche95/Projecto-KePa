@@ -3,36 +3,88 @@
   "WorkspaceRootPath": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\artistas.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\artistas.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\artistas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\artistas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\carrito.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\carrito.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\principal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\principal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\github\\projecto-kepa\\kepa_tienda\\kepa_tienda\\view\\confirmaciondepago.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\confirmaciondepago.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\github\\projecto-kepa\\kepa_tienda\\kepa_tienda\\view\\confirmaciondepago.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\confirmaciondepago.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\confirmaciondepago.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\github\\projecto-kepa\\kepa_tienda\\kepa_tienda\\view\\ayuda.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\ayuda.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\github\\projecto-kepa\\kepa_tienda\\kepa_tienda\\view\\ayuda.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\ayuda.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\carrito.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\carrito.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\comprarealizada.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\comprarealizada.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\comprarealizada.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\comprarealizada.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\anadirdiscos.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\anadirdiscos.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\github\\projecto-kepa\\kepa_tienda\\kepa_tienda\\view\\datosdepago.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\contaco.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\contaco.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\contaco.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\contaco.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\principal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\principal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\principal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\principal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\github\\projecto-kepa\\kepa_tienda\\kepa_tienda\\view\\contaco.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\contaco.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\carrito.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\carrito.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\detallesqueens.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\detallesqueens.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\artistas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\artistas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\listapedidos.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\listapedidos.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\datosdepago.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\datosdepago.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\disco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\disco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\github\\projecto-kepa\\kepa_tienda\\kepa_tienda\\view\\anadirdiscos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\anadirdiscos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\artistas.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\artistas.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\github\\projecto-kepa\\kepa_tienda\\kepa_tienda\\view\\confirmaciondepago.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\confirmaciondepago.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\editar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,10 +103,6 @@
       "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\ofertas.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\principal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\principal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\ofertas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\ofertas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -67,48 +115,8 @@
       "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\anadirdiscos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\anadirdiscos.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\detallesqueens.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\detallesqueens.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\contaco.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\contaco.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\detallesqueens.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\detallesqueens.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\contaco.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\contaco.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\comprarealizada.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\comprarealizada.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\github\\projecto-kepa\\kepa_tienda\\kepa_tienda\\view\\listapedidos.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\listapedidos.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\comprarealizada.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\comprarealizada.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\carrito.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\carrito.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\kepa_tienda\\view\\disco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\disco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|c:\\users\\kevin\\documents\\github\\projecto-kepa\\kepa_tienda\\kepa_tienda\\view\\contaco.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{170A2D13-C57B-4520-9422-92CBE1FAC29D}|Kepa_Tienda\\Kepa_Tienda.csproj|solutionrelative:kepa_tienda\\view\\contaco.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -118,24 +126,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 283,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 17,
               "Title": "Disco.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Disco.cs",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Disco.cs",
               "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Disco.cs",
               "RelativeToolTip": "Kepa_Tienda\\View\\Disco.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAIA5wBsAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-11T12:01:42.894Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
+              "Title": "View\\Ayuda.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Ayuda.xaml.cs",
+              "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Ayuda.xaml.cs",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Ayuda.xaml.cs",
+              "RelativeToolTip": "Kepa_Tienda\\View\\Ayuda.xaml.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAvwCYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T15:15:54.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Ayuda.xaml",
+              "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Ayuda.xaml",
+              "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Ayuda.xaml",
+              "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Ayuda.xaml",
+              "RelativeToolTip": "Kepa_Tienda\\View\\Ayuda.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-11T15:11:56.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "ConfirmacionDePago.xaml",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\ConfirmacionDePago.xaml",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\ConfirmacionDePago.xaml",
@@ -147,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 16,
               "Title": "DatosDePago.xaml",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\DatosDePago.xaml",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\DatosDePago.xaml",
@@ -159,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 15,
               "Title": "ListaPedidos.xaml",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\ListaPedidos.xaml",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\ListaPedidos.xaml",
@@ -171,7 +205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 14,
               "Title": "Artistas.xaml",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Artistas.xaml",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Artistas.xaml",
@@ -183,31 +217,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
               "Title": "Carrito.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Carrito.xaml.cs",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Carrito.xaml.cs",
               "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Carrito.xaml.cs",
               "RelativeToolTip": "Kepa_Tienda\\View\\Carrito.xaml.cs",
-              "ViewState": "AQIAADoAAAAAAAAAAADwv08AAAAJAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAIwC4AAABRAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-11T14:16:38.994Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 3,
               "Title": "Carrito.xaml",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Carrito.xaml",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Carrito.xaml",
               "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Carrito.xaml",
               "RelativeToolTip": "Kepa_Tienda\\View\\Carrito.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-11T14:16:34.103Z"
+              "WhenOpened": "2024-06-11T14:16:34.103Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 4,
               "Title": "CompraRealizada.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\CompraRealizada.xaml.cs",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\CompraRealizada.xaml.cs",
@@ -215,11 +250,12 @@
               "RelativeToolTip": "Kepa_Tienda\\View\\CompraRealizada.xaml.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAACsAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T13:55:30.635Z"
+              "WhenOpened": "2024-06-11T13:55:30.635Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 5,
               "Title": "CompraRealizada.xaml",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\CompraRealizada.xaml",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\CompraRealizada.xaml",
@@ -231,20 +267,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 7,
               "Title": "Contaco.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Contaco.xaml.cs",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Contaco.xaml.cs",
               "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Contaco.xaml.cs",
               "RelativeToolTip": "Kepa_Tienda\\View\\Contaco.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAFAAAA",
+              "ViewState": "AQIAACYAAAAAAAAAAAAgwDEAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-11T13:39:07.333Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 8,
               "Title": "Contaco.xaml",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Contaco.xaml",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Contaco.xaml",
@@ -256,32 +292,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 13,
               "Title": "DetallesQueens.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\DetallesQueens.xaml.cs",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\DetallesQueens.xaml.cs",
               "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\DetallesQueens.xaml.cs",
               "RelativeToolTip": "Kepa_Tienda\\View\\DetallesQueens.xaml.cs",
-              "ViewState": "AQIAAHcAAAAAAAAAAAAWwH8AAAAYAAAA",
+              "ViewState": "AQIAAKwAAAAAAAAAAADgv80AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-11T12:22:15.816Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 28,
               "Title": "DetallesQueens.xaml",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\DetallesQueens.xaml",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\DetallesQueens.xaml",
               "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\DetallesQueens.xaml",
               "RelativeToolTip": "Kepa_Tienda\\View\\DetallesQueens.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-11T12:22:04.48Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T12:22:04.48Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 19,
               "Title": "Artistas.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Artistas.xaml.cs",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Artistas.xaml.cs",
@@ -289,12 +324,11 @@
               "RelativeToolTip": "Kepa_Tienda\\View\\Artistas.xaml.cs",
               "ViewState": "AQIAACoAAAAAAAAAAAAYwEMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T12:12:01.628Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T12:12:01.628Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "AnadirDiscos.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\AnadirDiscos.xaml.cs",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\AnadirDiscos.xaml.cs",
@@ -319,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 21,
               "Title": "Editar.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Editar.xaml.cs",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Editar.xaml.cs",
@@ -327,24 +361,22 @@
               "RelativeToolTip": "Kepa_Tienda\\View\\Editar.xaml.cs",
               "ViewState": "AQIAAC4AAAAAAAAAAAAYwG0AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T12:00:11.596Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T12:00:11.596Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 22,
               "Title": "Editar.xaml",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Editar.xaml",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Editar.xaml",
               "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Editar.xaml",
               "RelativeToolTip": "Kepa_Tienda\\View\\Editar.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-11T11:57:48.922Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T11:57:48.922Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 23,
               "Title": "ListaPedidos.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\ListaPedidos.xaml.cs",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\ListaPedidos.xaml.cs",
@@ -352,12 +384,11 @@
               "RelativeToolTip": "Kepa_Tienda\\View\\ListaPedidos.xaml.cs",
               "ViewState": "AQIAACgAAAAAAAAAAAAAwDoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T11:52:07.175Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T11:52:07.175Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 24,
               "Title": "Ofertas.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Ofertas.xaml.cs",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Ofertas.xaml.cs",
@@ -365,25 +396,24 @@
               "RelativeToolTip": "Kepa_Tienda\\View\\Ofertas.xaml.cs",
               "ViewState": "AQIAAFkAAAAAAAAAAAAgwHkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T11:47:48.137Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T11:47:48.137Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "Principal.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Principal.xaml.cs",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Principal.xaml.cs",
               "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Principal.xaml.cs",
               "RelativeToolTip": "Kepa_Tienda\\View\\Principal.xaml.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAAAD4AAAAHAAAA",
+              "ViewState": "AQIAADkAAAAAAAAAAAAiwEQAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-11T11:47:41.839Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
               "Title": "Principal.xaml",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Principal.xaml",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Principal.xaml",
@@ -395,19 +425,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 25,
               "Title": "Ofertas.xaml",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Ofertas.xaml",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Ofertas.xaml",
               "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Ofertas.xaml",
               "RelativeToolTip": "Kepa_Tienda\\View\\Ofertas.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-11T11:45:50.635Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T11:45:50.635Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 26,
               "Title": "LoginView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\LoginView.xaml.cs",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\LoginView.xaml.cs",
@@ -415,20 +444,18 @@
               "RelativeToolTip": "Kepa_Tienda\\View\\LoginView.xaml.cs",
               "ViewState": "AQIAAJYAAAAAAAAAAAAAAKwAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T11:38:29.385Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T11:38:29.385Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 27,
               "Title": "LoginView.xaml",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\LoginView.xaml",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\LoginView.xaml",
               "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\LoginView.xaml",
               "RelativeToolTip": "Kepa_Tienda\\View\\LoginView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-11T11:37:49.466Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T11:37:49.466Z"
             }
           ]
         }
@@ -453,7 +480,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 11,
               "Title": "Contaco.xaml",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\Contaco.xaml",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\Contaco.xaml",
@@ -487,13 +514,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 20,
               "Title": "ConfirmacionDePago.xaml",
               "DocumentMoniker": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\ConfirmacionDePago.xaml",
               "RelativeDocumentMoniker": "Kepa_Tienda\\View\\ConfirmacionDePago.xaml",
               "ToolTip": "C:\\Users\\Kevin\\Documents\\GitHub\\Projecto-KePa\\Kepa_Tienda\\Kepa_Tienda\\View\\ConfirmacionDePago.xaml",
               "RelativeToolTip": "Kepa_Tienda\\View\\ConfirmacionDePago.xaml",
-              "ViewState": "AQIAAOwAAAAAAAAAAAAAAPoAAAAEAAAA",
+              "ViewState": "AQIAAOoAAAAAAAAAAAAAAPgAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-06-11T14:51:43.515Z",
               "EditorCaption": ""
