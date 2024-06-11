@@ -39,10 +39,7 @@ namespace Kepa_Tienda.View
             ConfigurarVisibilidadBotonAgregarDisco();
 
         }
-        private void IrOfertas(object sender, RoutedEventArgs e)
-        {
-
-        }
+       
         private void ConfigurarVisibilidadBotonAgregarDisco()
         {
             if (usuarioActual.Tipo == "admin")
@@ -224,6 +221,13 @@ namespace Kepa_Tienda.View
                 loginWindow.Show(); // Mostrar la ventana LoginView
                 Close(); // Cerrar la ventana actual si es necesario
             }
+        private void IrOfertas(object sender, RoutedEventArgs e)
+        {
+            Ofertas PedidosWindow = new Ofertas(usuarioActual);
+            PedidosWindow.Show();
+            Hide();
+
+        }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {

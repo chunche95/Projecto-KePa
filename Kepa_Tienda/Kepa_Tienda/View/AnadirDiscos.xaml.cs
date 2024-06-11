@@ -44,7 +44,7 @@ namespace Kepa_Tienda.View
             {
                 string query = @"
                     INSERT INTO DiscosVinilo (Titulo, Precio, Stock, Artista, Genero, AnioPublicacion, Imagen, Pais, SelloDiscografico, Descripcion, Oferta, PorcentajeOferta) 
-                    VALUES (@Titulo, @Precio, @Stock, @Artista, @Genero, @AnioPublicacion, @Imagen, @Pais, @SelloDiscografico, @Descripcion@Oferta, @PorcentajeOferta)";
+                    VALUES (@Titulo, @Precio, @Stock, @Artista, @Genero, @AnioPublicacion, @Imagen, @Pais, @SelloDiscografico, @Descripcion, @Oferta, @PorcentajeOferta)";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -59,7 +59,7 @@ namespace Kepa_Tienda.View
                     command.Parameters.AddWithValue("@SelloDiscografico", SelloDiscograficoTextBox.Text);
                     command.Parameters.AddWithValue("@Descripcion", DescripcionTextBox.Text);
                     command.Parameters.AddWithValue("@Oferta", Convert.ToBoolean(OfertaCheckBox.IsChecked));
-                    command.Parameters.AddWithValue("@PorcentajeOferta", double.Parse(PorcentajeOfertaTextBox.Text));
+                    command.Parameters.AddWithValue("@PorcentajeOferta", int.Parse(PorcentajeOfertaTextBox.Text));
 
                     try
                     {
